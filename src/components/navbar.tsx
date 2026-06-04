@@ -21,35 +21,18 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Frameworks",
-    items: [
-      { label: "EcoVadis", href: "/en/frameworks/ecovadis" },
-      { label: "ISO 14001", href: "/en/frameworks/iso-14001" },
-      { label: "CDP", href: "/en/frameworks/cdp" },
-      { label: "CSRD / VSME", href: "/en/frameworks/csrd" },
-      { label: "Other frameworks", href: "/en/frameworks" },
-    ],
-  },
-  {
     label: "Solutions",
     items: [
       { label: "Management system", href: "/en/solutions/management-system" },
-      { label: "Compliance questionnaires", href: "/en/solutions/compliance-questionnaires" },
-      { label: "AI solutions", href: "/en/solutions/ai-solutions" },
-      { label: "Supplier engagement", href: "/en/solutions/supplier-engagement" },
     ],
   },
-  { label: "Customers", href: "/en/customer-stories" },
   {
     label: "Resources",
     items: [
       { label: "Blog", href: "/en/resources/blog" },
-      { label: "Guides", href: "/en/resources/guides" },
-      { label: "News", href: "/en/resources/news" },
     ],
   },
   { label: "Manifesto", href: "/en/manifesto" },
-  { label: "Careers", href: "/en/careers" },
 ];
 
 function DesktopNavItem({ item }: { item: NavItem }) {
