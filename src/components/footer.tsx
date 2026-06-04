@@ -77,9 +77,9 @@ export function Footer() {
               <Image
                 src="/brand/maroc360-logo.png"
                 alt="Maroc 360 Agency"
-                width={120}
-                height={32}
-                className="h-8 w-auto"
+                width={240}
+                height={190}
+                className="h-20 w-auto"
               />
             </Link>
             <p className="body-lg max-w-md">
