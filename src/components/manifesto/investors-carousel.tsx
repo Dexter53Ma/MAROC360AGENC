@@ -2,22 +2,22 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 import { useCallback } from "react";
 import { ChevronLeft24, ChevronRight24 } from "@/components/icons";
 
 interface Investor {
   name: string;
+  logo: string;
 }
 
 const investors: Investor[] = [
-  { name: "Kfund" },
-  { name: "Ring Capital" },
-  { name: "Bpifrance" },
-  { name: "Investisseurs" },
-  { name: "Aglaé Ventures" },
-  { name: "Hi Inov" },
-  { name: "Raise Sherpas" },
-  { name: "Normandie Participations" },
+  { name: "Nine Capital", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b96085a32e7106c24bfb_nine.avif" },
+  { name: "Purple", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b9606ef3fedec0757bf1_purple.avif" },
+  { name: "Better Angle", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b960ce58e09d2418ad5e_better-angle.avif" },
+  { name: "Aonia Ventures", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b96042c32bcf5e05cab4_aonia.avif" },
+  { name: "Kima Ventures", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b960f81118f10549ee7a_kima-ventures.avif" },
+  { name: "Motier Ventures", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b960ce3117638f74790e_motier-ventures.avif" },
 ];
 
 export function InvestorsCarousel() {
@@ -68,10 +68,14 @@ export function InvestorsCarousel() {
                 key={inv.name}
                 className="flex-[0_0_60vw] md:flex-[0_0_10rem] lg:flex-[0_0_12rem] min-w-0"
               >
-                <div className="h-24 w-full flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                  <span className="text-lg font-heading text-text-primary text-center px-2">
-                    {inv.name}
-                  </span>
+                <div className="relative h-16 w-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+                  <Image
+                    src={inv.logo}
+                    alt={inv.name}
+                    fill
+                    sizes="12rem"
+                    className="object-contain"
+                  />
                 </div>
               </div>
             ))}

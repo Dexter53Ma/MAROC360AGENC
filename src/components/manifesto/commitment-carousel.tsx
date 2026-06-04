@@ -15,22 +15,22 @@ interface CommitmentCard {
 
 const commitments: CommitmentCard[] = [
   {
-    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6854c3e94b5bc20dde8db6dc_ecovadis-platinum.svg",
+    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/69f0c6a9c34efe096f2f8b03_Design%20sans%20titre.svg",
     badgeAlt: "EcoVadis Platinum",
     title: "Ditto is EcoVadis Platinum",
     body: "We've put our methodology to the test on our own business and earned the highest EcoVadis rating.",
   },
   {
-    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6854c3e94b5bc20dde8db6dd_un-global-compact.svg",
+    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b8162524789eed7a6de2_UN.avif",
     badgeAlt: "UN Global Compact",
     title: "UN Global Compact",
     body: "Our membership in the UN Global Compact means we're putting our values to work to build a sustainable business and a better world.",
   },
   {
-    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6854c3e94b5bc20dde8db6de_ecovadis-training-partner.svg",
-    badgeAlt: "EcoVadis training partner",
-    title: "We're EcoVadis training partners",
-    body: "We've been working with EcoVadis since 2023 to increase sustainability in supply chains, one CSR program at a time.",
+    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b6d9cd5c42b2d099f74c_Efrag.avif",
+    badgeAlt: "Friend of EFRAG",
+    title: "Friend of EFRAG",
+    body: "We are proud to provide our insight in support of EFRAG's efforts to develop the European sustainability reporting standards.",
   },
 ];
 

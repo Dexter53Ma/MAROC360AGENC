@@ -58,7 +58,6 @@ const columns = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "/en/about" },
       { label: "Manifesto", href: "/en/manifesto" },
       { label: "Careers", href: "/en/careers" },
     ],

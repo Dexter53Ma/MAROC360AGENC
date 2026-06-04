@@ -18,14 +18,14 @@ const beliefs = [
   {
     title: "We think great partners make great businesses",
     body: "A great partner can help you scale faster, work smarter, and grow in ways you couldn't imagine. That's the kind of partner we aim to be for our customers and everyone they work with, too.",
-    image: "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6970ff9bf4ef80b4ce269d2b_ditto_better_businesses_illustration_7%20-%20Grande.jpeg",
+    image: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835af9a9762f62378e46c0e_manifesto-illus-1.avif",
     imageAlt: "Illustration of professionals in a colorful office space",
     reverse: false,
   },
   {
     title: "We see compliance as an opportunity, not an obstacle",
     body: "At Ditto, we see compliance as a chance to showcase your leadership, take pride in your CSR practices, and partner with people who share your values.",
-    image: "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a184a915f82cad90b79a145_ditto_better_world_illustration_6%20-%20Grande.jpeg",
+    image: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835af9a177815a656ca465b_manifesto-illus-2.avif",
     imageAlt: "Illustration of a sustainable city with trees and modern buildings",
     reverse: true,
   },

@@ -67,12 +67,12 @@ export function HeroWithIllustration() {
 
           <div className="relative aspect-[1391/910] w-full">
             <Image
-              src="/images/hero/frameworks-hero.jpg"
+              src="https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6845a66f8a93f372dc9be585_management-hero.svg"
               alt="Ditto management system dashboard"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover rounded-3xl"
+              className="object-contain"
             />
           </div>
         </div>
