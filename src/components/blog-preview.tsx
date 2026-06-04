@@ -12,25 +12,25 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
-    title: "ESG: Definition, Criteria and Challenges",
+    title: "How to Build a Digital Marketing Strategy in Morocco",
     thumbnail: "/images/blog/post-1.png",
-    thumbnailAlt: "Infographic showing the three ESG pillars: Environment, Social, Governance",
-    href: "/en/resources/blog/esg-definition-criteria-challenges",
-    category: "ESG",
-  },
-  {
-    title: "CSR: A Clear Definition and Scope",
-    thumbnail: "/images/blog/post-2.jpeg",
-    thumbnailAlt: "Definition and scope of corporate social responsibility in business",
-    href: "/en/resources/blog/csr-definition-scope",
-    category: "CSR",
-  },
-  {
-    title: "How to integrate CSR into your strategy",
-    thumbnail: "/images/blog/post-3.jpeg",
-    thumbnailAlt: "Illustration of a company integrating corporate social responsibility into its strategy",
-    href: "/en/resources/blog/csr-integration-strategy",
+    thumbnailAlt: "Illustration of a digital marketing strategy mapped across channels and KPIs",
+    href: "/en/resources/blog/digital-marketing-strategy-morocco",
     category: "Strategy",
+  },
+  {
+    title: "The Complete Guide to Paid Ads in 2026",
+    thumbnail: "/images/blog/post-2.jpeg",
+    thumbnailAlt: "Visual guide to running paid ads on Google, Meta, and TikTok in 2026",
+    href: "/en/resources/blog/paid-ads-guide-2026",
+    category: "Paid Media",
+  },
+  {
+    title: "Social Media Trends Reshaping Morocco",
+    thumbnail: "/images/blog/post-3.jpeg",
+    thumbnailAlt: "Illustration of social media content trends influencing brands in Morocco",
+    href: "/en/resources/blog/social-media-trends-morocco",
+    category: "Social",
   },
 ];
 
@@ -39,7 +39,7 @@ export function BlogPreview() {
     <section className="section-y">
       <div className="container-page">
         <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-2xl mb-10">
-          Learn more about Ditto &amp; AI-powered CSR compliance
+          Marketing insights, playbooks, and trend reports
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

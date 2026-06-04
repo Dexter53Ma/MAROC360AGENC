@@ -161,14 +161,14 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <LanguageSwitcher />
             <LinkButton
-              href="https://cloud.trustditto.com/o"
+              href="/en/contact"
               variant="secondary"
               size="md"
               className="text-text-primary"
             >
               Log in
             </LinkButton>
-            <LinkButton href="/en/get-started" variant="primary" size="md">
+            <LinkButton href="/en/contact" variant="primary" size="md">
               Get Started
             </LinkButton>
           </div>
@@ -227,14 +227,14 @@ export function Navbar() {
             </div>
             <div className="mt-4 flex flex-col gap-3">
               <LinkButton
-                href="https://cloud.trustditto.com/o"
+                href="/en/contact"
                 variant="secondary"
                 size="md"
                 className="w-full"
               >
                 Log in
               </LinkButton>
-              <LinkButton href="/en/get-started" variant="primary" size="md" className="w-full">
+              <LinkButton href="/en/contact" variant="primary" size="md" className="w-full">
                 Get Started
               </LinkButton>
             </div>

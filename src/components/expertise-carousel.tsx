@@ -17,30 +17,31 @@ const expertise: ExpertiseCard[] = [
   {
     title: "Proprietary methodology",
     description:
-      "Our approach for each framework is developed by our in-house experts",
+      "Our 360° playbook is built in-house and refined on every brand we ship for",
     icon: "/icons/methodology.svg",
   },
   {
-    title: "Dedicated coach",
+    title: "Dedicated strategist",
     description:
-      "A dedicated coach is assigned to monitor your CSR program and help you improve",
+      "A senior strategist is assigned to your account to plan, steer, and grow every channel",
     icon: "/icons/coach.svg",
   },
   {
-    title: "EcoVadis training partner",
-    description: "Ditto is an approved EcoVadis training partner",
+    title: "Google & Meta certified",
+    description:
+      "Our media team is certified by Google, Meta, and TikTok to run paid campaigns at scale",
     icon: "/icons/training-partner.svg",
   },
   {
-    title: "Friend of EFRAG",
+    title: "Trusted by leading brands",
     description:
-      "We are proud to provide our insight in support of EFRAG's efforts",
+      "We partner with Morocco's most ambitious companies across e-commerce, hospitality, and services",
     icon: "/icons/efrag.svg",
   },
   {
-    title: "Compliance watch",
+    title: "Always-on optimization",
     description:
-      "Our team closely monitors regulations and notifies you of any changes",
+      "We monitor campaigns daily and reallocate budget in real time to maximize your ROI",
     icon: "/icons/compliance-watch.svg",
   },
 ];
@@ -59,18 +60,17 @@ export function ExpertiseCarousel() {
       <div className="container-page">
         <div className="flex items-end justify-between gap-6 mb-10">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-2xl">
-            Advanced technology meets human expertise
+            Creative talent meets data-driven results
           </h2>
-          <LinkButton href="/en/get-started" variant="primary" size="md" className="hidden md:inline-flex">
+          <LinkButton href="/en/contact" variant="primary" size="md" className="hidden md:inline-flex">
             Get Started
           </LinkButton>
         </div>
         <p className="body-lg max-w-3xl mb-10">
-          Ditto embeds decades of CSR experience into cutting-edge software and pairs it with a dedicated
-          coach so you can move faster with confidence.
+          Maroc 360 pairs a senior in-house team with sharp creative and a culture of measurement, so every campaign we ship is built to perform—and we can prove it.
         </p>
         <div className="md:hidden mb-6">
-          <LinkButton href="/en/get-started" variant="primary" size="md" className="w-full sm:w-auto">
+          <LinkButton href="/en/contact" variant="primary" size="md" className="w-full sm:w-auto">
             Get Started
           </LinkButton>
         </div>

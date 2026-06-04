@@ -17,12 +17,10 @@ export function InterviewList() {
     <section className="pt-24 pb-36">
       <div className="container-page">
         <h2 className="font-heading text-[40px] md:text-[48px] font-normal leading-[1.15] tracking-[-0.01em] text-text-primary text-center text-balance">
-          Interviewing at Ditto
+          Interviewing at Maroc 360
         </h2>
         <p className="mt-6 text-[22px] leading-[1.25] text-text-primary max-w-[48rem] mx-auto text-center">
-          We aim to be as sustainable and transparent as we can with our hiring
-          practices. Regardless of role, the process typically takes 2-3 weeks
-          from first call to final offer.
+          We aim to be as transparent and respectful as we can with our hiring practices. Regardless of role, the process typically takes 2-3 weeks from first call to final offer.
         </p>
 
         <div className="mt-16">

@@ -16,33 +16,33 @@ interface TeamCard {
 
 const teams: TeamCard[] = [
   {
-    title: "Product & Engineering",
-    body: "We're putting technology to work on some of our customers' most challenging problems. Our Product and Engineering teams work hard to make it not only easy, but enjoyable.",
+    title: "Strategy & Planning",
+    body: "We put data and insight to work on our clients' most ambitious growth problems. Our Strategy and Planning team makes the complex simple—and the simple unforgettable.",
     icon: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835bf7d14f094acd3522f9a_Product%20%26%20Engineering.svg",
   },
   {
-    title: "Customer Success",
-    body: "Our Customer Success team listens deeply and works actively to incorporate our customers' needs and feedback into Ditto, so that we're always getting better.",
+    title: "Client Success",
+    body: "Our Client Success team listens deeply and works actively to incorporate our clients' needs and feedback into every campaign, so we're always getting better.",
     icon: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835bf7d2fb51d794312f086_Customer%20Success.svg",
   },
   {
-    title: "Growth",
-    body: "The more customers we can serve, the better off our world will be. Our Growth team helps us reach as many people as we can to make CSR and compliance easy for all.",
+    title: "Performance Media",
+    body: "The more brands we can grow, the more our industry evolves. Our Performance Media team plans, buys, and optimizes campaigns that turn ad spend into real revenue.",
     icon: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835bf7db5d31160927462de_Growth.svg",
   },
   {
-    title: "Partnerships",
-    body: "The right partners can have a major impact. Our Partnerships team looks for opportunities to grow alongside likeminded folks while serving our customers.",
+    title: "Creative & Content",
+    body: "The right creative can change everything. Our Creative and Content team turns strategy into stories, visuals, and campaigns people actually want to share.",
     icon: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835bf7d469b1259f48c91b6_Partnerships.svg",
   },
   {
-    title: "Sales",
-    body: "Our Sales team gives our customers their first experience of Ditto. From the start, we're here to help, freeing them up from their biggest CSR and compliance challenges.",
+    title: "New Business",
+    body: "Our New Business team gives Moroccan brands their first experience of Maroc 360. From the first call, we're here to help, freeing them up to focus on what they do best.",
     icon: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835bf7d5d9f87b8c6ceaee6_Sales.svg",
   },
   {
-    title: "Expertise",
-    body: "Our Expertise team gives our customers a competitive edge by embedding their deep framework knowledge into our products and experiences.",
+    title: "SEO & Analytics",
+    body: "Our SEO and Analytics team gives our clients a competitive edge by turning search data, attribution, and measurement into clear, actionable growth levers.",
     icon: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835bf7db7bd07f019d52762_Expertise.svg",
   },
 ];
@@ -83,9 +83,7 @@ export function TeamsCarousel() {
             Many teams, one vision
           </h2>
           <p className="mt-6 text-[22px] leading-[1.25] text-text-primary max-w-[48rem] mx-auto">
-            Compliance is complex—that&apos;s exactly what makes this work so
-            exciting. Each team at Ditto plays a unique and interconnected role
-            in realizing our mission.
+            Marketing moves fast—that&apos;s exactly what makes this work so exciting. Each team at Maroc 360 plays a unique and interconnected role in growing our clients&apos; brands.
           </p>
         </div>
       </div>
@@ -158,7 +156,7 @@ export function TeamsCarousel() {
         </div>
         <div className="flex justify-center mt-8 mb-24">
           <LinkButton
-            href="https://jobs.ashbyhq.com/beavr"
+            href="/en/contact"
             variant="primary"
             size="md"
           >

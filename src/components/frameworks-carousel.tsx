@@ -13,32 +13,32 @@ interface FrameworkCard {
 
 const frameworks: FrameworkCard[] = [
   {
-    title: "CSRD",
+    title: "SEO",
     description:
-      "Comply with CSRD requirements and prepare your sustainability report directly in Ditto",
+      "Rank higher on Google and drive qualified organic traffic to your site, month after month",
     icon: "/icons/csrd.avif",
-    href: "/en/frameworks/csrd",
+    href: "/en/solutions/management-system",
   },
   {
-    title: "EcoVadis",
+    title: "Paid Ads",
     description:
-      "Structure your EcoVadis questionnaire response with pre-filled, expert-validated answers",
+      "High-ROI campaigns on Google, Meta, and TikTok—planned, launched, and optimized by senior media buyers",
     icon: "/icons/ecovadis.avif",
-    href: "/en/frameworks/ecovadis",
+    href: "/en/solutions/management-system",
   },
   {
-    title: "ISO 14001",
+    title: "Social Media",
     description:
-      "Build a robust environmental management system aligned with ISO 14001 requirements",
+      "Scroll-stopping content, daily community management, and a clear brand voice across every platform",
     icon: "/icons/iso.avif",
-    href: "/en/frameworks/iso-14001",
+    href: "/en/solutions/management-system",
   },
   {
-    title: "CDP",
+    title: "Branding",
     description:
-      "Lead in environmental transparency with structured CDP disclosure workflows",
+      "Brand strategy, identity, and design systems built to stand out in Morocco and scale across MENA",
     icon: "/icons/cdp.avif",
-    href: "/en/frameworks/cdp",
+    href: "/en/solutions/management-system",
   },
 ];
 
@@ -52,7 +52,7 @@ export function FrameworksCarousel() {
     <section className="section-y overflow-hidden">
       <div className="container-page">
         <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-xl mb-10">
-          Get compliant four times faster
+          Grow 4× faster with the right channel mix
         </h2>
       </div>
 

@@ -16,21 +16,21 @@ interface CommitmentCard {
 const commitments: CommitmentCard[] = [
   {
     badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/69f0c6a9c34efe096f2f8b03_Design%20sans%20titre.svg",
-    badgeAlt: "EcoVadis Platinum",
-    title: "Ditto is EcoVadis Platinum",
-    body: "We've put our methodology to the test on our own business and earned the highest EcoVadis rating.",
+    badgeAlt: "Google Premier Partner",
+    title: "Google Premier Partner",
+    body: "We're recognized by Google for the volume and quality of campaigns we run for brands across Morocco and the MENA region.",
   },
   {
     badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b8162524789eed7a6de2_UN.avif",
-    badgeAlt: "UN Global Compact",
-    title: "UN Global Compact",
-    body: "Our membership in the UN Global Compact means we're putting our values to work to build a sustainable business and a better world.",
+    badgeAlt: "Meta Business Partner",
+    title: "Meta Business Partner",
+    body: "Our media team is certified by Meta to run performance campaigns on Facebook and Instagram at scale.",
   },
   {
     badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b6d9cd5c42b2d099f74c_Efrag.avif",
-    badgeAlt: "Friend of EFRAG",
-    title: "Friend of EFRAG",
-    body: "We are proud to provide our insight in support of EFRAG's efforts to develop the European sustainability reporting standards.",
+    badgeAlt: "TikTok Marketing Partner",
+    title: "TikTok Marketing Partner",
+    body: "We help brands win on TikTok with creative, buying, and measurement that match the speed of the platform.",
   },
 ];
 
@@ -47,7 +47,7 @@ export function CommitmentCarousel() {
     <section className="section-y overflow-hidden">
       <div className="container-page">
         <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-3xl mb-12 text-balance">
-          We&apos;re committed to a sustainable future for everyone
+          We&apos;re committed to growing Morocco&apos;s brands on the global stage
         </h2>
       </div>
 

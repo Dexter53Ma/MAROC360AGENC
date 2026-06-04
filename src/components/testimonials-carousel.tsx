@@ -18,49 +18,49 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Ditto is the all-in-one solution we needed to scale our CSR reporting. We moved from spreadsheet chaos to a structured, expert-driven workflow in weeks.",
+      "Maroc 360 turned our online presence around. In six months, our qualified leads grew 3× and our cost per lead dropped by half.",
     name: "Sophie Wardan",
-    role: "CSR Manager",
+    role: "Marketing Director",
     avatar: "/images/testimonials/avatar-1.avif",
     companyLogo: "/images/testimonials/logo-1.svg",
   },
   {
     quote:
-      "Our EcoVadis score jumped from silver to gold. The platform's pre-filled answers and expert guidance made the difference.",
+      "The team rebuilt our brand, our site, and our paid media from scratch. We finally feel like a modern Moroccan brand.",
     name: "Virginie Caro",
-    role: "Sustainability Lead",
+    role: "Head of Growth",
     avatar: "/images/testimonials/avatar-2.avif",
     companyLogo: "/images/testimonials/logo-2.svg",
   },
   {
     quote:
-      "The Ditto coach helped us align 12 different teams on the same CSRD data. The platform paid for itself in two months.",
+      "Their strategist aligned 12 different teams on the same campaign calendar. Maroc 360 paid for itself in two months.",
     name: "Laurence Sauphanor",
-    role: "Head of Compliance",
+    role: "Chief Marketing Officer",
     avatar: "/images/testimonials/avatar-3.avif",
     companyLogo: "/images/testimonials/logo-3.svg",
   },
   {
     quote:
-      "We finally have a single source of truth for all our CSR data. Questionnaires that took days now take hours.",
+      "We finally have one team running all our performance marketing. Briefs that took weeks now take days, and the numbers are up.",
     name: "Camille Nironi",
-    role: "ESG Director",
+    role: "Brand Director",
     avatar: "/images/testimonials/avatar-4.avif",
     companyLogo: "/images/testimonials/logo-4.svg",
   },
   {
     quote:
-      "The AI features in Ditto are unmatched. Pre-filled answers are 80% accurate out of the box — we just refine and submit.",
+      "The creative output is sharp, the media buying is sharp, and reporting is clear. Exactly the partner we needed in Morocco.",
     name: "Audrey Evin",
-    role: "CSR Coordinator",
+    role: "E-commerce Lead",
     avatar: "/images/testimonials/avatar-5.avif",
     companyLogo: "/images/testimonials/logo-5.svg",
   },
   {
     quote:
-      "Ditto is the backbone of our supplier engagement program. Our partners actually complete questionnaires now.",
+      "They launched our creator program across MENA in four weeks. Influencer revenue is now a real line in our P&L.",
     name: "Anonymous",
-    role: "Procurement Manager",
+    role: "Partnerships Manager",
     avatar: "/images/testimonials/avatar-6.svg",
     companyLogo: "/images/testimonials/logo-6.svg",
   },
@@ -80,10 +80,10 @@ export function TestimonialsCarousel() {
       <div className="container-page">
         <div className="flex items-end justify-between gap-6 mb-10">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl">
-            What customers are saying
+            What our clients say
           </h2>
           <Link
-            href="/en/customer-stories"
+            href="/en/resources/blog"
             className="group hidden md:inline-flex items-center gap-1 text-base font-medium hover:opacity-70 transition-opacity"
           >
             Read More
@@ -91,11 +91,11 @@ export function TestimonialsCarousel() {
           </Link>
         </div>
         <p className="body-lg max-w-3xl mb-10">
-          Customers of all sizes love Ditto for its simplicity, smarts, and impact, above all.
+          Brands of all sizes choose Maroc 360 for our creativity, our discipline, and the measurable growth we deliver.
         </p>
         <div className="md:hidden -mt-6 mb-2">
           <Link
-            href="/en/customer-stories"
+            href="/en/resources/blog"
             className="group inline-flex items-center gap-1 text-base font-medium hover:opacity-70 transition-opacity"
           >
             Read More

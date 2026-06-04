@@ -171,12 +171,12 @@ export function LinkedIn20(props: IconProps) {
   );
 }
 
-export function DittoLogo(props: IconProps) {
+export function MarocLogo(props: IconProps) {
   return (
     <svg
-      width="120"
+      width="160"
       height="32"
-      viewBox="0 0 120 32"
+      viewBox="0 0 160 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
@@ -186,11 +186,11 @@ export function DittoLogo(props: IconProps) {
         y="24"
         fill="currentColor"
         fontFamily="Inter, sans-serif"
-        fontSize="24"
+        fontSize="22"
         fontWeight="700"
         letterSpacing="-0.5"
       >
-        ditto
+        Maroc 360
       </text>
     </svg>
   );

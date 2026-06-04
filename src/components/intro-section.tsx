@@ -4,12 +4,10 @@ export function IntroSection() {
       <div className="container-page">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-6">
-            Embedded expertise and AI tools, all in one platform
+            Strategy, creative, and media buying, all under one roof
           </h2>
           <p className="body-lg">
-            Ditto is your team&apos;s central command for CSR and compliance. It uses AI, software, and embedded
-            expertise to help you structure your initiatives, meet your partners&apos; expectations and maximize
-            your impact.
+            Maroc 360 brings strategy, creative production, and performance media together so your brand grows faster—with less guesswork, fewer agencies to manage, and every result measured end-to-end.
           </p>
         </div>
       </div>

@@ -16,11 +16,10 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-8 sm:pt-12 pb-12 sm:pb-16 lg:pt-20 lg:pb-24">
           <div className="flex flex-col gap-6 max-w-2xl">
             <h1 className="heading-display text-[2.5rem] leading-[1.05] sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
-              Get the CSR recognition you deserve
+              Your 360° digital marketing partner in Morocco
             </h1>
             <p className="body-lg text-lg lg:text-[1.375rem]">
-              You&apos;re already doing the work. Ditto helps you prove it, on EcoVadis, CDP and other CSR
-              frameworks.
+              From the first brief to the last click, Maroc 360 helps Moroccan brands grow online with strategy, creative, and paid media that actually performs.
             </p>
 
             <form
@@ -45,24 +44,22 @@ export function Hero() {
             </form>
 
             <Link
-              href="https://fr.trustpilot.com/review/trustditto.com"
+              href="/en/contact"
               className="inline-flex items-center gap-2 text-sm font-medium text-text-primary hover:opacity-70 transition-opacity"
-              target="_blank"
-              rel="noreferrer noopener"
             >
               <span className="flex items-center gap-0.5">
                 {[0, 1, 2, 3, 4].map((i) => (
                   <StarIcon key={i} className="text-brand-green w-4 h-4" />
                 ))}
               </span>
-              <span>4.6/5 on Trustpilot</span>
+              <span>4.9/5 on Google Reviews</span>
             </Link>
           </div>
 
           <div className="relative aspect-[1391/910] w-full">
             <Image
               src="/images/hero/frameworks-hero.jpg"
-              alt="Ditto frameworks overview"
+              alt="Maroc 360 digital marketing services overview"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -6,14 +6,16 @@ import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
-  { label: "All", href: "/en/resources" },
-  { label: "Blog", href: "/en/resources/blog" },
-  { label: "News", href: "/en/resources/news" },
-  { label: "Guide", href: "/en/resources/guides" },
+  { label: "All", href: "/en/resources/blog" },
+  { label: "Strategy", href: "/en/resources/blog" },
+  { label: "Paid Media", href: "/en/resources/blog" },
+  { label: "SEO", href: "/en/resources/blog" },
+  { label: "Social", href: "/en/resources/blog" },
+  { label: "Branding", href: "/en/resources/blog" },
 ];
 
 export function FilterTabs() {
-  const [active, setActive] = useState("Blog");
+  const [active, setActive] = useState("All");
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (

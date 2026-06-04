@@ -10,9 +10,9 @@ import { ValuesGrid } from "@/components/careers/values-grid";
 import { InterviewList } from "@/components/careers/interview-list";
 
 export const metadata: Metadata = {
-  title: "Careers at Ditto – Great businesses aren't built alone",
+  title: "Careers at Maroc 360 Agency – Great brands aren't built alone",
   description:
-    "That's the idea at the heart of Ditto. We're here to help people do their best work together, and that starts with our team.",
+    "That's the idea at the heart of Maroc 360. We're here to help people do their best work together, and that starts with our team.",
 };
 
 export default function CareersPage() {

@@ -8,106 +8,106 @@ import { SubscribeInline } from "@/components/blog/subscribe-inline";
 import type { BlogPost } from "@/types/blog";
 
 export const metadata = {
-  title: "Resources & Blog | Ditto",
+  title: "Resources & Blog | Maroc 360 Agency",
   description:
-    "Practical CSR insights — guides, articles, and case studies on EcoVadis, CSRD, ISO, and CDP from the Ditto team.",
+    "Practical digital marketing insights — guides, playbooks, and case studies on SEO, paid media, social, and branding from the Maroc 360 team.",
 };
 
 const posts: BlogPost[] = [
   {
-    title: "ESG: Definition, Criteria and Challenges",
+    title: "How to Build a Digital Marketing Strategy in Morocco",
     description:
-      "ESG — Environment, Social, Governance — structures the sustainable transformation of companies. It encompasses the practices, policies and indicators that help reconcile economic performance with positive impact on society and the planet.",
+      "A clear digital marketing strategy is the difference between guessing and growing. This guide walks through audience research, channel mix, KPIs, and budget allocation tailored to the Moroccan market in 2026.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a1850c71817ffd03370ffa3_new_better_businesses_illustration_10.png",
-    imageAlt: "Infographic showing the three ESG pillars: Environment, Social, Governance",
-    href: "/en/resources/blog/esg-definition-criteria-challenges",
-    category: "Blog",
+    imageAlt: "Illustration of a digital marketing strategy mapped across channels and KPIs",
+    href: "/en/resources/blog/digital-marketing-strategy-morocco",
+    category: "Strategy",
     featured: true,
   },
   {
-    title: "CSR: A Clear Definition and Scope",
+    title: "The Complete Guide to Paid Ads in 2026",
     description:
-      "Corporate Social Responsibility (CSR) structures an organisation's commitment to sustainable and ethical development. Its scope, built on precise principles, connects strategic management, measurable performance and regulatory compliance.",
+      "Google Ads, Meta, TikTok, and the new rules of audience targeting. Everything a Moroccan brand needs to know to plan, launch, and scale profitable paid campaigns in 2026.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a184a915f82cad90b79a145_ditto_better_world_illustration_6%20-%20Grande.jpeg",
-    imageAlt: "Definition and scope of corporate social responsibility in business",
-    href: "/en/resources/blog/csr-definition-scope",
-    category: "Blog",
+    imageAlt: "Visual guide to running paid ads on Google, Meta, and TikTok in 2026",
+    href: "/en/resources/blog/paid-ads-guide-2026",
+    category: "Paid Media",
   },
   {
-    title: "What is Corporate Social Responsibility?",
+    title: "SEO in Morocco: How to Rank Locally and Beyond",
     description:
-      "Corporate Social Responsibility (CSR) structures an organisation's commitment to society and the environment. Understanding its foundations, its impact on compliance and CSR performance helps build a credible, long-term sustainability strategy.",
+      "Local SEO, multilingual content, and link building that actually moves the needle. A practical playbook for Moroccan brands that want to win on Google in French, Arabic, and English.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6970ff9bf4ef80b4ce269d2b_ditto_better_businesses_illustration_7%20-%20Grande.jpeg",
-    imageAlt: "Illustration of a company integrating corporate social responsibility into its strategy",
-    href: "/en/resources/blog/corporate-social-responsibility-definition",
-    category: "Blog",
+    imageAlt: "Illustration of a brand climbing search rankings in Morocco",
+    href: "/en/resources/blog/seo-morocco-local-rankings",
+    category: "SEO",
   },
   {
-    title: "What is CSR performance?",
+    title: "What Makes a Great Social Media Strategy?",
     description:
-      "CSR performance reflects a company's ability to turn its sustainability commitments into measurable, lasting results across environmental, social and governance dimensions. This guide clarifies the difference with a CSR approach, covers the key KPIs, major frameworks and continuous improvement levers.",
+      "Frequency, format, voice, and measurement—the four levers we use to build social media programs that grow audiences and drive real revenue for our clients.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/696ea520c97cc0946ee7bef9_new_better_businesses_illustration_04.png",
-    imageAlt: "CSR performance diagram with ESG indicators for businesses",
-    href: "/en/resources/blog/csr-performance",
-    category: "Blog",
+    imageAlt: "Diagram of a social media strategy across content, audience, and measurement",
+    href: "/en/resources/blog/social-media-strategy-playbook",
+    category: "Social",
   },
   {
     title:
-      "How to make the most of your CSR commitments — Lessons from our Lyon roundtable",
+      "How to make the most of your brand — Lessons from our Casablanca roundtable",
     description:
-      "On March 17th, Ditto hosted its first CSR afterwork in Lyon, together with VERACY. Around twenty professionals gathered to tackle a question that comes up constantly with our clients: how do you structure and communicate your CSR commitments as an SME or mid-sized company? Three key lessons emerged from the discussion.",
+      "On March 17th, Maroc 360 hosted its first marketing roundtable in Casablanca, together with leading Moroccan CMOs. Around twenty professionals gathered to tackle a question that comes up constantly with our clients: how do you turn a strong brand into measurable growth? Three key lessons emerged from the discussion.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/69cbf6e3c98e9e31f4bd7485_IMG_4109.jpeg",
-    imageAlt: "CSR roundtable in Lyon — Ditto and VERACY afterwork event, March 2026",
-    href: "/en/resources/blog/csr-roundtable-lyon-commitments",
-    category: "Blog",
+    imageAlt: "Marketing roundtable in Casablanca — Maroc 360 client event, March 2026",
+    href: "/en/resources/blog/casablanca-roundtable-brand-growth",
+    category: "Strategy",
   },
   {
     title:
-      "Mastering ISO Compliance in Biotech & Medtech: The Critical Role of Global Regulatory Monitoring",
+      "Mastering Influencer Marketing: The Critical Role of Creator Partnerships in MENA",
     description:
-      "Missing a single regulatory update can mean delayed product launches and risks to patient safety. Meet Qalico — Ditto's specialized compliance monitoring engine built for life sciences.",
+      "Choosing the wrong creator can mean wasted budget and brand risk. Meet the Maroc 360 framework for vetting, briefing, and measuring influencers across the MENA region.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/69cb8a1a3cd9022dfcea8b8c_1768810480327.jpeg",
     imageAlt:
-      "Qalico by Ditto – Global Regulatory Monitoring for Biotech and Medtech ISO Compliance",
-    href: "/en/resources/blog/mastering-iso-compliance-biotech-medtech",
-    category: "Other",
+      "Maroc 360 – Influencer Marketing Playbook for the MENA region",
+    href: "/en/resources/blog/influencer-marketing-mena-playbook",
+    category: "Creator",
   },
   {
     title:
-      "CDP: definition, purpose, how it works, and why it matters for companies",
+      "Meta Ads: definition, purpose, and how to make them work in 2026",
     description:
-      "In this article, we explain the Carbon Disclosure Project (CDP), how it works in 2026, and the key levers to improve your score.",
+      "In this article, we break down Meta Ads in 2026—how the auction works, where the best opportunities are, and the levers that move your cost per result.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/694c04c336a030107a9b3ba3_asset_article_13.avif",
-    imageAlt: "CDP – Carbon Disclosure Project",
-    href: "/en/resources/blog/cdp-definition-purpose",
-    category: "CDP",
+    imageAlt: "Meta Ads in 2026 – auction, audiences, and creative",
+    href: "/en/resources/blog/meta-ads-2026",
+    category: "Paid Media",
   },
   {
-    title: "CSR Assessment: Understand, Measure and Structure Your CSR Strategy",
+    title: "Brand Identity: How to Build a Brand Moroccan Consumers Trust",
     description:
-      "A CSR assessment helps measure the maturity and structure of a company's CSR approach. This article explains key pillars, indicators and CSR maturity levels to move from an intuitive approach to a structured, well-managed CSR strategy.",
+      "A strong brand identity helps you stand out in a crowded market. This article explains the pillars of brand work, from positioning and naming to visual identity and voice.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/695d0b0a2c306512ed87e240_ditto_better_businesses_illustration_2%20-%20Grande.avif",
-    imageAlt: "Illustration explaining CSR assessment and CSR maturity in companies",
-    href: "/en/resources/blog/csr-assessment",
-    category: "Blog",
+    imageAlt: "Illustration explaining brand identity, positioning, and visual systems",
+    href: "/en/resources/blog/brand-identity-morocco",
+    category: "Branding",
   },
   {
-    title: "Carbon Footprint in Business: A Step-by-Step Guide",
+    title: "Content Marketing in Morocco: A Step-by-Step Guide",
     description:
-      "Discover practical advice for measuring and reducing your GHG emissions step by step, from data collection to action planning.",
+      "Discover a practical framework for planning, producing, and distributing content that earns attention, ranks on search, and converts—built for the Moroccan market.",
     image:
       "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6942d63b10ef5124dfea78d7_ditto_better_world_illustration_6%20-%20Grande.avif",
-    imageAlt: "Carbon Footprint in Business",
-    href: "/en/resources/blog/company-carbon-footprint-step-by-step",
-    category: "Blog",
+    imageAlt: "Content marketing in Morocco – planning, production, and distribution",
+    href: "/en/resources/blog/content-marketing-morocco",
+    category: "Content",
   },
 ];
 
@@ -125,10 +125,10 @@ export default function BlogPage() {
             <ol className="flex items-center gap-2 text-sm text-text-secondary">
               <li>
                 <Link
-                  href="/en/resources"
+                  href="/en"
                   className="hover:text-text-primary transition-colors"
                 >
-                  Resources
+                  Home
                 </Link>
               </li>
               <li aria-hidden>/</li>

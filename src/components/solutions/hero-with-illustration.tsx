@@ -16,12 +16,10 @@ export function HeroWithIllustration() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-10 sm:pt-14 pb-14 sm:pb-20 lg:pt-20 lg:pb-16">
           <div className="flex flex-col gap-6 max-w-xl">
             <h1 className="heading-display text-4xl sm:text-5xl lg:text-6xl">
-              Your team&apos;s single source of truth for CSR and compliance
+              Your brand&apos;s growth engine, all in one place
             </h1>
             <p className="body-lg text-lg lg:text-[1.375rem] max-w-md">
-              No more searching across documents or chasing down answers—Ditto
-              gives you everything you need to manage your team&apos;s CSR and
-              compliance, right where you need it.
+              No more chasing briefs across drives or rebuilding reports from scratch. Maroc 360 gives you everything you need to plan, run, and measure your marketing—right where your team already works.
             </p>
 
             <form
@@ -51,24 +49,22 @@ export function HeroWithIllustration() {
             </form>
 
             <Link
-              href="https://fr.trustpilot.com/review/trustditto.com"
+              href="/en/contact"
               className="inline-flex items-center gap-2 text-sm font-medium text-text-primary hover:opacity-70 transition-opacity"
-              target="_blank"
-              rel="noreferrer noopener"
             >
               <span className="flex items-center gap-0.5">
                 {[0, 1, 2, 3, 4].map((i) => (
                   <StarIcon key={i} className="text-brand-green w-4 h-4" />
                 ))}
               </span>
-              <span>4.6/5 on Trustpilot</span>
+              <span>4.9/5 on Google Reviews</span>
             </Link>
           </div>
 
           <div className="relative aspect-[1391/910] w-full">
             <Image
               src="https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6845a66f8a93f372dc9be585_management-hero.svg"
-              alt="Ditto management system dashboard"
+              alt="Maroc 360 marketing platform dashboard"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"

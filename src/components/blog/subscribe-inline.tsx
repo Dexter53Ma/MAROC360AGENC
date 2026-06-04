@@ -20,7 +20,7 @@ export function SubscribeInline() {
         className="flex flex-col sm:flex-row items-stretch gap-3 sm:items-center"
       >
         <p className="flex-1 text-sm text-text-primary">
-          Practical CSR insights—tools, studies, and templates, in your inbox
+          Digital marketing insights—playbooks, case studies, and trend reports, in your inbox
         </p>
         <div className="flex flex-col sm:flex-row items-stretch gap-2 sm:flex-1 sm:max-w-md">
           <input

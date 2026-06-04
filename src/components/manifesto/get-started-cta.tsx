@@ -6,14 +6,13 @@ export function GetStartedCta() {
       <div className="container-page">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-md text-balance">
-            Ready to get compliant? Ditto.
+            Ready to grow? Maroc 360.
           </h2>
           <div className="flex flex-col gap-6 md:items-start">
             <p className="body-lg md:text-left">
-              Turn your CSR program into a strategic advantage with a compliance
-              copilot that&apos;s with you every step of the way.
+              Let&apos;s build a marketing engine that turns your brand into a market leader in Morocco and beyond.
             </p>
-            <LinkButton href="/en/get-started" variant="primary" size="md">
+            <LinkButton href="/en/contact" variant="primary" size="md">
               Get Started
             </LinkButton>
           </div>

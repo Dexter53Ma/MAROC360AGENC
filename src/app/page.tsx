@@ -14,40 +14,40 @@ import { Footer } from "@/components/footer";
 
 const features = [
   {
-    eyebrow: "Management system",
-    title: "An AI-powered central place for all your CSR knowledge",
+    eyebrow: "Marketing platform",
+    title: "One workspace for every campaign, channel, and result",
     description:
-      "Ditto is a single source of truth for your team's CSR and compliance data, so you can easily search, collaborate, and improve over time.",
+      "Maroc 360 is the single source of truth for your marketing. Briefs, assets, KPIs, and reports all live in one place, so your team spends less time chasing files and more time shipping work that grows the brand.",
     href: "/en/solutions/management-system",
     image: "/images/features/management-system.avif",
-    imageAlt: "Management system illustration",
+    imageAlt: "Marketing platform illustration",
   },
   {
-    eyebrow: "Questionnaire automation",
-    title: "Answer questionnaires and RFPs automatically",
+    eyebrow: "Performance reporting",
+    title: "Reports your CMO actually wants to read",
     description:
-      "Ditto organizes your data and our AI assistants generate answers from your knowledge base to pre-fill questionnaires, forms, and RFPs, all with just the click of a button.",
-    href: "/en/solutions/compliance-questionnaires",
+      "Maroc 360 pulls data from every channel and turns it into clean, weekly performance reports. Spend less time in spreadsheets and more time making decisions that move the needle.",
+    href: "/en/solutions/management-system",
     image: "/images/features/questionnaire-automation.avif",
-    imageAlt: "Questionnaire automation illustration",
+    imageAlt: "Performance reporting illustration",
   },
   {
-    eyebrow: "AI and embedded intelligence",
-    title: "Ask Ditto for insights and areas to improve",
+    eyebrow: "AI-assisted creative",
+    title: "Brief, generate, and iterate in hours, not weeks",
     description:
-      "Ditto uses AI to understand your unique data in the context of industry best practices and frameworks, so it can answer questions and surface recommendations proactively.",
-    href: "/en/solutions/ai-solutions",
+      "Our strategists and creative leads use AI to draft concepts, audience angles, and copy faster—so you get more tested ideas, sharper messaging, and campaigns that launch sooner.",
+    href: "/en/solutions/management-system",
     image: "/images/features/ai-embedded.avif",
-    imageAlt: "AI and embedded intelligence illustration",
+    imageAlt: "AI-assisted creative illustration",
   },
   {
-    eyebrow: "Supplier engagement",
-    title: "Help your partners extend your impact",
+    eyebrow: "Creator partnerships",
+    title: "Tap into Morocco's top creators and media partners",
     description:
-      "Your partners are a reflection of your business. Help them become their best with improved CSR practices and ratings.",
-    href: "/en/solutions/supplier-engagement",
+      "Your brand is shaped by the partners you choose. We connect you with vetted influencers, publishers, and media partners across Morocco and the MENA region to extend your reach authentically.",
+    href: "/en/solutions/management-system",
     image: "/images/features/supplier-engagement.avif",
-    imageAlt: "Supplier engagement illustration",
+    imageAlt: "Creator partnerships illustration",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function HomePage() {
         <IntroSection />
         {features.map((feature, i) => (
           <FeatureSection
-            key={feature.href}
+            key={feature.eyebrow}
             feature={feature}
             eager={i === 0}
           />

@@ -16,16 +16,16 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Ditto is the all-in-one tool that enables us to turn our CSR compliance into a competitive advantage.",
+      "Maroc 360 is the all-in-one team that turned our marketing into a real growth engine. We finally know what's working and why.",
     name: "Souraya Bouri",
-    role: "Group CSR Manager",
+    role: "Group Marketing Director",
     avatar: "/images/testimonials/avatar-1.avif",
   },
   {
     quote:
-      "A big thank you to Ditto. Their platform enables us with skill and passion for helping us strive for quality, solutions, and requests. We have nothing but praise for this exceptional tool.",
+      "A big thank you to the Maroc 360 team. Their strategists, creatives, and media buyers bring skill and passion to every project. We have nothing but praise for them.",
     name: "Robert",
-    role: "Procurement Manager",
+    role: "Head of Brand",
     avatar: "/images/testimonials/avatar-2.avif",
   },
 ];
@@ -65,11 +65,10 @@ export function CustomersCarousel() {
       <div className="container-page">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-3">
-            Hear it from our customers
+            Hear it from our clients
           </h2>
           <p className="text-base text-text-secondary max-w-2xl mx-auto">
-            Customers of all sizes love Ditto for its simplicity, smarts, and
-            impact, above all.
+            Brands of all sizes choose Maroc 360 for our creativity, our discipline, and the measurable growth we deliver.
           </p>
         </div>
       </div>

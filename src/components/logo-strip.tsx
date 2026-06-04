@@ -10,15 +10,15 @@ interface Logo {
 }
 
 const logos: Logo[] = [
-  { name: "Niedax", src: "/images/logos/niedax.png", href: "#", caseStudy: true },
-  { name: "Adenes", src: "/images/logos/adenes.png", href: "#", caseStudy: true },
-  { name: "Aico Ltd", src: "/images/logos/aico.avif", href: "#" },
-  { name: "Émile Maurin", src: "/images/logos/maurin.avif", href: "#" },
-  { name: "FERCO", src: "/images/logos/ferco.avif", href: "#" },
-  { name: "Superga Beauty", src: "/images/logos/superga.svg", href: "#" },
-  { name: "YESSS", src: "/images/logos/yesss.avif", href: "#" },
-  { name: "Stelliant", src: "/images/logos/stelliant.avif", href: "#" },
-  { name: "ECS Group", src: "/images/logos/ecs.avif", href: "#" },
+  { name: "Niedax", src: "/images/logos/niedax.png", href: "/en/resources/blog", caseStudy: true },
+  { name: "Adenes", src: "/images/logos/adenes.png", href: "/en/resources/blog", caseStudy: true },
+  { name: "Aico Ltd", src: "/images/logos/aico.avif", href: "/en/resources/blog" },
+  { name: "Émile Maurin", src: "/images/logos/maurin.avif", href: "/en/resources/blog" },
+  { name: "FERCO", src: "/images/logos/ferco.avif", href: "/en/resources/blog" },
+  { name: "Superga Beauty", src: "/images/logos/superga.svg", href: "/en/resources/blog" },
+  { name: "YESSS", src: "/images/logos/yesss.avif", href: "/en/resources/blog" },
+  { name: "Stelliant", src: "/images/logos/stelliant.avif", href: "/en/resources/blog" },
+  { name: "ECS Group", src: "/images/logos/ecs.avif", href: "/en/resources/blog" },
 ];
 
 export function LogoStrip() {
@@ -26,7 +26,7 @@ export function LogoStrip() {
     <section className="section-y">
       <div className="container-page">
         <h2 className="heading-display text-2xl md:text-3xl text-center max-w-2xl mx-auto mb-10">
-          Join 500+ companies managing their compliance with Ditto
+          Trusted by 100+ brands across Morocco and beyond
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-8 items-center justify-items-center">

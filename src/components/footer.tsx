@@ -8,51 +8,37 @@ import { LinkButton } from "@/components/button";
 
 const columns = [
   {
-    title: "EcoVadis",
+    title: "Services",
     links: [
-      { label: "EcoVadis platform", href: "/en/frameworks/ecovadis" },
-      { label: "EcoVadis score", href: "/en/frameworks/ecovadis/score" },
-      { label: "EcoVadis medals", href: "/en/frameworks/ecovadis/medals" },
-    ],
-  },
-  {
-    title: "ISO 14001",
-    links: [
-      { label: "ISO 14001 certification", href: "/en/frameworks/iso-14001" },
-      { label: "ISO 14001 requirements", href: "/en/frameworks/iso-14001/requirements" },
-    ],
-  },
-  {
-    title: "CDP",
-    links: [
-      { label: "CDP climate change", href: "/en/frameworks/cdp" },
-      { label: "CDP disclosure", href: "/en/frameworks/cdp/disclosure" },
-    ],
-  },
-  {
-    title: "CSRD / VSME",
-    links: [
-      { label: "CSRD compliance", href: "/en/frameworks/csrd" },
-      { label: "VSME standard", href: "/en/frameworks/vsme" },
-      { label: "Double materiality", href: "/en/frameworks/csrd/double-materiality" },
+      { label: "Strategy & Planning", href: "/en/solutions/management-system" },
+      { label: "Paid Media", href: "/en/solutions/management-system" },
+      { label: "SEO & Content", href: "/en/solutions/management-system" },
+      { label: "Social Media", href: "/en/solutions/management-system" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "Management system", href: "/en/solutions/management-system" },
-      { label: "Compliance questionnaires", href: "/en/solutions/compliance-questionnaires" },
-      { label: "AI solutions", href: "/en/solutions/ai-solutions" },
-      { label: "Supplier engagement", href: "/en/solutions/supplier-engagement" },
+      { label: "Marketing Platform", href: "/en/solutions/management-system" },
+      { label: "Performance Tracking", href: "/en/solutions/management-system" },
+      { label: "Creative Studio", href: "/en/solutions/management-system" },
+    ],
+  },
+  {
+    title: "Industries",
+    links: [
+      { label: "E-commerce", href: "/en/solutions/management-system" },
+      { label: "Hospitality & Travel", href: "/en/solutions/management-system" },
+      { label: "Real Estate", href: "/en/solutions/management-system" },
+      { label: "Professional Services", href: "/en/solutions/management-system" },
     ],
   },
   {
     title: "Resources",
     links: [
       { label: "Blog", href: "/en/resources/blog" },
-      { label: "Guides", href: "/en/resources/guides" },
-      { label: "News", href: "/en/resources/news" },
-      { label: "Customer stories", href: "/en/customer-stories" },
+      { label: "Case Studies", href: "/en/resources/blog" },
+      { label: "Guides", href: "/en/resources/blog" },
     ],
   },
   {
@@ -85,7 +71,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="body-lg max-w-md">
-              Practical CSR insights — tools, studies, and templates, in your inbox.
+              Digital marketing insights—playbooks, case studies, and trend reports, in your inbox.
             </p>
             <form
               onSubmit={(e) => {
@@ -114,7 +100,7 @@ export function Footer() {
             )}
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-8">
             {columns.map((col) => (
               <div key={col.title} className="flex flex-col gap-3">
                 <h4 className="font-semibold text-sm uppercase tracking-wide">
@@ -122,7 +108,7 @@ export function Footer() {
                 </h4>
                 <ul className="flex flex-col gap-2">
                   {col.links.map((link) => (
-                    <li key={link.href}>
+                    <li key={`${link.href}-${link.label}`}>
                       <Link
                         href={link.href}
                         className="text-sm text-text-secondary hover:text-text-primary transition-colors"
@@ -139,30 +125,30 @@ export function Footer() {
 
         <div className="border-t border-text-primary/10 pt-6 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-sm text-text-secondary">
-            © 2026 Ditto — All rights reserved
+            © 2026 Maroc 360 Agency — All rights reserved
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="/en/legal"
+              href="/en/contact"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
-              Legal
+              Contact
             </Link>
             <Link
-              href="/en/privacy"
+              href="/en/contact"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
               Privacy
             </Link>
             <Link
-              href="/en/terms"
+              href="/en/contact"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
               Terms
             </Link>
             <Link
-              href="https://www.linkedin.com/company/trustditto"
-              aria-label="Ditto on LinkedIn"
+              href="/en/contact"
+              aria-label="Maroc 360 Agency on LinkedIn"
               className="text-text-primary hover:opacity-70 transition-opacity"
             >
               <LinkedIn20 />

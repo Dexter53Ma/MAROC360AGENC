@@ -33,12 +33,10 @@ export function CopilotsCta() {
               Careers
             </p>
             <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-6 text-balance">
-              We&apos;re all copilots on this journey
+              We&apos;re all builders on this journey
             </h2>
             <p className="text-base md:text-lg text-text-primary/80 leading-relaxed mb-8">
-              This work is about building better together—and that starts with
-              our team. If you want to work on the future of sustainable
-              business, we&apos;d love to hear from you.
+              Great marketing comes from great people. If you want to help shape how Morocco&apos;s brands grow, we&apos;d love to hear from you.
             </p>
             <LinkButton href="/en/careers" variant="primary" size="md">
               Explore open roles

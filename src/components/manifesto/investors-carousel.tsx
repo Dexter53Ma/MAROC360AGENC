@@ -34,11 +34,10 @@ export function InvestorsCarousel() {
       <div className="container-page">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-2">
-            Our investors
+            Backed by great partners
           </h2>
           <p className="text-sm text-text-secondary">
-            Partnership is in our DNA and we&apos;re proud to work with many of
-            the best.
+            Partnership is in our DNA and we&apos;re proud to work with many of the best.
           </p>
         </div>
       </div>

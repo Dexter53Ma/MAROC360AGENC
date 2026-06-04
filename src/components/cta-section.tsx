@@ -32,11 +32,10 @@ export function CtaSection() {
 
           <div className="relative flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
             <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl">
-              Ready to get compliant? Ditto.
+              Ready to grow? Maroc 360.
             </h2>
             <p className="body-lg">
-              Turn your CSR program into a strategic advantage with a compliance copilot that&apos;s with you
-              every step of the way.
+              Let&apos;s build a marketing engine that turns your brand into a market leader in Morocco and beyond.
             </p>
             <form
               onSubmit={(e) => {

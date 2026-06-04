@@ -16,13 +16,13 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Maroc 360 Agency | Your CSR copilot",
+  title: "Maroc 360 Agency | Your 360° digital marketing partner in Morocco",
   description:
-    "Maroc 360 Agency empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
+    "Maroc 360 Agency is a full-service digital marketing agency based in Morocco. We help brands grow with strategy, creative, paid media, SEO, social, and content that delivers measurable results.",
   openGraph: {
-    title: "Maroc 360 Agency | Your CSR copilot",
+    title: "Maroc 360 Agency | Your 360° digital marketing partner in Morocco",
     description:
-      "Maroc 360 Agency empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
+      "Maroc 360 Agency is a full-service digital marketing agency based in Morocco. We help brands grow with strategy, creative, paid media, SEO, social, and content that delivers measurable results.",
     images: [
       {
         url: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77bec4f672c42ac4d5_open-graph.jpg",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maroc 360 Agency | Your CSR copilot",
+    title: "Maroc 360 Agency | Your 360° digital marketing partner in Morocco",
     description:
-      "Maroc 360 Agency empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
+      "Maroc 360 Agency is a full-service digital marketing agency based in Morocco. We help brands grow with strategy, creative, paid media, SEO, social, and content that delivers measurable results.",
   },
   icons: {
     icon: [
