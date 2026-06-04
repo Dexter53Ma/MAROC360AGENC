@@ -140,14 +140,14 @@ export function Navbar() {
       <div className="container-page">
         <div className="h-20 flex items-center justify-between gap-6">
           <Link href="/en" className="flex items-center" aria-label="Maroc 360 Agency home">
-            <div className="h-16 w-[160px] bg-white rounded-lg px-2 flex items-center justify-center">
+            <div className="relative h-16 w-[130px]">
               <Image
                 src="/brand/maroc360-logo.png"
                 alt="Maroc 360 Agency"
                 width={533}
                 height={433}
                 priority
-                className="h-14 w-auto object-contain"
+                className="absolute inset-0 w-full h-full object-contain object-bottom-left"
               />
             </div>
           </Link>
