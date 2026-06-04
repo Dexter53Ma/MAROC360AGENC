@@ -1,0 +1,45 @@
+{
+  "pill": {
+    "rect": {
+      "x": 0,
+      "y": 5127.875,
+      "width": 375,
+      "height": 288.46875,
+      "top": 5127.875,
+      "right": 375,
+      "bottom": 5416.34375,
+      "left": 0
+    },
+    "styles": {
+      "width": "375px",
+      "height": "288.469px",
+      "border": "0px none rgb(19, 14, 48)",
+      "display": "block",
+      "position": "relative",
+      "overflow": "clip"
+    }
+  },
+  "wrapper": {
+    "rect": {
+      "x": 16,
+      "y": 5223.875,
+      "width": 343,
+      "height": 192.46875,
+      "top": 5223.875,
+      "right": 359,
+      "bottom": 5416.34375,
+      "left": 16
+    },
+    "classes": "pill-illus_wrapper",
+    "styles": {
+      "width": "343px",
+      "height": "192.469px",
+      "borderRadius": "390px",
+      "border": "1px solid rgb(19, 14, 48)",
+      "display": "block",
+      "position": "relative",
+      "overflow": "visible",
+      "aspectRatio": "69.5 / 39"
+    }
+  }
+}

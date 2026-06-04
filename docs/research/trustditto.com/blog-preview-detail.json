@@ -1,0 +1,97 @@
+{
+  "h2": "Learn more about Ditto & AI-powered CSR compliance",
+  "cards": [
+    {
+      "text": "ESG: Definition, Criteria and ChallengesESG: Definition, Criteria and ChallengesESG — Environment, Social, Governance — structures the sustainable transformation of companies. It encompasses the pract",
+      "classes": "card-image",
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "padding": "24px",
+        "width": "411px",
+        "height": "534.781px",
+        "maxWidth": "416px",
+        "display": "flex",
+        "flexDirection": "column",
+        "borderRadius": "24px",
+        "border": "0px none rgb(19, 14, 48)",
+        "position": "relative",
+        "opacity": "1",
+        "backgroundColor": "rgb(232, 235, 217)",
+        "background": "rgb(232, 235, 217) none repeat scroll 0% 0% / auto padding-box border-box",
+        "transition": "0.25s ease-in-out",
+        "overflow": "visible"
+      }
+    },
+    {
+      "text": "",
+      "classes": "card-image_thumbnail",
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "width": "363px",
+        "height": "242px",
+        "display": "block",
+        "flexDirection": "row",
+        "borderRadius": "24px",
+        "border": "0px none rgb(19, 14, 48)",
+        "position": "relative",
+        "opacity": "1",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "transition": "all",
+        "overflow": "clip"
+      }
+    },
+    {
+      "text": "ESG: Definition, Criteria and ChallengesESG: Definition, Criteria and ChallengesESG — Environment, Social, Governance — structures the sustainable transformation of companies. It encompasses the pract",
+      "classes": "card-image_content",
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "width": "363px",
+        "height": "244.781px",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start",
+        "border": "0px none rgb(19, 14, 48)",
+        "position": "static",
+        "opacity": "1",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "transition": "all",
+        "overflow": "visible"
+      }
+    },
+    {
+      "text": "ESG: Definition, Criteria and ChallengesESG: Definition, Criteria and Challenges",
+      "classes": "card-image_link_wrapper",
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "width": "363px",
+        "height": "76.7812px",
+        "display": "block",
+        "flexDirection": "row",
+        "border": "0px none rgb(19, 14, 48)",
+        "position": "static",
+        "opacity": "1",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "transition": "all",
+        "overflow": "visible"
+      }
+    }
+  ],
+  "structure": "<section class=\"blog-preview_section\"><div class=\"padding-global\"><div data-wf--padding--space=\"small-3rem\" class=\"spacer-component\"></div><div class=\"container-48rem\"><div class=\"header\"><h2 class=\"heading-size-3rem\">Learn more about Ditto &amp; AI-powered CSR compliance</h2></div></div><div class=\"spacer-3rem\"></div><div class=\"container-84rem\"><div class=\"blog_list_wrapper w-dyn-list\"><div role=\"list\" class=\"blog_list w-dyn-items\"><div role=\"listitem\" class=\"blog-preview_item w-dyn-item\"><div class=\"card-image\"><div class=\"card-image_thumbnail\"><img alt=\"Infographic showing the three ESG pillars: Environment, Social, Governance\" src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a1850c71817ffd03370ffa3_new_better_businesses_illustration_10.png\" loading=\"lazy\" class=\"media-full-size\"></div><div class=\"card-image_content\"><div class=\"spacer-1x5rem spacer-mob-1rem\"></div><p fs-list-field=\"\" class=\"label w-dyn-bind-empty\"></p><div class=\"spacer-0x75rem\"></div><div class=\"card-image_link_wrapper\"><a fs-list-field=\"title\" href=\"/en/resources/blog/esg-definition-criteria-challenges\" class=\"heading-size-2rem link-hover-parent\">ESG: Definition, Criteria and Challenges</a><a fs-list-field=\"title\" href=\"#\" class=\"heading-size-2rem link-hover-parent w-condition-invisible\">ESG: Definition, Criteria and Challenges</a></div><div class=\"spacer-0x75rem\"></div><p fs-list-field=\"desc\" class=\"text-size-1rem\">ESG — Environment, Social, Governance — structures the sustainable tra"
+}

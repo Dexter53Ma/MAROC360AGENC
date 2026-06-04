@@ -1,0 +1,98 @@
+{
+  "primaryBtn": {
+    "classes": "button w-inline-block",
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.32px",
+      "color": "rgb(239, 242, 229)",
+      "padding": "12px 22px",
+      "width": "126.141px",
+      "height": "48px",
+      "maxWidth": "100%",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "gap": "8px",
+      "borderRadius": "1440px",
+      "border": "2px solid rgb(0, 0, 0)",
+      "position": "static",
+      "opacity": "1",
+      "backgroundColor": "rgb(19, 14, 48)",
+      "background": "rgb(19, 14, 48) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "background-color 0.2s ease-in-out",
+      "cursor": "pointer"
+    }
+  },
+  "secondaryBtn": {
+    "classes": "button w-variant-65493725-7ae1-e50b-73f7-cdb2cb7a8365 w-inline-block",
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.32px",
+      "color": "rgb(19, 14, 48)",
+      "padding": "12px 22px",
+      "width": "89.375px",
+      "height": "48px",
+      "maxWidth": "100%",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "gap": "8px",
+      "borderRadius": "1440px",
+      "border": "2px solid rgb(255, 226, 40)",
+      "position": "static",
+      "opacity": "1",
+      "backgroundColor": "rgb(255, 226, 40)",
+      "background": "rgb(255, 226, 40) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "background-color 0.2s ease-in-out",
+      "cursor": "pointer"
+    }
+  },
+  "cardIcon": {
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "padding": "24px",
+      "width": "416px",
+      "height": "292.891px",
+      "display": "flex",
+      "flexDirection": "column",
+      "borderRadius": "24px",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "static",
+      "opacity": "1",
+      "backgroundColor": "rgb(232, 235, 217)",
+      "background": "rgb(232, 235, 217) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  },
+  "cardIconWrapper": {
+    "classes": "carousel_slide splide__slide width-26rem splide__slide--clone",
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "width": "416px",
+      "height": "292.891px",
+      "display": "flex",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "relative",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  }
+}

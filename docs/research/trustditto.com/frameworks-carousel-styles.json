@@ -1,0 +1,74 @@
+{
+  "sec": {
+    "rect": {
+      "x": 0,
+      "y": -0.46875,
+      "width": 1425,
+      "height": 528.078125,
+      "top": -0.46875,
+      "right": 1425,
+      "bottom": 527.609375,
+      "left": 0
+    },
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "width": "1425px",
+      "height": "528.078px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "relative",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all",
+      "overflow": "clip"
+    }
+  },
+  "h2": {
+    "text": "Get compliant four times faster",
+    "styles": {
+      "fontSize": "48px",
+      "fontWeight": "400",
+      "fontFamily": "\"Hedvig Letters Serif\", \"Times New Roman\", sans-serif",
+      "lineHeight": "55.2px",
+      "letterSpacing": "-0.48px",
+      "color": "rgb(19, 14, 48)",
+      "width": "1329px",
+      "height": "55.1875px",
+      "display": "flex",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "static",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all",
+      "overflow": "visible"
+    }
+  },
+  "tabs": [],
+  "track": {
+    "classes": "carousel_track splide__track splide__track--loop splide__track--ltr splide__track--draggable",
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "width": "416px",
+      "height": "292.891px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "relative",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all",
+      "overflow": "visible"
+    }
+  },
+  "listChildren": 12
+}

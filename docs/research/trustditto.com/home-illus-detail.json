@@ -1,0 +1,20 @@
+{
+  "rect": {
+    "x": 16,
+    "y": 1573.25,
+    "width": 343,
+    "height": 178,
+    "top": 1573.25,
+    "right": 359,
+    "bottom": 1751.25,
+    "left": 16
+  },
+  "styles": {
+    "width": "343px",
+    "height": "178px",
+    "borderRadius": "48px",
+    "border": "1px solid rgb(19, 14, 48)",
+    "display": "block"
+  },
+  "structure": "<div class=\"home-illus_wrapper\"><img src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow.avif\" loading=\"lazy\" sizes=\"(max-width: 2016px) 100vw, 2016px\" srcset=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow-p-500.avif 500w, https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow-p-800.avif 800w, https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow-p-1080.avif 1080w, https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow-p-1600.avif 1600w, https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow.avif 2016w\" alt=\"\" class=\"home-illus_image\"></div>"
+}

@@ -1,0 +1,27 @@
+{
+  "filterPills": [],
+  "itemCount": 12,
+  "firstItem": {
+    "classes": "carousel_slide splide__slide width-26rem splide__slide--clone",
+    "text": "CSRDComply with CSRD requirements and prepare your sustainability report directly in Ditto",
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "margin": "0px 48px 0px 0px",
+      "width": "416px",
+      "height": "292.891px",
+      "display": "flex",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "relative",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all",
+      "overflow": "visible"
+    }
+  },
+  "sectionStructure": "<section data-wf--section-compliant-carousel--variant=\"base\" class=\"carousel_section\"><div class=\"padding-global\"><div data-wf--padding--space=\"medium-6rem\" class=\"spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c\"></div><div class=\"container-84rem\"><div class=\"max-width-32rem\"></div><h2 class=\"heading-size-3rem text-wrap-balance\">Get compliant four times faster</h2><div class=\"spacer-3rem\"></div><div splide-gap-mobile=\"1rem\" splide=\"carousel\" splide-direction=\"ltr\" splide-gap=\"3rem\" splide-interval=\"5000\" class=\"carousel_component\"><div class=\"carousel_splide_wrapper\"><div class=\"carousel_splide splide width-26rem gms-r5a65p is-overflow is-initialized splide--loop splide--ltr splide--draggable is-active\" id=\"splide01\" role=\"region\" aria-roledescription=\"carousel\"><div class=\"carousel_track splide__track splide__track--loop splide__track--ltr splide__track--draggable\" id=\"splide01-track\" style=\"padding-left: 0px; padding-right: 0px;\" aria-live=\"off\" aria-atomic=\"true\" aria-busy=\"true\"><div class=\"carousel_list splide__list gms-r5a65p\" id=\"splide01-list\" role=\"presentation\" style=\"transform: translateX(-2784px); transition: transform 750ms cubic-bezier(0.645, 0.045, 0.355, 1);\"><div class=\"carousel_slide splide__slide width-26rem splide__slide--clone\" id=\"splide01-clone01\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"1 of 4\" style=\"margin-right: 3rem;\" aria-hidden=\"true\"><div data-wf--card---icon--variant=\"primary\" class=\"card-icon\"><img src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed169cfc14d8e3135faa6_Csrd.avif\" loading=\"lazy\" alt=\"\" class=\"card-icon_image\"><div class=\"spacer-3rem spacer-mob-2rem\"></div><h3 class=\"heading-size-2rem\"><strong>CSRD</strong></h3><div class=\"spacer-0x75rem\"></div><p class=\"text-size-1x375rem\">Comply with CSRD requirements and prepare your sustainability report directly in Ditto</p><div class=\"spacer-auto\"></div></div></div><div class=\"carousel_slide splide__slide splide__slide--clone\" id=\"splide01-clone02\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"2 of 4\" style=\"margin-right: 3rem;\" aria-hidden=\"true\"><div data-wf--card---icon--variant=\"primary\" class=\"card-icon\"><img src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c26a35724770ef7a90_Ecovadis.avif\" loading=\"lazy\" alt=\"\" class=\"card-icon_image\"><div class=\"spacer-3rem spacer-mob-2rem\"></div><h3 class=\"heading-size-2rem\">EcoVadis</h3><div class=\"spacer-0x75rem\"></div><p class=\"text-size-1x375rem\">Structure your approach, prepare for the EcoVadis assessment, and earn the medal you deserve</p><div class=\"spacer-auto\"></div></div></div><div class=\"carousel_slide splide__slide splide__slide--clone is-active\" id=\"splide01-clone03\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"3 of 4\" style=\"margin-right: 3rem;\" aria-hidden=\"true\"><div data-wf--card---icon--variant=\"primary\" class=\"card-icon\"><img src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c27d430a77816d3240_Iso.avif\" loading=\"lazy\" alt=\"\" class=\"card-icon_image\"><div class=\"spacer-3rem spacer-mob-2rem\"></div><h3 class=\"heading-size-2rem\">ISO</h3><div class=\"spacer-0x75rem\"></div><p class=\"text-size-1x375rem\">Organize all of your audit info and prepare your ISO certifications for 14001, 45001, and 50001</p><div class=\"spacer-auto\"></div></div></div><div class=\"carousel_slide splide__slide splide__slide--clone\" id=\"splide01-clone04\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"4 of 4\" style=\"margin-right: 3rem;\" aria-hidden=\"true\"><div data-wf--card---icon--variant=\"primary\" class=\"card-icon\"><img src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c2ab419262c58ece95_Cdp.avif\" loading=\"lazy\" alt=\"\" class=\"card-icon_image\"><div class=\"spacer-3rem spacer-mob-2rem\"></div><h3 class=\"heading-size-2rem\">CDP</h3><div class=\"spacer-0x75rem\"></div><p class=\"text-size-1x375rem\">Get your best score by taking&nbsp;&nbsp;advantage of Ditto's structure and expertise for the CDP"
+}

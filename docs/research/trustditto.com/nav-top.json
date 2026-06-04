@@ -1,0 +1,16 @@
+{
+  "atTop": {
+    "y": 0,
+    "styles": {
+      "position": "sticky",
+      "backgroundColor": "rgb(239, 242, 229)",
+      "height": "80.1562px",
+      "zIndex": "1000",
+      "transition": "all",
+      "borderBottom": "0px none rgb(19, 14, 48)",
+      "borderBottomColor": "rgb(19, 14, 48)",
+      "width": "1425px"
+    }
+  },
+  "navClasses": "navbar1 w-nav"
+}

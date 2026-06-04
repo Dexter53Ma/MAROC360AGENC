@@ -1,0 +1,13 @@
+{
+  "atScrolled": {
+    "y": 500,
+    "styles": {
+      "position": "sticky",
+      "backgroundColor": "rgb(239, 242, 229)",
+      "height": "80.1562px",
+      "zIndex": "1000",
+      "transition": "all",
+      "borderBottom": "0px none rgb(19, 14, 48)"
+    }
+  }
+}

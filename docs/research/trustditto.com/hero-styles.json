@@ -1,0 +1,143 @@
+{
+  "hero": {
+    "rect": {
+      "x": 0,
+      "y": 0.15625,
+      "width": 1425,
+      "height": 564,
+      "top": 0.15625,
+      "right": 1425,
+      "bottom": 564.15625,
+      "left": 0
+    },
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "width": "1425px",
+      "height": "564px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "relative",
+      "zIndex": "1",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  },
+  "h1": {
+    "text": "Get the CSR recognition you deserve",
+    "styles": {
+      "fontSize": "64px",
+      "fontWeight": "400",
+      "fontFamily": "\"Hedvig Letters Serif\", \"Times New Roman\", sans-serif",
+      "lineHeight": "64px",
+      "letterSpacing": "-0.64px",
+      "color": "rgb(19, 14, 48)",
+      "width": "532px",
+      "height": "192px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "static",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  },
+  "p": {
+    "text": "You're already doing the work. Ditto helps you prove it, on EcoVadis, CDP and other CSR frameworks.",
+    "styles": {
+      "fontSize": "22px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "27.5px",
+      "letterSpacing": "-0.44px",
+      "color": "rgb(19, 14, 48)",
+      "width": "532px",
+      "height": "55px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "static",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  },
+  "form": {
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "width": "406.141px",
+      "height": "56px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "static",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  },
+  "input": {
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.32px",
+      "color": "rgb(19, 14, 48)",
+      "padding": "0px 16px",
+      "paddingRight": "16px",
+      "paddingLeft": "16px",
+      "width": "272px",
+      "height": "48px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(0, 0, 0)",
+      "position": "static",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all",
+      "cursor": "text"
+    },
+    "placeholder": "name@company.com"
+  },
+  "button": {
+    "text": "Try Ditto",
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.32px",
+      "color": "rgb(239, 242, 229)",
+      "padding": "12px 22px",
+      "paddingTop": "12px",
+      "paddingRight": "22px",
+      "paddingBottom": "12px",
+      "paddingLeft": "22px",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "gap": "8px",
+      "borderRadius": "1440px",
+      "border": "2px solid rgb(0, 0, 0)",
+      "position": "static",
+      "opacity": "1",
+      "backgroundColor": "rgb(19, 14, 48)",
+      "background": "rgb(19, 14, 48) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "background-color 0.2s ease-in-out",
+      "cursor": "pointer",
+      "rowGap": "8px",
+      "columnGap": "8px"
+    }
+  }
+}

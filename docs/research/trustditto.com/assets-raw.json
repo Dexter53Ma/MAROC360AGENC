@@ -1,0 +1,868 @@
+{
+  "images": [
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77e73e672cfd2353a9_ditto-logo.svg",
+      "alt": "",
+      "width": 120,
+      "height": 32,
+      "classes": "",
+      "parent": "A.navbar_mobile-brand w-nav-brand w--current",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77e73e672cfd2353a9_ditto-logo.svg",
+      "alt": "",
+      "width": 120,
+      "height": 32,
+      "classes": "",
+      "parent": "A.navbar_brand w-inline-block w--current",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/68500999cd3a8053037167ae_lang-en.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "classes": "dropdown_lang_flag",
+      "parent": "DIV.navbar_dropdown-card-link w-locales-item",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685009a1f74b665277648e9c_lang-fr.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "classes": "dropdown_lang_flag",
+      "parent": "DIV.navbar_dropdown-card-link w-locales-item",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/69a7fb7319962df0c9f5adbc_trustpilot-2.svg",
+      "alt": "",
+      "width": 2500,
+      "height": 2378,
+      "classes": "",
+      "parent": "DIV.socialproof_item",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/69d4a872ab9543da2eb2b3d1_ditto-frameworks-hero-p-1600.jpg",
+      "alt": "",
+      "width": 1391,
+      "height": 910,
+      "classes": "hero_image",
+      "parent": "DIV.hero_image_wrapper w-variant-234d20b7-ade1-a378-0a62-2b94b0af6325",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a042ff6dc23785842acb469_Logo%20Niedax%20black.png",
+      "alt": "",
+      "width": 4500,
+      "height": 3108,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/699ecb20a76db01423b109bc_Logo%20Adenes%20black.png",
+      "alt": "",
+      "width": 4500,
+      "height": 3108,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dca577999e73c8d98f71b_Logo%20Aico%20Black.avif",
+      "alt": "",
+      "width": 4500,
+      "height": 3108,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dc8c9acf019fac90c1fbc_Logo-Groupe-MAURIN%201.avif",
+      "alt": "",
+      "width": 4500,
+      "height": 3000,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dccb1841dc81ef46dd7b7_FERCO-navigation-logo%201.avif",
+      "alt": "",
+      "width": 588,
+      "height": 198,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dc68c789cf9f20e6fd1ea_Superga%20Beauty.svg",
+      "alt": "",
+      "width": 558,
+      "height": 130,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dcdc4414d8c1395cba442_LOGO_YESSS%201.avif",
+      "alt": "",
+      "width": 1701,
+      "height": 681,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dcb6f63511d0a1940c6a5_Logo%20Stelliant%20black.avif",
+      "alt": "",
+      "width": 4500,
+      "height": 3108,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/692dce8b800a697604569485_ECS%20group.avif",
+      "alt": "",
+      "width": 4500,
+      "height": 3108,
+      "classes": "logostrip_item_image",
+      "parent": "DIV.logostrip_item_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed169cfc14d8e3135faa6_Csrd.avif",
+      "alt": "",
+      "width": 256,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c26a35724770ef7a90_Ecovadis.avif",
+      "alt": "",
+      "width": 442,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c27d430a77816d3240_Iso.avif",
+      "alt": "",
+      "width": 276,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c2ab419262c58ece95_Cdp.avif",
+      "alt": "",
+      "width": 343,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed169cfc14d8e3135faa6_Csrd.avif",
+      "alt": "",
+      "width": 256,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c26a35724770ef7a90_Ecovadis.avif",
+      "alt": "",
+      "width": 442,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c27d430a77816d3240_Iso.avif",
+      "alt": "",
+      "width": 276,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c2ab419262c58ece95_Cdp.avif",
+      "alt": "",
+      "width": 343,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed169cfc14d8e3135faa6_Csrd.avif",
+      "alt": "",
+      "width": 256,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c26a35724770ef7a90_Ecovadis.avif",
+      "alt": "",
+      "width": 442,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c27d430a77816d3240_Iso.avif",
+      "alt": "",
+      "width": 276,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ed1c2ab419262c58ece95_Cdp.avif",
+      "alt": "",
+      "width": 343,
+      "height": 256,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/685005b22e3569e38d4c485a_ditto_better_businesses_illustration_1_narrow-p-1600.avif",
+      "alt": "",
+      "width": 1440,
+      "height": 360,
+      "classes": "home-illus_image",
+      "parent": "DIV.home-illus_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682edf7009b9c94e92fe6873_10d2ad89fc937d48265e36de5d2cbddd_management-system-illus.avif",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "classes": "feature_image w-variant-4ebb32a8-1af6-b01a-98eb-4cf2c5559d60",
+      "parent": "DIV.feature_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee0558f40d350a3c7eea6_questionnaire-automation-illus.avif",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "classes": "feature_image w-variant-36516e33-6498-7739-c387-daf79718e851",
+      "parent": "DIV.feature_image_wrapper w-variant-36516e33-6498-7739-c387-daf79718e851",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee055de0944813d79bd87_ai-and-embedded-intelligence-illus.avif",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "classes": "feature_image",
+      "parent": "DIV.feature_image_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee05524a83de2f9bc8aaf_supplier-questionnaire-illus.avif",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "classes": "feature_image w-variant-36516e33-6498-7739-c387-daf79718e851",
+      "parent": "DIV.feature_image_wrapper w-variant-36516e33-6498-7739-c387-daf79718e851",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee40e21f304d2370b1de0_happy-business-meeting-team-laughing.avif",
+      "alt": "A group of professionals smiling and laughing during a casual business meeting near a window, with a bald man in glasses at the center of the image.",
+      "width": 0,
+      "height": 0,
+      "classes": "media-full-size",
+      "parent": "DIV.pill-illus_wrapper",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee6e02bc0625d098f75f6_proprietary-methodology.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee73125bd5f1a0649534f_Icon%201.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee731bb1e36ea15f9a2be_Icon%202.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee73169e8441ab81e63ec_Icon%205.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee732f7973ba1851de513_Icon%206.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee6e02bc0625d098f75f6_proprietary-methodology.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee73125bd5f1a0649534f_Icon%201.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee731bb1e36ea15f9a2be_Icon%202.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee73169e8441ab81e63ec_Icon%205.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee732f7973ba1851de513_Icon%206.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee6e02bc0625d098f75f6_proprietary-methodology.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee73125bd5f1a0649534f_Icon%201.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee731bb1e36ea15f9a2be_Icon%202.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee73169e8441ab81e63ec_Icon%205.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682ee732f7973ba1851de513_Icon%206.svg",
+      "alt": "",
+      "width": 64,
+      "height": 64,
+      "classes": "card-icon_image",
+      "parent": "DIV.card-icon",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d1dd54e8caaf4582513_image%20184.svg",
+      "alt": "",
+      "width": 288,
+      "height": 162,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68501082e841829eb6230fb4_sophie%20wardan.avif",
+      "alt": "",
+      "width": 800,
+      "height": 800,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d53b42be2ab3bf0e940_image%20182.svg",
+      "alt": "",
+      "width": 117,
+      "height": 117,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/685011fad75863ba0daabf4c_virginie%20caro.avif",
+      "alt": "",
+      "width": 200,
+      "height": 200,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d59fd017a7053f397ff_image%20185.svg",
+      "alt": "",
+      "width": 146,
+      "height": 34,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6850129d078bbc4227e6b0e2_laurence%20sauphanor.avif",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d2b7dbe6fa2c7a6bd4a_image%20186.svg",
+      "alt": "",
+      "width": 250,
+      "height": 110,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6850177eb543d8315a1cd935_camille%20nironi.avif",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d5fd246b3f9f5a26b86_Group%2015404.svg",
+      "alt": "",
+      "width": 126,
+      "height": 56,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/685013b3290c0b4c0a2d6c48_audrey%20evin.avif",
+      "alt": "",
+      "width": 800,
+      "height": 800,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d004edf686e13b05bb7_image%20179.svg",
+      "alt": "",
+      "width": 154,
+      "height": 69,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68501722e9aa5c36757119f6_icon.svg",
+      "alt": "",
+      "width": 256,
+      "height": 256,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d1dd54e8caaf4582513_image%20184.svg",
+      "alt": "",
+      "width": 288,
+      "height": 162,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68501082e841829eb6230fb4_sophie%20wardan.avif",
+      "alt": "",
+      "width": 800,
+      "height": 800,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d53b42be2ab3bf0e940_image%20182.svg",
+      "alt": "",
+      "width": 117,
+      "height": 117,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/685011fad75863ba0daabf4c_virginie%20caro.avif",
+      "alt": "",
+      "width": 200,
+      "height": 200,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d59fd017a7053f397ff_image%20185.svg",
+      "alt": "",
+      "width": 146,
+      "height": 34,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6850129d078bbc4227e6b0e2_laurence%20sauphanor.avif",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d2b7dbe6fa2c7a6bd4a_image%20186.svg",
+      "alt": "",
+      "width": 250,
+      "height": 110,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6850177eb543d8315a1cd935_camille%20nironi.avif",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d5fd246b3f9f5a26b86_Group%2015404.svg",
+      "alt": "",
+      "width": 126,
+      "height": 56,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/685013b3290c0b4c0a2d6c48_audrey%20evin.avif",
+      "alt": "",
+      "width": 800,
+      "height": 800,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d004edf686e13b05bb7_image%20179.svg",
+      "alt": "",
+      "width": 154,
+      "height": 69,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68501722e9aa5c36757119f6_icon.svg",
+      "alt": "",
+      "width": 256,
+      "height": 256,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d1dd54e8caaf4582513_image%20184.svg",
+      "alt": "",
+      "width": 288,
+      "height": 162,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68501082e841829eb6230fb4_sophie%20wardan.avif",
+      "alt": "",
+      "width": 800,
+      "height": 800,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d53b42be2ab3bf0e940_image%20182.svg",
+      "alt": "",
+      "width": 117,
+      "height": 117,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/685011fad75863ba0daabf4c_virginie%20caro.avif",
+      "alt": "",
+      "width": 200,
+      "height": 200,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d59fd017a7053f397ff_image%20185.svg",
+      "alt": "",
+      "width": 146,
+      "height": 34,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6850129d078bbc4227e6b0e2_laurence%20sauphanor.avif",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d2b7dbe6fa2c7a6bd4a_image%20186.svg",
+      "alt": "",
+      "width": 250,
+      "height": 110,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6850177eb543d8315a1cd935_camille%20nironi.avif",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d5fd246b3f9f5a26b86_Group%2015404.svg",
+      "alt": "",
+      "width": 126,
+      "height": 56,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/685013b3290c0b4c0a2d6c48_audrey%20evin.avif",
+      "alt": "",
+      "width": 800,
+      "height": 800,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68500d004edf686e13b05bb7_image%20179.svg",
+      "alt": "",
+      "width": 154,
+      "height": 69,
+      "classes": "card-testimonial_logo",
+      "parent": "DIV.card-testimonial",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/68501722e9aa5c36757119f6_icon.svg",
+      "alt": "",
+      "width": 256,
+      "height": 256,
+      "classes": "media-full-size",
+      "parent": "DIV.profile_image",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a1850c71817ffd03370ffa3_new_better_businesses_illustration_10.png",
+      "alt": "Infographic showing the three ESG pillars: Environment, Social, Governance",
+      "width": 0,
+      "height": 0,
+      "classes": "media-full-size",
+      "parent": "DIV.card-image_thumbnail",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a184a915f82cad90b79a145_ditto_better_world_illustration_6%20-%20Grande.jpeg",
+      "alt": "Definition and scope of corporate social responsibility in business",
+      "width": 0,
+      "height": 0,
+      "classes": "media-full-size",
+      "parent": "DIV.card-image_thumbnail",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6970ff9bf4ef80b4ce269d2b_ditto_better_businesses_illustration_7%20-%20Grande.jpeg",
+      "alt": "Illustration of a company integrating corporate social responsibility into its strategy",
+      "width": 0,
+      "height": 0,
+      "classes": "media-full-size",
+      "parent": "DIV.card-image_thumbnail",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77e73e672cfd2353a9_ditto-logo.svg",
+      "alt": "",
+      "width": 120,
+      "height": 32,
+      "classes": "",
+      "parent": "A.footer_linkblock w-inline-block w--current",
+      "loading": "lazy"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/69a7fb7319962df0c9f5adbc_trustpilot-2.svg",
+      "alt": "",
+      "width": 2500,
+      "height": 2378,
+      "classes": "",
+      "parent": "DIV.socialproof_item",
+      "loading": "lazy"
+    }
+  ],
+  "videos": [],
+  "backgroundImages": [
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label w-dyn-bind-empty"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label w-dyn-bind-empty"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d905d04518b67cfa677e6_label-bullet.svg",
+      "element": "P.label w-dyn-bind-empty"
+    }
+  ],
+  "svgCount": 22,
+  "inlineSvgs": [
+    488,
+    246,
+    488,
+    488,
+    1284
+  ]
+}

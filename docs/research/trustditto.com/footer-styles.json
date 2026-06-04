@@ -1,0 +1,159 @@
+{
+  "footer": {
+    "rect": {
+      "x": 0,
+      "y": -0.1875,
+      "width": 1425,
+      "height": 1160,
+      "top": -0.1875,
+      "right": 1425,
+      "bottom": 1159.8125,
+      "left": 0
+    },
+    "styles": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, Arial, sans-serif",
+      "lineHeight": "24px",
+      "color": "rgb(19, 14, 48)",
+      "width": "1425px",
+      "height": "1160px",
+      "display": "block",
+      "flexDirection": "row",
+      "border": "0px none rgb(19, 14, 48)",
+      "position": "relative",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "transition": "all"
+    }
+  },
+  "headings": [
+    {
+      "text": "Your CSR andcompliance copilot",
+      "tag": "P"
+    }
+  ],
+  "linkBlocks": [
+    {
+      "text": "",
+      "href": "/en"
+    },
+    {
+      "text": "4.6/5 on Trustpilot",
+      "href": "https://fr.trustpilot.com/review/trustditto.com"
+    },
+    {
+      "text": "",
+      "href": "https://www.linkedin.com/company/trustditto/"
+    },
+    {
+      "text": "English",
+      "href": "/en"
+    },
+    {
+      "text": "Français",
+      "href": "/fr"
+    },
+    {
+      "text": "Terms",
+      "href": "/en/legal/terms-and-conditions"
+    },
+    {
+      "text": "Privacy",
+      "href": "/en/legal/privacy-policy"
+    },
+    {
+      "text": "Legal notices",
+      "href": "/en/legal/legal-notices"
+    },
+    {
+      "text": "Ecovadis",
+      "href": "/en/frameworks/ecovadis"
+    },
+    {
+      "text": "CDP",
+      "href": "/en/frameworks/cdp"
+    },
+    {
+      "text": "CSRD",
+      "href": "/en/frameworks/csrd"
+    },
+    {
+      "text": "ISO 14001",
+      "href": "/en/frameworks/iso-14001"
+    },
+    {
+      "text": "Management System",
+      "href": "/en/solutions/management-system"
+    },
+    {
+      "text": "Compliance questionnaire",
+      "href": "/en/solutions/compliance-questionnaires"
+    },
+    {
+      "text": "Artificial Intelligence",
+      "href": "/en/solutions/ai-solutions"
+    },
+    {
+      "text": "Supplier Engagement",
+      "href": "/en/solutions/supplier-engagement"
+    },
+    {
+      "text": "SME",
+      "href": "/en/customer-stories?team-size_equal=100-250"
+    },
+    {
+      "text": "Large Companies",
+      "href": "/en/customer-stories?team-size_equal=1000-5000"
+    },
+    {
+      "text": "All Case Studies",
+      "href": "/en/customer-stories"
+    },
+    {
+      "text": "All",
+      "href": "/en/resources"
+    },
+    {
+      "text": "Blog",
+      "href": "/en/resources/blog"
+    },
+    {
+      "text": "News",
+      "href": "/en/resources/news"
+    },
+    {
+      "text": "Guides",
+      "href": "/en/resources/guides"
+    },
+    {
+      "text": "Events",
+      "href": "https://app.livestorm.co/trustditto?lang=en"
+    },
+    {
+      "text": "Manifesto",
+      "href": "/en/manifesto"
+    },
+    {
+      "text": "What is Corporate Social Responsibility?",
+      "href": "/en/resources/blog/corporate-social-responsibility-definition"
+    },
+    {
+      "text": "What is Corporate Social Responsibility?",
+      "href": "#"
+    },
+    {
+      "text": "What is CSR performance?",
+      "href": "/en/resources/blog/csr-performance"
+    },
+    {
+      "text": "What is CSR performance?",
+      "href": "#"
+    },
+    {
+      "text": "How to make the most of your CSR commitments — Lessons from ",
+      "href": "/en/resources/blog/csr-roundtable-lyon-commitments"
+    }
+  ],
+  "structure": "<footer class=\"footer\"><div class=\"padding-global\"><div data-wf--padding--space=\"none\" class=\"spacer-component w-variant-c5e33d14-e297-6cd7-2fd0-a5ca94b32941\"></div><div class=\"container-84rem\"><div class=\"footer_newsletter\"><p class=\"text-size-1rem text-weight-600 text-wrap-balance\">Practical CSR insights—tools, studies, and templates, in your inbox</p><div class=\"newsletter_form_wrapper w-form\"><form id=\"wf-form-newsletter\" name=\"wf-form-newsletter\" data-name=\"newsletter\" method=\"get\" data-webflow-hubspot-api-form-url=\"https://hubspotonwebflow.com/api/forms/451f1c81-d0aa-4730-bdf3-94b686c9bc79\" class=\"newsletter_form\" data-wf-page-id=\"682d7fad3c89203197a56f9b\" data-wf-element-id=\"54f2eeae-d0ed-b3d6-19a3-72190d8615e6\" data-wf-locale-id=\"682d7fad3c89203197a56fa8\" aria-label=\"newsletter\"><div class=\"newsletter_input_wrapper\"><input class=\"newsletter_input w-input\" data-wfhsfieldname=\"FormTextInput-2\" maxlength=\"256\" name=\"email\" data-name=\"email\" placeholder=\"name@company.com\" type=\"email\" id=\"email\" required=\"\" style=\"\"><input type=\"submit\" data-wait=\"Please wait...\" id=\"submit\" class=\"button w-button\" value=\"Subscribe\" style=\"\"></div><input type=\"hidden\" name=\"hutk\" value=\"\" style=\"\"><input type=\"hidden\" name=\"ipAddress\" value=\"\" style=\"\"><input type=\"hidden\" name=\"pageUri\" value=\"\" style=\"\"><input type=\"hidden\" name=\"pageId\" value=\"\" style=\"\"><input type=\"hidden\" name=\"pageName\" value=\"\" style=\"\"><input type=\"hidden\" name=\"0-1_source_3_t\" data-hubspot-form-id=\"5f5cc989-a13a-4a87-9b7e-b38398721394\" value=\"Newsletter\" style=\"\"><input type=\"hidden\" name=\"0-1_utm_source\" data-hubspot-form-id=\"5f5cc989-a13a-4a87-9b7e-b38398721394\" value=\"\" style=\"\"><input type=\"hidden\" name=\"0-1_utm_campaign\" data-hubspot-form-id=\"5f5cc989-a13a-4a87-9b7e-b38398721394\" value=\"\" style=\"\"></form><div class=\"newsletter_form_success w-form-done\" tabindex=\"-1\" role=\"region\" aria-label=\"newsletter success\"><div>Thank you for subscribing!</div></div><div class=\"w-form-fail\" tabindex=\"-1\" role=\"region\" aria-label=\"newsletter failure\"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div><div data-wf--padding--space=\"medium-6rem\" class=\"spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c\"></div><div class=\"container-84rem\"><div class=\"footer_component\"><div class=\"footer_brand\"><a href=\"/en\" aria-current=\"page\" class=\"footer_linkblock w-inline-block w--current\"><img src=\"https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77e73e672cfd2353a9_ditto-logo.svg\" loading=\"lazy\" width=\"120\" alt=\"\"></a><div class=\"spacer-1rem\"><div class=\"spacer-0x25rem\"></div></div><p class=\"heading-size-1x375rem\">Your CSR and<br>compliance copilot</p><div class=\"spacer-2rem\"></div><div class=\"socialproof_item\"><a href=\"https://fr.trustpilot.com/review/trustditto.com\" target=\"_blank\" class=\"text-size-1x125rem w-inline-block\"><span class=\"text-weight-600\">4.6</span><span class=\"text-color-neutral\">/5</span><span class=\"text-color-neutral\">&nb"
+}
