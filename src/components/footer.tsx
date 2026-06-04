@@ -74,13 +74,15 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 mb-16">
           <div className="lg:col-span-4 flex flex-col gap-6">
             <Link href="/en" aria-label="Maroc 360 Agency home">
-              <Image
-                src="/brand/maroc360-logo.png"
-                alt="Maroc 360 Agency"
-                width={240}
-                height={190}
-                className="h-20 w-auto"
-              />
+              <div className="relative h-20 w-[170px] overflow-hidden">
+                <Image
+                  src="/brand/maroc360-logo.png"
+                  alt="Maroc 360 Agency"
+                  width={533}
+                  height={433}
+                  className="absolute inset-0 w-full h-full object-cover object-bottom-left"
+                />
+              </div>
             </Link>
             <p className="body-lg max-w-md">
               Practical CSR insights — tools, studies, and templates, in your inbox.
