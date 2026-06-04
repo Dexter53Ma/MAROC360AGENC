@@ -33,6 +33,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Manifesto", href: "/en/manifesto" },
+  { label: "Careers", href: "/en/careers" },
 ];
 
 function DesktopNavItem({ item }: { item: NavItem }) {
