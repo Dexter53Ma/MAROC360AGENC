@@ -73,10 +73,10 @@ export function Footer() {
       <div className="container-page">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 mb-16">
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <Link href="/en" aria-label="Ditto home">
+            <Link href="/en" aria-label="Maroc 360 Agency home">
               <Image
-                src="/brand/ditto-logo.svg"
-                alt="Ditto"
+                src="/brand/maroc360-logo.png"
+                alt="Maroc 360 Agency"
                 width={120}
                 height={32}
                 className="h-8 w-auto"

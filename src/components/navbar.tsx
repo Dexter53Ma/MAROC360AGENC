@@ -139,10 +139,10 @@ export function Navbar() {
     <header className="sticky top-0 z-[1000] bg-surface-primary">
       <div className="container-page">
         <div className="h-20 flex items-center justify-between gap-6">
-          <Link href="/en" className="flex items-center" aria-label="Ditto home">
+          <Link href="/en" className="flex items-center" aria-label="Maroc 360 Agency home">
             <Image
-              src="/brand/ditto-logo.svg"
-              alt="Ditto"
+              src="/brand/maroc360-logo.png"
+              alt="Maroc 360 Agency"
               width={120}
               height={32}
               priority

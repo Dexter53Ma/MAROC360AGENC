@@ -16,19 +16,19 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Ditto – Your CSR copilot | More impact, less effort",
+  title: "Maroc 360 Agency | Your CSR copilot",
   description:
-    "Ditto empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
+    "Maroc 360 Agency empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
   openGraph: {
-    title: "Ditto – Your CSR copilot | More impact, less effort",
+    title: "Maroc 360 Agency | Your CSR copilot",
     description:
-      "Ditto empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
+      "Maroc 360 Agency empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
     images: [
       {
         url: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77bec4f672c42ac4d5_open-graph.jpg",
         width: 1200,
         height: 630,
-        alt: "Ditto – Your CSR copilot",
+        alt: "Maroc 360 Agency",
       },
     ],
     locale: "en_US",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ditto – Your CSR copilot | More impact, less effort",
+    title: "Maroc 360 Agency | Your CSR copilot",
     description:
-      "Ditto empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
+      "Maroc 360 Agency empowers SMEs and mid-sized enterprises to build reliable, structured, and value-driven CSR strategies through a platform and expert guidance on EcoVadis, CSRD, ISO, and CDP.",
   },
   icons: {
     icon: [
