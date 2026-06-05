@@ -52,3 +52,9 @@ tmp-*.ps1
 tmp-*.js
 dev-server*.log
 .playwright-mcp/
+
+# Next.js auto-generated app icon files (we use /seo/favicon.png + /seo/webclip.png)
+src/app/favicon.ico
+src/app/favicon.png
+src/app/apple-icon.png
+src/app/icon.png
