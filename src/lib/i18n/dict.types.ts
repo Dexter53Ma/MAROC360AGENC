@@ -432,6 +432,9 @@ export interface HomeSeoAuditFormDict {
   readonly doneButton: string;
   readonly errorFallback: string;
   readonly loadingHint: string;
+  readonly progressTemplate: string;
+  readonly categoryPendingLabel: string;
+  readonly categoryRunningLabel: string;
   readonly topIssuesHeading: string;
   readonly noIssues: string;
   readonly footerCategories: string;
@@ -444,6 +447,7 @@ export interface HomeSeoAuditFormDict {
   readonly auditAnotherSiteLabel: string;
   readonly severityFailLabel: string;
   readonly severityWarnLabel: string;
+  readonly categoryLabels: Readonly<Record<string, string>>;
 }
 
 export interface MultiStepFormServiceOption {

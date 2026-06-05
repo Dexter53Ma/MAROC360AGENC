@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { ArrowRight, Loader2, SearchIcon, Check, X } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import type { HomeSeoAuditFormDict } from "@/lib/i18n/dict.types";
@@ -32,6 +32,14 @@ interface AuditResult {
   topIssues: TopIssue[];
 }
 
+type CategoryStatus = "pending" | "running" | "done";
+
+interface CategoryProgress {
+  id: string;
+  status: CategoryStatus;
+  score?: number;
+}
+
 type Status = "idle" | "loading" | "ok" | "error";
 
 const GRADE_STYLES: Record<GradeTone, { bg: string; text: string; ring: string; chip: string }> = {
@@ -61,16 +69,20 @@ const GRADE_STYLES: Record<GradeTone, { bg: string; text: string; ring: string; 
   },
 };
 
-const CATEGORY_LABELS: Record<string, string> = {
-  core: "Core SEO",
-  perf: "Performance",
-  security: "Security",
-  links: "Links",
-  images: "Images",
-  content: "Content",
-  technical: "Technical",
-  schema: "Structured Data",
-};
+type StreamEvent =
+  | { type: "start"; url: string; categories: Array<{ id: string; name: string }> }
+  | { type: "category-start"; categoryId: string; categoryName: string }
+  | {
+      type: "category-complete";
+      categoryId: string;
+      categoryName: string;
+      score: number;
+      pass: number;
+      warn: number;
+      fail: number;
+    }
+  | { type: "complete"; result: AuditResult }
+  | { type: "error"; message: string; code: string };
 
 function gradeLabel(tone: GradeTone, dict: HomeSeoAuditFormDict): string {
   switch (tone) {
@@ -83,6 +95,128 @@ function gradeLabel(tone: GradeTone, dict: HomeSeoAuditFormDict): string {
     case "bad":
       return dict.gradeBad;
   }
+}
+
+function categoryLabel(id: string, fallback: string | undefined, dict: HomeSeoAuditFormDict): string {
+  return dict.categoryLabels[id] ?? fallback ?? id;
+}
+
+async function consumeAuditStream(
+  res: Response,
+  onEvent: (event: StreamEvent) => void,
+  signal: AbortSignal,
+): Promise<void> {
+  if (!res.body) {
+    throw new Error("The audit service did not return a stream.");
+  }
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+
+  try {
+    while (true) {
+      if (signal.aborted) {
+        try {
+          await reader.cancel();
+        } catch {
+          // ignore
+        }
+        return;
+      }
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      let nlIndex = buffer.indexOf("\n");
+      while (nlIndex >= 0) {
+        const line = buffer.slice(0, nlIndex).trim();
+        buffer = buffer.slice(nlIndex + 1);
+        if (line) {
+          try {
+            const event = JSON.parse(line) as StreamEvent;
+            onEvent(event);
+          } catch {
+            // skip malformed line
+          }
+        }
+        nlIndex = buffer.indexOf("\n");
+      }
+    }
+
+    const tail = buffer.trim();
+    if (tail) {
+      try {
+        const event = JSON.parse(tail) as StreamEvent;
+        onEvent(event);
+      } catch {
+        // ignore
+      }
+    }
+  } finally {
+    try {
+      reader.releaseLock();
+    } catch {
+      // ignore
+    }
+  }
+}
+
+function CategoryProgressList({
+  items,
+  doneCount,
+  dict,
+}: {
+  items: CategoryProgress[];
+  doneCount: number;
+  dict: HomeSeoAuditFormDict;
+}) {
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      className="mt-4 max-w-xl w-full rounded-2xl border border-text-primary/10 bg-surface-tertiary p-4 sm:p-5"
+    >
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+        {dict.progressTemplate
+          .replace("{done}", String(doneCount))
+          .replace("{total}", String(items.length))}
+      </p>
+      <ul className="mt-3 grid grid-cols-1 gap-1.5 sm:grid-cols-2">
+        {items.map((item) => {
+          const label = categoryLabel(item.id, undefined, dict);
+          const isDone = item.status === "done";
+          const isRunning = item.status === "running";
+          return (
+            <li
+              key={item.id}
+              className="flex items-center gap-2 rounded-lg bg-surface-primary/60 px-3 py-2 text-xs text-text-primary"
+            >
+              <span
+                className={cn(
+                  "inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[9px] font-bold",
+                  isDone && "bg-brand-green text-text-primary",
+                  isRunning && "bg-brand-yellow text-text-primary",
+                  !isDone && !isRunning && "bg-text-primary/10 text-text-tertiary",
+                )}
+                aria-hidden
+              >
+                {isDone ? "✓" : isRunning ? "•" : ""}
+              </span>
+              <span className="min-w-0 flex-1 truncate font-medium">{label}</span>
+              <span className="shrink-0 text-[10px] tabular-nums text-text-tertiary">
+                {isDone
+                  ? item.score
+                  : isRunning
+                    ? dict.categoryRunningLabel
+                    : dict.categoryPendingLabel}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 function AuditResultPanel({
@@ -174,7 +308,7 @@ function AuditResultPanel({
                 <span className="min-w-0 flex-1">
                   <span className="font-medium">{issue.message}</span>
                   <span className="ml-1 text-text-tertiary">
-                    · {CATEGORY_LABELS[issue.category] ?? issue.category}
+                    · {categoryLabel(issue.category, undefined, dict)}
                   </span>
                 </span>
               </li>
@@ -199,6 +333,9 @@ export function HeroSeoAuditForm({ dict }: { dict: HomeSeoAuditFormDict }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<AuditResult | null>(null);
+  const [progress, setProgress] = useState<CategoryProgress[]>([]);
+  const [doneCount, setDoneCount] = useState(0);
+  const abortRef = useRef<AbortController | null>(null);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -206,32 +343,73 @@ export function HeroSeoAuditForm({ dict }: { dict: HomeSeoAuditFormDict }) {
 
     setStatus("loading");
     setError(null);
+    setResult(null);
+    setProgress([]);
+    setDoneCount(0);
+
+    const controller = new AbortController();
+    abortRef.current = controller;
 
     try {
       const res = await fetch("/api/seo-audit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
+        signal: controller.signal,
       });
 
-      const data = (await res.json()) as Partial<AuditResult> & { error?: string; details?: string };
-
-      if (!res.ok || data.error) {
+      if (!res.ok && res.headers.get("Content-Type")?.includes("application/json")) {
+        const data = (await res.json()) as { error?: string; details?: string };
         throw new Error(data.details ?? data.error ?? dict.errorFallback);
       }
 
-      setResult(data as AuditResult);
-      setStatus("ok");
+      if (!res.ok) {
+        throw new Error(dict.errorFallback);
+      }
+
+      await consumeAuditStream(res, (event) => {
+        if (event.type === "start") {
+          setProgress(
+            event.categories.map((c) => ({ id: c.id, status: "pending" })),
+          );
+        } else if (event.type === "category-start") {
+          setProgress((prev) =>
+            prev.map((p) => (p.id === event.categoryId ? { ...p, status: "running" } : p)),
+          );
+        } else if (event.type === "category-complete") {
+          setProgress((prev) =>
+            prev.map((p) =>
+              p.id === event.categoryId ? { ...p, status: "done", score: event.score } : p,
+            ),
+          );
+          setDoneCount((c) => c + 1);
+        } else if (event.type === "complete") {
+          setResult(event.result);
+          setStatus("ok");
+        } else if (event.type === "error") {
+          setError(event.message);
+          setStatus("error");
+        }
+      }, controller.signal);
     } catch (err) {
+      if (err instanceof DOMException && err.name === "AbortError") {
+        return;
+      }
       setError(err instanceof Error ? err.message : dict.errorFallback);
       setStatus("error");
+    } finally {
+      abortRef.current = null;
     }
   };
 
   const reset = () => {
+    abortRef.current?.abort();
+    abortRef.current = null;
     setStatus("idle");
     setError(null);
     setResult(null);
+    setProgress([]);
+    setDoneCount(0);
     setUrl("");
   };
 
@@ -314,10 +492,14 @@ export function HeroSeoAuditForm({ dict }: { dict: HomeSeoAuditFormDict }) {
         </p>
       ) : null}
 
-      {status === "loading" ? (
+      {status === "loading" && progress.length === 0 ? (
         <p className="mt-2 max-w-xl text-xs text-text-tertiary">
           {dict.loadingHint}
         </p>
+      ) : null}
+
+      {status === "loading" && progress.length > 0 ? (
+        <CategoryProgressList items={progress} doneCount={doneCount} dict={dict} />
       ) : null}
 
       {status === "ok" && result ? (

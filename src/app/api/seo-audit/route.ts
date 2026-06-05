@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
 import { createAuditor } from "@seomator/seo-audit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
+export const dynamic = "force-dynamic";
 
 const CATEGORIES = [
   "core",
@@ -98,66 +98,158 @@ function topIssues(
   return flat.slice(0, limit);
 }
 
+type StreamEvent =
+  | { type: "start"; url: string; categories: Array<{ id: string; name: string }> }
+  | { type: "category-start"; categoryId: string; categoryName: string }
+  | {
+      type: "category-complete";
+      categoryId: string;
+      categoryName: string;
+      score: number;
+      pass: number;
+      warn: number;
+      fail: number;
+    }
+  | {
+      type: "complete";
+      result: {
+        url: string;
+        overallScore: number;
+        grade: { letter: string; tone: "good" | "ok" | "warn" | "bad" };
+        crawledPages: number;
+        timestamp: string;
+        categories: Array<{ id: string; score: number; pass: number; warn: number; fail: number }>;
+        topIssues: Array<{ category: string; ruleId: string; message: string; severity: "warn" | "fail" }>;
+      };
+    }
+  | { type: "error"; message: string; code: string };
+
+function ndjsonEvent(event: StreamEvent): string {
+  return `${JSON.stringify(event)}\n`;
+}
+
+function buildErrorResponse(message: string, code = "INVALID_URL", status = 400) {
+  return new Response(JSON.stringify({ error: message, code }), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
 export async function POST(request: Request) {
   let body: { url?: string };
   try {
     body = (await request.json()) as { url?: string };
   } catch {
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+    return buildErrorResponse("Invalid JSON body", "INVALID_JSON", 400);
   }
 
   const normalized = normalizeUrl(body?.url ?? "");
   if (!normalized) {
-    return NextResponse.json(
-      { error: "Please provide a valid URL (e.g. example.com or https://example.com)" },
-      { status: 400 },
+    return buildErrorResponse(
+      "Please provide a valid URL (e.g. example.com or https://example.com)",
+      "INVALID_URL",
+      400,
     );
   }
 
-  let raw: Awaited<ReturnType<ReturnType<typeof createAuditor>["audit"]>>;
-  try {
-    const auditor = createAuditor({
-      categories: [...CATEGORIES],
-      measureCwv: false,
-      timeout: 45_000,
-    });
-    raw = await auditor.audit(normalized);
-  } catch (err) {
-    const { code, message } = describeError(err);
-    console.error(`[seo-audit] ${normalized} failed (${code}):`, err);
-    return NextResponse.json(
-      {
-        error: "Couldn’t complete the audit",
-        details: message,
-        code,
-      },
-      { status: 502 },
-    );
-  }
+  const encoder = new TextEncoder();
+  let cancelled = false;
 
-  const grade = gradeFromScore(raw.overallScore);
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      const emit = (event: StreamEvent) => {
+        if (cancelled) return;
+        try {
+          controller.enqueue(encoder.encode(ndjsonEvent(event)));
+        } catch {
+          cancelled = true;
+        }
+      };
 
-  return NextResponse.json({
-    url: raw.url,
-    overallScore: raw.overallScore,
-    grade,
-    crawledPages: raw.crawledPages,
-    timestamp: raw.timestamp,
-    categories: raw.categoryResults.map((c) => ({
-      id: c.categoryId,
-      score: c.score,
-      pass: c.passCount,
-      warn: c.warnCount,
-      fail: c.failCount,
-    })),
-    topIssues: topIssues(raw.categoryResults, 3),
+      try {
+        const auditor = createAuditor({
+          categories: [...CATEGORIES],
+          measureCwv: false,
+          timeout: 30_000,
+          onCategoryStart: (categoryId, categoryName) => {
+            emit({ type: "category-start", categoryId, categoryName });
+          },
+          onCategoryComplete: (categoryId, categoryName, result) => {
+            emit({
+              type: "category-complete",
+              categoryId,
+              categoryName,
+              score: result.score,
+              pass: result.passCount,
+              warn: result.warnCount,
+              fail: result.failCount,
+            });
+          },
+        });
+
+        const categoryMeta = auditor.getCategoriesToAudit().map((c) => ({
+          id: c.id,
+          name: c.name,
+        }));
+
+        emit({ type: "start", url: normalized, categories: categoryMeta });
+
+        const raw = await auditor.audit(normalized);
+        if (cancelled) return;
+
+        const grade = gradeFromScore(raw.overallScore);
+
+        emit({
+          type: "complete",
+          result: {
+            url: raw.url,
+            overallScore: raw.overallScore,
+            grade,
+            crawledPages: raw.crawledPages,
+            timestamp: raw.timestamp,
+            categories: raw.categoryResults.map((c) => ({
+              id: c.categoryId,
+              score: c.score,
+              pass: c.passCount,
+              warn: c.warnCount,
+              fail: c.failCount,
+            })),
+            topIssues: topIssues(raw.categoryResults, 3),
+          },
+        });
+      } catch (err) {
+        const { code, message } = describeError(err);
+        console.error(`[seo-audit] ${normalized} failed (${code}):`, err);
+        emit({ type: "error", message, code });
+      } finally {
+        try {
+          controller.close();
+        } catch {
+          // already closed
+        }
+      }
+    },
+    cancel() {
+      cancelled = true;
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-store",
+      "X-Accel-Buffering": "no",
+    },
   });
 }
 
 export async function GET() {
-  return NextResponse.json({
-    status: "ok",
-    description: "POST { url: 'example.com' } to run a SEOmator audit.",
-    categories: CATEGORIES,
-  });
+  return new Response(
+    JSON.stringify({
+      status: "ok",
+      description: "POST { url: 'example.com' } to run a SEOmator audit.",
+      categories: CATEGORIES,
+    }),
+    { headers: { "Content-Type": "application/json" } },
+  );
 }

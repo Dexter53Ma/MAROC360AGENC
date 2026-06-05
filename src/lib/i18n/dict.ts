@@ -898,6 +898,9 @@ const homeSeoAuditFormEN: HomePageDict["hero"]["seoAuditForm"] = {
   errorFallback: "Something went wrong. Please try again.",
   loadingHint:
     "Running 8 SEO categories across 251 rules. This usually takes 10–30 seconds…",
+  progressTemplate: "{done} of {total} categories complete",
+  categoryPendingLabel: "Waiting…",
+  categoryRunningLabel: "Analyzing…",
   topIssuesHeading: "Top issues to fix",
   noIssues: "No issues found. Your site is in great shape.",
   footerCategories: "8 categories",
@@ -910,6 +913,16 @@ const homeSeoAuditFormEN: HomePageDict["hero"]["seoAuditForm"] = {
   auditAnotherSiteLabel: "Audit another site",
   severityFailLabel: "fail",
   severityWarnLabel: "warning",
+  categoryLabels: {
+    core: "Core SEO",
+    performance: "Performance",
+    security: "Security",
+    links: "Links & Redirects",
+    images: "Images",
+    content: "Content",
+    technical: "Technical",
+    schema: "Structured Data",
+  },
 };
 
 const homeEN: HomePageDict = {
@@ -1144,6 +1157,9 @@ const homeSeoAuditFormFR: HomePageDict["hero"]["seoAuditForm"] = {
   errorFallback: "Une erreur est survenue. Veuillez réessayer.",
   loadingHint:
     "Analyse de 8 catégories SEO sur 251 règles. Comptez 10 à 30 secondes…",
+  progressTemplate: "{done} catégories sur {total} terminées",
+  categoryPendingLabel: "En attente…",
+  categoryRunningLabel: "Analyse…",
   topIssuesHeading: "Problèmes prioritaires à corriger",
   noIssues: "Aucun problème détecté. Votre site est en bonne santé.",
   footerCategories: "8 catégories",
@@ -1156,6 +1172,16 @@ const homeSeoAuditFormFR: HomePageDict["hero"]["seoAuditForm"] = {
   auditAnotherSiteLabel: "Auditer un autre site",
   severityFailLabel: "échec",
   severityWarnLabel: "avertissement",
+  categoryLabels: {
+    core: "SEO de base",
+    performance: "Performance",
+    security: "Sécurité",
+    links: "Liens & redirections",
+    images: "Images",
+    content: "Contenu",
+    technical: "Technique",
+    schema: "Données structurées",
+  },
 };
 
 const homeFR: HomePageDict = {
