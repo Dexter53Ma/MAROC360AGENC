@@ -431,8 +431,8 @@ export function MultiStepFormModal({ fallbackDict }: { fallbackDict: MultiStepFo
                             : "border-text-primary/10 bg-surface-primary hover:border-text-primary/30",
                         )}
                       >
-                        <div className="flex items-center justify-between gap-3">
-                          <div>
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0 flex-1">
                             <div
                               className={cn(
                                 "font-semibold text-sm sm:text-base",
@@ -661,12 +661,12 @@ export function MultiStepFormModal({ fallbackDict }: { fallbackDict: MultiStepFo
             )}
           </div>
 
-          <div className="border-t border-text-primary/10 bg-surface-primary px-6 py-4 sm:px-8 sm:py-5 flex items-center gap-3 sticky bottom-0">
+          <div className="border-t border-text-primary/10 bg-surface-primary px-5 py-4 sm:px-8 sm:py-5 flex flex-col-reverse sm:flex-row sm:items-center gap-2.5 sm:gap-3 sticky bottom-0 pb-[max(1rem,env(safe-area-inset-bottom))]">
             {step > 1 && step < 5 && (
               <button
                 type="button"
                 onClick={goBack}
-                className="press inline-flex h-12 items-center justify-center rounded-full px-5 text-sm font-semibold bg-surface-tertiary text-text-primary hover:bg-text-primary/10 transition-colors"
+                className="press inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-full px-5 text-sm font-semibold bg-surface-tertiary text-text-primary hover:bg-text-primary/10 transition-colors"
               >
                 {dict.back}
               </button>
@@ -675,7 +675,7 @@ export function MultiStepFormModal({ fallbackDict }: { fallbackDict: MultiStepFo
               <button
                 type="button"
                 onClick={goNext}
-                className="press ml-auto inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold bg-text-primary text-surface-primary hover:bg-text-secondary transition-colors"
+                className="press sm:ml-auto inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold bg-text-primary text-surface-primary hover:bg-text-secondary transition-colors"
               >
                 {dict.next}
                 <ArrowRight className="h-4 w-4" />
@@ -686,7 +686,7 @@ export function MultiStepFormModal({ fallbackDict }: { fallbackDict: MultiStepFo
                 type="button"
                 onClick={handleSend}
                 disabled={sending}
-                className="press ml-auto inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold bg-text-primary text-surface-primary hover:bg-text-secondary transition-colors disabled:opacity-80"
+                className="press sm:ml-auto inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold bg-text-primary text-surface-primary hover:bg-text-secondary transition-colors disabled:opacity-80"
               >
                 {sending ? (
                   <>
@@ -705,7 +705,7 @@ export function MultiStepFormModal({ fallbackDict }: { fallbackDict: MultiStepFo
               <button
                 type="button"
                 onClick={handleClose}
-                className="press ml-auto inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold bg-text-primary text-surface-primary hover:bg-text-secondary transition-colors"
+                className="press sm:ml-auto inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold bg-text-primary text-surface-primary hover:bg-text-secondary transition-colors"
               >
                 {dict.closeAria}
               </button>

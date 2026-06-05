@@ -227,6 +227,7 @@ export function ChatWidget() {
           className={cn(
             "w-[min(380px,calc(100vw-2rem))] sm:w-[380px]",
             "h-[min(560px,calc(100vh-7rem))] sm:h-[560px]",
+            "max-sm:fixed max-sm:inset-0 max-sm:w-full max-sm:h-[100dvh] max-sm:max-h-[100dvh] max-sm:rounded-none",
             "flex flex-col overflow-hidden rounded-2xl border border-text-primary/10 bg-surface-tertiary shadow-2xl",
             "origin-bottom-right animate-in fade-in slide-in-from-bottom-2 duration-200",
           )}
@@ -251,7 +252,7 @@ export function ChatWidget() {
               <button
                 type="button"
                 onClick={handleReset}
-                className="rounded-md px-2 py-1 text-xs font-medium text-text-primary/80 hover:bg-text-primary/10 transition-colors"
+                className="rounded-md h-8 px-3 text-xs font-medium text-text-primary/80 hover:bg-text-primary/10 transition-colors"
                 aria-label="Restart conversation"
               >
                 Reset
@@ -259,7 +260,7 @@ export function ChatWidget() {
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="grid size-8 place-items-center rounded-md text-text-primary/80 hover:bg-text-primary/10 transition-colors"
+                className="grid size-9 sm:size-8 place-items-center rounded-md text-text-primary/80 hover:bg-text-primary/10 transition-colors"
                 aria-label="Close chat"
               >
                 <X className="size-4" aria-hidden />
@@ -303,7 +304,7 @@ export function ChatWidget() {
           )}
 
           <form
-            className="border-t border-text-primary/10 bg-surface-tertiary p-3"
+            className="border-t border-text-primary/10 bg-surface-tertiary p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
             onSubmit={(e) => {
               e.preventDefault();
               void sendMessage(input);
@@ -339,10 +340,10 @@ export function ChatWidget() {
             <p className="mt-2 text-[10px] text-text-primary/50 text-center">
               Answers are generated from our knowledge base. For sensitive topics, write to{" "}
               <a
-                href="mailto:hello@maroc360.agency"
+                href="mailto:Contact@maroc360.agency"
                 className="underline hover:text-text-primary"
               >
-                hello@maroc360.agency
+                Contact@maroc360.agency
               </a>
               .
             </p>
@@ -356,10 +357,11 @@ export function ChatWidget() {
         aria-label={isOpen ? "Close chat assistant" : "Open chat assistant"}
         aria-expanded={isOpen}
         className={cn(
-          "group grid size-14 place-items-center rounded-full shadow-lg",
+          "group grid size-12 sm:size-14 place-items-center rounded-full shadow-lg",
           "bg-brand-yellow text-text-primary",
           "hover:scale-[1.04] active:scale-[0.98] transition-transform",
           "ring-1 ring-text-primary/10",
+          isOpen && "max-sm:hidden",
         )}
       >
         <span
@@ -372,9 +374,9 @@ export function ChatWidget() {
           1
         </span>
         {isOpen ? (
-          <X className="size-6" aria-hidden />
+          <X className="size-5 sm:size-6" aria-hidden />
         ) : (
-          <MessageCircle className="size-6" aria-hidden />
+          <MessageCircle className="size-5 sm:size-6" aria-hidden />
         )}
       </button>
     </div>
