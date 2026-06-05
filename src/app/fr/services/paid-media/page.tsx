@@ -68,7 +68,7 @@ export default function PaidMediaPage() { const dict = getDict("fr"); return (
         <ServiceHero
           title="De la publicité payante qui transforme le budget en chiffre d'affaires, pas seulement en clics"
           description="Nous planifions, achetons et optimisons des campagnes sur Google, Meta et TikTok avec la discipline d'une équipe senior intégrée et l'expertise d'une agence spécialiste. Chaque dirham est rattaché à un résultat business."
-          image="https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a184a915f82cad90b79a145_ditto_better_world_illustration_6%20-%20Grande.jpeg"
+          image="/images/hero/frameworks-hero.png"
           imageAlt="Dashboard de campagne paid media avec performance Google, Meta et TikTok"
         />
 

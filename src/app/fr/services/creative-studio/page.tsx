@@ -70,7 +70,7 @@ export default function CreativeStudioPage() {
         <ServiceHero
           title="Du créatif qui capte l'attention et fait bouger le business"
           description="Branding, systèmes d'identité, concepts de campagne, motion et design — le travail créatif qui rend votre marque reconnaissable et votre marketing efficace. Des directeurs artistiques seniors, designers et motion designers qui connaissent le marché marocain."
-          image="https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/695d0b0a2c306512ed87e240_ditto_better_businesses_illustration_2%20-%20Grande.avif"
+          image="/images/hero/frameworks-hero.png"
           imageAlt="Système d'identité de marque avec logo, palette de couleurs, typographie et applications"
         />
 

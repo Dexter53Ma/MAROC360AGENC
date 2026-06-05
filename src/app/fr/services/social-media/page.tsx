@@ -68,7 +68,7 @@ export default function SocialMediaPage() { const dict = getDict("fr"); return (
         <ServiceHero
           title="Des réseaux sociaux qui bâtissent audience, marque et chiffre d'affaires"
           description="Stratégie, production de contenu, community management et partenariats créateurs — le programme social complet piloté par une équipe senior qui a fait passer des marques marocaines à plusieurs millions d'abonnés et à un chiffre d'affaires significatif."
-          image="https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/696ea520c97cc0946ee7bef9_new_better_businesses_illustration_04.png"
+          image="/images/hero/frameworks-hero.png"
           imageAlt="Calendrier éditorial social media avec métriques d'engagement par plateforme"
         />
 

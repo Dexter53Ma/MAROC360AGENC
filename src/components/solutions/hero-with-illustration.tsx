@@ -53,12 +53,12 @@ export function HeroWithIllustration({
 
           <div className="relative aspect-[1391/910] w-full">
             <Image
-              src="https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6845a66f8a93f372dc9be585_management-hero.svg"
-              alt="Maroc 360 marketing platform dashboard"
+              src="/images/hero/frameworks-hero.png"
+              alt="Maroc 360 marketing services overview"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="lift object-contain"
+              className="lift object-cover rounded-3xl"
             />
           </div>
         </div>

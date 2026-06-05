@@ -68,7 +68,7 @@ export default function StrategyPlanningPage() { const dict = getDict("fr"); ret
         <ServiceHero
           title="Une stratégie qui transforme le marketing en croissance mesurable"
           description="Feuilles de route étayées par la recherche, stratégie de canaux et frameworks KPI adaptés au marché marocain — pour que chaque dirham de budget marketing travaille à un objectif clair."
-          image="https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a1850c71817ffd03370ffa3_new_better_businesses_illustration_10.png"
+          image="/images/hero/frameworks-hero.png"
           imageAlt="Roadmap de stratégie marketing avec canaux, KPI et jalons"
         />
 

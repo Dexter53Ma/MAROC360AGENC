@@ -68,7 +68,7 @@ export default function SeoContentPage() { const dict = getDict("fr"); return (
         <ServiceHero
           title="Du SEO et du contenu qui se cumulent pendant des années, pas des semaines"
           description="Nous aidons les marques marocaines à atteindre le sommet de Google en français, arabe et anglais — et à transformer cette visibilité en leads qualifiés, en ventes et en autorité de marque. Du contenu orienté recherche, du SEO technique et du link building fait par des gens qui connaissent le marché local."
-          image="https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6970ff9bf4ef80b4ce269d2b_ditto_better_businesses_illustration_7%20-%20Grande.jpeg"
+          image="/images/hero/frameworks-hero.png"
           imageAlt="Dashboard SEO avec positions de mots-clés et tendances de trafic organique"
         />
 
