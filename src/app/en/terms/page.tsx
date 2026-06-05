@@ -204,7 +204,7 @@ const sections: LegalSection[] = [
       <>
         <p>
           If you have any questions about these Terms, email us at{" "}
-          <a href="mailto:hello@maroc360.agency">hello@maroc360.agency</a> or
+          <a href="mailto:Contact@maroc360.agency">Contact@maroc360.agency</a> or
           use the contact form on our{" "}
           <a href="/en/contact">contact page</a>.
         </p>

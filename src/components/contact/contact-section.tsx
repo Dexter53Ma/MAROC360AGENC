@@ -2,10 +2,11 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
+import { Mail, Phone } from "lucide-react";
 import { Check, Loader2 } from "@/components/icons";
 import { Reveal } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
-import { buildWhatsAppUrl } from "@/lib/site-config";
+import { buildWhatsAppUrl, siteConfig } from "@/lib/site-config";
 import type { ContactDict } from "@/lib/i18n/dict.types";
 
 const DEFAULT_FEATURES = [
@@ -32,7 +33,7 @@ const DEFAULT_FIELDS = {
   formEmailLabel: "Email",
   formEmailPlaceholder: "john@acme.com",
   formPhoneLabel: "Phone number",
-  formPhonePlaceholder: "+212 6 21 34 65 78",
+  formPhonePlaceholder: "+212 6 12 34 56 78",
   formCompanyLabel: "Company name",
   formCompanyPlaceholder: "Acme",
   formTopicsLabel: "Which services are you interested in?",
@@ -50,6 +51,7 @@ type ContactSectionProps = {
     | "trustpilotLabel"
     | "whyTitle"
     | "features"
+    | "whatsappLabel"
     | "formFirstNameLabel"
     | "formFirstNamePlaceholder"
     | "formLastNameLabel"
@@ -258,6 +260,7 @@ export function ContactSection({ dict }: ContactSectionProps = {}) {
     dict?.heroDescription ??
     "Tell us about your project. We typically reply within 24 hours.";
   const trustpilotLabel = dict?.trustpilotLabel ?? "on Trustpilot";
+  const whatsappLabel = dict?.whatsappLabel ?? "WhatsApp";
   const whyTitle = dict?.whyTitle ?? "Why teams reach out:";
   const features = dict?.features ?? DEFAULT_FEATURES;
 
@@ -279,8 +282,32 @@ export function ContactSection({ dict }: ContactSectionProps = {}) {
             </Reveal>
 
             <Reveal delay={200}>
+              <ul className="flex flex-col gap-2 text-base sm:text-lg">
+                <li>
+                  <a
+                    href={siteConfig.contact.emailHref}
+                    className="link-underline inline-flex items-center gap-2 text-text-primary"
+                  >
+                    <Mail className="size-4 shrink-0" aria-hidden />
+                    <span>{siteConfig.contact.email}</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={siteConfig.whatsapp.telHref}
+                    className="link-underline inline-flex items-center gap-2 text-text-primary"
+                  >
+                    <Phone className="size-4 shrink-0" aria-hidden />
+                    <span>{siteConfig.whatsapp.display}</span>
+                    <span className="text-text-secondary text-sm">({whatsappLabel})</span>
+                  </a>
+                </li>
+              </ul>
+            </Reveal>
+
+            <Reveal delay={300}>
               <a
-                href="https://fr.trustpilot.com/review/trustditto.com"
+                href="https://fr.trustpilot.com/review/maroc360.agency"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-lg"

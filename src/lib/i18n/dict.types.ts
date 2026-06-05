@@ -183,6 +183,7 @@ export interface ContactDict {
   readonly heroTitle: string;
   readonly heroDescription: string;
   readonly trustpilotLabel: string;
+  readonly whatsappLabel: string;
   readonly whyTitle: string;
   readonly features: readonly string[];
   readonly formFirstNameLabel: string;

@@ -48,11 +48,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b3688bd2099bac4628b_favicon.png",
+        url: "/seo/favicon.png",
         type: "image/png",
       },
     ],
-    apple: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b38c92588c26172148c_webclip.png",
+    apple: "/seo/webclip.png",
   },
 };
 

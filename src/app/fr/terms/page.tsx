@@ -207,7 +207,7 @@ const sections: LegalSection[] = [
         <p>
           Si vous avez des questions concernant les présentes Conditions, écrivez-nous à
           l&apos;adresse{" "}
-          <a href="mailto:hello@maroc360.agency">hello@maroc360.agency</a> ou utilisez le
+          <a href="mailto:Contact@maroc360.agency">Contact@maroc360.agency</a> ou utilisez le
           formulaire sur notre{" "}
           <Link href="/fr/contact">page de contact</Link>.
         </p>

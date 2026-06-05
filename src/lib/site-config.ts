@@ -20,10 +20,15 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/maroc360",
     facebook: "https://www.facebook.com/maroc360",
   },
+  contact: {
+    email: "Contact@maroc360.agency",
+    emailHref: "mailto:Contact@maroc360.agency",
+  },
   whatsapp: {
-    raw: "+212621947421",
-    href: "https://wa.me/212621947421",
-    display: "+212 621 947 421",
+    raw: "+212621947493",
+    href: "https://wa.me/212621947493",
+    display: "+212 621 947 493",
+    telHref: "tel:+212621947493",
   },
 } as const;
 

@@ -260,10 +260,10 @@ const chatWidgetEN: ChatWidgetDict = {
     "How do you price a project?",
     "Do you work with e-commerce brands?",
   ],
-  fallbackMessage: "I'm not sure I have a great answer for that. Try asking about our services, case studies, or industries. Or reach out at contact@maroc360.agency.",
+  fallbackMessage: "I'm not sure I have a great answer for that. Try asking about our services, case studies, or industries. Or reach out at Contact@maroc360.agency.",
   typingLabel: "Maroc 360 is typing…",
   errorMessage: "Sorry, something went wrong. Please try again.",
-  conversationLimitMessage: "We've reached the conversation limit. Please reach out at contact@maroc360.agency for more.",
+  conversationLimitMessage: "We've reached the conversation limit. Please reach out at Contact@maroc360.agency for more.",
 };
 
 const chatWidgetFR: ChatWidgetDict = {
@@ -280,10 +280,10 @@ const chatWidgetFR: ChatWidgetDict = {
     "Comment tarifez-vous un projet ?",
     "Travaillez-vous avec des marques e-commerce ?",
   ],
-  fallbackMessage: "Je ne suis pas sûr d'avoir une bonne réponse. Essayez de demander nos services, études de cas ou secteurs. Ou contactez-nous à contact@maroc360.agency.",
+  fallbackMessage: "Je ne suis pas sûr d'avoir une bonne réponse. Essayez de demander nos services, études de cas ou secteurs. Ou contactez-nous à Contact@maroc360.agency.",
   typingLabel: "Maroc 360 est en train d'écrire…",
   errorMessage: "Désolé, une erreur est survenue. Veuillez réessayer.",
-  conversationLimitMessage: "Nous avons atteint la limite de la conversation. Contactez-nous à contact@maroc360.agency pour aller plus loin.",
+  conversationLimitMessage: "Nous avons atteint la limite de la conversation. Contactez-nous à Contact@maroc360.agency pour aller plus loin.",
 };
 
 const backToTopEN: BackToTopDict = { label: "Back to top" };
@@ -398,7 +398,7 @@ const contactEN: ContactDict = {
   submitButton: "Send message",
   successTitle: "Thanks — message received",
   successMessage: "We'll be in touch within one business day. In the meantime, feel free to explore our work.",
-  errorMessage: "Something went wrong. Please try again or email us at contact@maroc360.agency.",
+  errorMessage: "Something went wrong. Please try again or email us at Contact@maroc360.agency.",
   orEmail: "Or email us directly",
   orCall: "Or call us",
   responseTime: "We respond within 1 business day",
@@ -411,6 +411,7 @@ const contactEN: ContactDict = {
   heroTitle: "Get in touch",
   heroDescription: "Tell us about your project. We typically reply within 24 hours.",
   trustpilotLabel: "on Trustpilot",
+  whatsappLabel: "WhatsApp",
   whyTitle: "Why teams reach out:",
   features: [
     "Free 30-min strategy call",
@@ -425,7 +426,7 @@ const contactEN: ContactDict = {
   formEmailLabel: "Email",
   formEmailPlaceholder: "john@acme.com",
   formPhoneLabel: "Phone number",
-  formPhonePlaceholder: "+212 6 21 34 65 78",
+  formPhonePlaceholder: "+212 6 12 34 56 78",
   formCompanyLabel: "Company name",
   formCompanyPlaceholder: "Acme",
   formTopicsLabel: "Which services are you interested in?",
@@ -456,7 +457,7 @@ const contactFR: ContactDict = {
   submitButton: "Envoyer le message",
   successTitle: "Merci — message reçu",
   successMessage: "Nous reviendrons vers vous sous un jour ouvré. En attendant, n'hésitez pas à explorer nos réalisations.",
-  errorMessage: "Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@maroc360.agency.",
+  errorMessage: "Une erreur est survenue. Veuillez réessayer ou nous écrire à Contact@maroc360.agency.",
   orEmail: "Ou écrivez-nous directement",
   orCall: "Ou appelez-nous",
   responseTime: "Nous répondons sous 1 jour ouvré",
@@ -469,6 +470,7 @@ const contactFR: ContactDict = {
   heroTitle: "Contactez-nous",
   heroDescription: "Parlez-nous de votre projet. Nous répondons généralement sous 24 heures.",
   trustpilotLabel: "sur Trustpilot",
+  whatsappLabel: "WhatsApp",
   whyTitle: "Pourquoi les équipes nous contactent :",
   features: [
     "Appel stratégique gratuit de 30 min",
@@ -483,7 +485,7 @@ const contactFR: ContactDict = {
   formEmailLabel: "Email",
   formEmailPlaceholder: "jean@entreprise.com",
   formPhoneLabel: "Numéro de téléphone",
-  formPhonePlaceholder: "+212 6 21 34 65 78",
+  formPhonePlaceholder: "+212 6 12 34 56 78",
   formCompanyLabel: "Nom de l'entreprise",
   formCompanyPlaceholder: "Entreprise",
   formTopicsLabel: "Quels services vous intéressent ?",
@@ -1129,7 +1131,7 @@ const homeEN: HomePageDict = {
 const legalFR: LegalDict = {
   lastUpdated: "Dernière mise à jour",
   contactTitle: "Des questions sur cette politique ?",
-  contactDescription: "Contactez-nous à contact@maroc360.agency — nous serons ravis de clarifier quoi que ce soit.",
+  contactDescription: "Contactez-nous à Contact@maroc360.agency — nous serons ravis de clarifier quoi que ce soit.",
   backToHome: "Retour à l'accueil",
 };
 
@@ -1400,7 +1402,7 @@ const multiStepFormEN: MultiStepFormDict = {
     email: "Email",
     emailPlaceholder: "john@acme.com",
     phone: "Phone",
-    phonePlaceholder: "+212 6 21 34 65 78",
+    phonePlaceholder: "+212 6 12 34 56 78",
     company: "Company",
     companyPlaceholder: "Acme",
     message: "Tell us about your project",
@@ -1504,7 +1506,7 @@ const multiStepFormFR: MultiStepFormDict = {
     email: "Email",
     emailPlaceholder: "jean@acme.com",
     phone: "Téléphone",
-    phonePlaceholder: "+212 6 21 34 65 78",
+    phonePlaceholder: "+212 6 12 34 56 78",
     company: "Entreprise",
     companyPlaceholder: "Acme",
     message: "Parlez-nous de votre projet",

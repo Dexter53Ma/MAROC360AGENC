@@ -240,7 +240,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
       "darija",
     ],
     answer:
-      "You can reach us at hello@maroc360.agency, through the contact form, or on LinkedIn. We work in English, French, and Arabic (including Darija), and we are based in Morocco (GMT+1).",
+      "You can reach us at Contact@maroc360.agency, through the contact form, or on LinkedIn. We work in English, French, and Arabic (including Darija), and we are based in Morocco (GMT+1).",
     followUps: ["What are your office hours?", "Do you have a phone number?"],
   },
   {
