@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
+import { getDict } from "@/lib/i18n/dict";
 import { Footer } from "@/components/footer";
 import { CtaSection } from "@/components/cta-section";
 import { Breadcrumbs } from "@/components/careers/breadcrumbs";
@@ -16,19 +17,20 @@ export const metadata: Metadata = {
 };
 
 export default function CareersPage() {
+  const dict = getDict("en");
   return (
     <>
-      <Navbar />
-      <main>
-        <Breadcrumbs />
-        <HeroMarquee />
-        <TeamsCarousel />
+      <Navbar dict={dict.nav} locale="en" multiStepForm={dict.multiStepForm} />
+      <main id="main" tabIndex={-1}>
+        <Breadcrumbs dict={dict.careers} />
+        <HeroMarquee dict={dict.careers} />
+        <TeamsCarousel dict={dict.careers} />
         <VideoSection />
-        <ValuesGrid />
-        <InterviewList />
-        <CtaSection />
+        <ValuesGrid dict={dict.careers} />
+        <InterviewList dict={dict.careers} />
+        <CtaSection dict={dict} />
       </main>
-      <Footer />
+      <Footer dict={dict.footer} locale="en" />
     </>
   );
 }

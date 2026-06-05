@@ -1,14 +1,14 @@
-export function IntroSection() {
+import type { HomePageDict } from "@/lib/i18n/dict.types";
+
+export function IntroSection({ dict }: { dict: HomePageDict["intro"] }) {
   return (
     <section className="section-y">
       <div className="container-page">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-6">
-            Strategy, creative, and media buying, all under one roof
+          <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-5 sm:mb-6 text-balance">
+            {dict.heading}
           </h2>
-          <p className="body-lg">
-            Maroc 360 brings strategy, creative production, and performance media together so your brand grows faster—with less guesswork, fewer agencies to manage, and every result measured end-to-end.
-          </p>
+          <p className="body-lg">{dict.body}</p>
         </div>
       </div>
     </section>

@@ -4,10 +4,17 @@ import { useState } from "react";
 import { PostCard } from "@/components/blog/post-card";
 import { Button } from "@/components/button";
 import type { BlogPost } from "@/types/blog";
+import type { BlogPostDict } from "@/lib/i18n/dict.types";
 
 const PAGE_SIZE = 6;
 
-export function PostsGrid({ posts }: { posts: ReadonlyArray<BlogPost> }) {
+export function PostsGrid({
+  posts,
+  dict,
+}: {
+  posts: ReadonlyArray<BlogPost>;
+  dict: BlogPostDict;
+}) {
   const [visibleCount, setVisibleCount] = useState(9);
   const visible = posts.slice(0, visibleCount);
   const hasMore = visibleCount < posts.length;
@@ -16,7 +23,7 @@ export function PostsGrid({ posts }: { posts: ReadonlyArray<BlogPost> }) {
     <div className="flex flex-col items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         {visible.map((post) => (
-          <PostCard key={post.href} post={post} />
+          <PostCard key={post.href} post={post} dict={dict} />
         ))}
       </div>
 

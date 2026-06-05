@@ -1,0 +1,1174 @@
+{
+  "tag": "section",
+  "cls": "logostrip_section",
+  "text": null,
+  "rect": {
+    "w": 1440,
+    "h": 355.375
+  },
+  "styles": {
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Inter, Arial, sans-serif",
+    "lineHeight": "24px",
+    "color": "rgb(19, 14, 48)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "width": "1440px",
+    "height": "355.375px",
+    "display": "block",
+    "flexDirection": "row",
+    "border": "0px none rgb(19, 14, 48)",
+    "borderTop": "0px none rgb(19, 14, 48)",
+    "borderBottom": "0px none rgb(19, 14, 48)",
+    "borderLeft": "0px none rgb(19, 14, 48)",
+    "borderRight": "0px none rgb(19, 14, 48)",
+    "overflow": "visible",
+    "position": "relative",
+    "zIndex": "1",
+    "opacity": "1",
+    "transition": "all",
+    "objectFit": "fill"
+  },
+  "attrs": {
+    "href": null,
+    "src": null,
+    "alt": null
+  },
+  "children": [
+    {
+      "tag": "div",
+      "cls": "padding-global",
+      "text": null,
+      "rect": {
+        "w": 1440,
+        "h": 355.375
+      },
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "padding": "0px 48px",
+        "paddingRight": "48px",
+        "paddingLeft": "48px",
+        "width": "1440px",
+        "height": "355.375px",
+        "display": "block",
+        "flexDirection": "row",
+        "border": "0px none rgb(19, 14, 48)",
+        "borderTop": "0px none rgb(19, 14, 48)",
+        "borderBottom": "0px none rgb(19, 14, 48)",
+        "borderLeft": "0px none rgb(19, 14, 48)",
+        "borderRight": "0px none rgb(19, 14, 48)",
+        "overflow": "visible",
+        "position": "static",
+        "opacity": "1",
+        "transition": "all",
+        "objectFit": "fill"
+      },
+      "attrs": {
+        "href": null,
+        "src": null,
+        "alt": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "cls": "spacer-component",
+          "text": "",
+          "rect": {
+            "w": 1344,
+            "h": 64
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "padding": "64px 0px 0px",
+            "paddingTop": "64px",
+            "width": "1344px",
+            "height": "64px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "static",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "attrs": {
+            "href": null,
+            "src": null,
+            "alt": null
+          },
+          "children": []
+        },
+        {
+          "tag": "div",
+          "cls": "container-84rem",
+          "text": null,
+          "rect": {
+            "w": 1344,
+            "h": 227.375
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "width": "1344px",
+            "height": "227.375px",
+            "maxWidth": "1344px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "static",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "attrs": {
+            "href": null,
+            "src": null,
+            "alt": null
+          },
+          "children": [
+            {
+              "tag": "div",
+              "cls": "header",
+              "text": null,
+              "rect": {
+                "w": 1344,
+                "h": 20
+              },
+              "styles": {
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "fontFamily": "Inter, Arial, sans-serif",
+                "lineHeight": "24px",
+                "color": "rgb(19, 14, 48)",
+                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                "width": "1344px",
+                "height": "20px",
+                "display": "flex",
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "border": "0px none rgb(19, 14, 48)",
+                "borderTop": "0px none rgb(19, 14, 48)",
+                "borderBottom": "0px none rgb(19, 14, 48)",
+                "borderLeft": "0px none rgb(19, 14, 48)",
+                "borderRight": "0px none rgb(19, 14, 48)",
+                "overflow": "visible",
+                "position": "static",
+                "opacity": "1",
+                "transition": "all",
+                "objectFit": "fill"
+              },
+              "attrs": {
+                "href": null,
+                "src": null,
+                "alt": null
+              },
+              "children": [
+                {
+                  "tag": "h2",
+                  "cls": "text-size-1rem text-weight-400",
+                  "text": "Join 500+ companies managing their compliance with Ditto",
+                  "rect": {
+                    "w": 403.859375,
+                    "h": 20
+                  },
+                  "styles": {
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "fontFamily": "Inter, Arial, sans-serif",
+                    "lineHeight": "20px",
+                    "letterSpacing": "-0.32px",
+                    "color": "rgb(19, 14, 48)",
+                    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                    "width": "403.859px",
+                    "height": "20px",
+                    "display": "block",
+                    "flexDirection": "row",
+                    "border": "0px none rgb(19, 14, 48)",
+                    "borderTop": "0px none rgb(19, 14, 48)",
+                    "borderBottom": "0px none rgb(19, 14, 48)",
+                    "borderLeft": "0px none rgb(19, 14, 48)",
+                    "borderRight": "0px none rgb(19, 14, 48)",
+                    "overflow": "visible",
+                    "position": "static",
+                    "opacity": "1",
+                    "transition": "all",
+                    "objectFit": "fill"
+                  },
+                  "attrs": {
+                    "href": null,
+                    "src": null,
+                    "alt": null
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "spacer-2rem",
+              "text": "",
+              "rect": {
+                "w": 1344,
+                "h": 32
+              },
+              "styles": {
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "fontFamily": "Inter, Arial, sans-serif",
+                "lineHeight": "24px",
+                "color": "rgb(19, 14, 48)",
+                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                "padding": "32px 0px 0px",
+                "paddingTop": "32px",
+                "width": "1344px",
+                "height": "32px",
+                "display": "block",
+                "flexDirection": "row",
+                "border": "0px none rgb(19, 14, 48)",
+                "borderTop": "0px none rgb(19, 14, 48)",
+                "borderBottom": "0px none rgb(19, 14, 48)",
+                "borderLeft": "0px none rgb(19, 14, 48)",
+                "borderRight": "0px none rgb(19, 14, 48)",
+                "overflow": "visible",
+                "position": "static",
+                "opacity": "1",
+                "transition": "all",
+                "objectFit": "fill"
+              },
+              "attrs": {
+                "href": null,
+                "src": null,
+                "alt": null
+              },
+              "children": []
+            },
+            {
+              "tag": "div",
+              "cls": "logostrip_list_wrapper w-dyn-list",
+              "text": null,
+              "rect": {
+                "w": 1344,
+                "h": 175.375
+              },
+              "styles": {
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "fontFamily": "Inter, Arial, sans-serif",
+                "lineHeight": "24px",
+                "color": "rgb(19, 14, 48)",
+                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                "width": "1344px",
+                "height": "175.375px",
+                "display": "block",
+                "flexDirection": "row",
+                "border": "0px none rgb(19, 14, 48)",
+                "borderTop": "0px none rgb(19, 14, 48)",
+                "borderBottom": "0px none rgb(19, 14, 48)",
+                "borderLeft": "0px none rgb(19, 14, 48)",
+                "borderRight": "0px none rgb(19, 14, 48)",
+                "overflow": "visible",
+                "position": "static",
+                "opacity": "1",
+                "transition": "all",
+                "objectFit": "fill"
+              },
+              "attrs": {
+                "href": null,
+                "src": null,
+                "alt": null
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "logostrip_list w-dyn-items",
+                  "text": null,
+                  "rect": {
+                    "w": 1344,
+                    "h": 175.375
+                  },
+                  "styles": {
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "fontFamily": "Inter, Arial, sans-serif",
+                    "lineHeight": "24px",
+                    "color": "rgb(19, 14, 48)",
+                    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                    "width": "1344px",
+                    "height": "175.375px",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "gap": "16px 48px",
+                    "border": "0px none rgb(19, 14, 48)",
+                    "borderTop": "0px none rgb(19, 14, 48)",
+                    "borderBottom": "0px none rgb(19, 14, 48)",
+                    "borderLeft": "0px none rgb(19, 14, 48)",
+                    "borderRight": "0px none rgb(19, 14, 48)",
+                    "overflow": "visible",
+                    "position": "static",
+                    "opacity": "1",
+                    "transition": "all",
+                    "objectFit": "fill"
+                  },
+                  "attrs": {
+                    "href": null,
+                    "src": null,
+                    "alt": null
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/niedax-client-pressure-gold-ecovadis-medal",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/first-cdp-assessment-one-month-adenes",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/aico-building-a-strong-csr-framework-to-aim-for-excellence",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/emile-maurin-a-family-business-strengthening-its-csr-strategy-with-ditto",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/ferco-a-strategic-partnership-with-ditto-for-structured-and-efficient-csr",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/superga-beauty-structuring-and-promoting-its-csr-approach-for-sustainable-leadership",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/yesss-electrique-structuring-its-csr-approach-and-standing-out-in-tenders",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/stelliant-a-structured-csr-approach-at-the-service-of-commercial-performance",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "logostrip_item w-dyn-item",
+                      "text": null,
+                      "rect": {
+                        "w": 125,
+                        "h": 79.6875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "125px",
+                        "height": "79.6875px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "attrs": {
+                        "href": null,
+                        "src": null,
+                        "alt": null
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "logostrip_item_linkblock w-inline-block",
+                          "text": null,
+                          "rect": {
+                            "w": 125,
+                            "h": 79.6875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "125px",
+                            "height": "79.6875px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "attrs": {
+                            "href": "https://www.trustditto.com/en/customer-stories/quito-aero-accelerating-csr-transformation-with-ditto-strategic-and-operational-co-pilot",
+                            "src": null,
+                            "alt": null
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "cls": "spacer-component",
+          "text": "",
+          "rect": {
+            "w": 1344,
+            "h": 64
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "padding": "64px 0px 0px",
+            "paddingTop": "64px",
+            "width": "1344px",
+            "height": "64px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "static",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "attrs": {
+            "href": null,
+            "src": null,
+            "alt": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "div",
+      "cls": "layer-4",
+      "text": null,
+      "rect": {
+        "w": 1440,
+        "h": 355.375
+      },
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "width": "1440px",
+        "height": "355.375px",
+        "display": "block",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "border": "0px none rgb(19, 14, 48)",
+        "borderTop": "0px none rgb(19, 14, 48)",
+        "borderBottom": "0px none rgb(19, 14, 48)",
+        "borderLeft": "0px none rgb(19, 14, 48)",
+        "borderRight": "0px none rgb(19, 14, 48)",
+        "overflow": "visible",
+        "position": "absolute",
+        "zIndex": "-4",
+        "opacity": "1",
+        "transition": "all",
+        "objectFit": "fill"
+      },
+      "attrs": {
+        "href": null,
+        "src": null,
+        "alt": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "cls": "background w-variant-d4e67767-ab3f-6e5c-2116-e9a6d2688920",
+          "text": "",
+          "rect": {
+            "w": 1440,
+            "h": 355.375
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "backgroundColor": "rgb(232, 235, 217)",
+            "background": "rgb(232, 235, 217) none repeat scroll 0% 0% / auto padding-box border-box",
+            "width": "1440px",
+            "height": "355.375px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "absolute",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "attrs": {
+            "href": null,
+            "src": null,
+            "alt": null
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

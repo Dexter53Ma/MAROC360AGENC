@@ -3,46 +3,13 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import type { HomePageDict } from "@/lib/i18n/dict.types";
 
-interface FrameworkCard {
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-}
-
-const frameworks: FrameworkCard[] = [
-  {
-    title: "SEO",
-    description:
-      "Rank higher on Google and drive qualified organic traffic to your site, month after month",
-    icon: "/icons/csrd.avif",
-    href: "/en/solutions/management-system",
-  },
-  {
-    title: "Paid Ads",
-    description:
-      "High-ROI campaigns on Google, Meta, and TikTok—planned, launched, and optimized by senior media buyers",
-    icon: "/icons/ecovadis.avif",
-    href: "/en/solutions/management-system",
-  },
-  {
-    title: "Social Media",
-    description:
-      "Scroll-stopping content, daily community management, and a clear brand voice across every platform",
-    icon: "/icons/iso.avif",
-    href: "/en/solutions/management-system",
-  },
-  {
-    title: "Branding",
-    description:
-      "Brand strategy, identity, and design systems built to stand out in Morocco and scale across MENA",
-    icon: "/icons/cdp.avif",
-    href: "/en/solutions/management-system",
-  },
-];
-
-export function FrameworksCarousel() {
+export function FrameworksCarousel({
+  dict,
+}: {
+  dict: HomePageDict["frameworks"];
+}) {
   const [emblaRef] = useEmblaCarousel(
     { loop: true, align: "start", dragFree: false },
     [Autoplay({ delay: 5000, stopOnInteraction: false })]
@@ -51,14 +18,14 @@ export function FrameworksCarousel() {
   return (
     <section className="section-y overflow-hidden">
       <div className="container-page">
-        <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-xl mb-10">
-          Grow 4× faster with the right channel mix
+        <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-xl mb-8 sm:mb-10 text-balance">
+          {dict.heading}
         </h2>
       </div>
 
       <div className="embla" ref={emblaRef}>
         <div className="embla__container pl-6 md:pl-10 lg:pl-[calc((100vw-84rem)/2+2.5rem)]">
-          {frameworks.map((card) => (
+          {dict.cards.map((card) => (
             <div key={card.title} className="embla__slide">
               <a
                 href={card.href}

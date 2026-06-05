@@ -5,6 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import type { ServicesDict } from "@/lib/i18n/dict.types";
 
 interface Testimonial {
   quote: string;
@@ -30,7 +31,7 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export function CustomersCarousel() {
+export function CustomersCarousel({ dict }: { dict: ServicesDict }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [Autoplay({ delay: 6000, stopOnInteraction: false })]
@@ -65,10 +66,10 @@ export function CustomersCarousel() {
       <div className="container-page">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-3">
-            Hear it from our clients
+            {dict.customersHeading}
           </h2>
           <p className="text-base text-text-secondary max-w-2xl mx-auto">
-            Brands of all sizes choose Maroc 360 for our creativity, our discipline, and the measurable growth we deliver.
+            {dict.customersSubheading}
           </p>
         </div>
       </div>
@@ -111,7 +112,7 @@ export function CustomersCarousel() {
             <button
               key={i}
               type="button"
-              aria-label={`Go to testimonial ${i + 1}`}
+              aria-label={dict.testimonialAriaTemplate.replace("{n}", String(i + 1))}
               onClick={() => scrollTo(i)}
               className={cn(
                 "h-1.5 rounded-full transition-all",

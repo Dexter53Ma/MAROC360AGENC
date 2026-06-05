@@ -1,49 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight12 } from "@/components/icons";
+import type { HomePageDict } from "@/lib/i18n/dict.types";
 
-interface BlogPost {
-  title: string;
-  thumbnail: string;
-  thumbnailAlt: string;
-  href: string;
-  category?: string;
-}
-
-const posts: BlogPost[] = [
-  {
-    title: "How to Build a Digital Marketing Strategy in Morocco",
-    thumbnail: "/images/blog/post-1.png",
-    thumbnailAlt: "Illustration of a digital marketing strategy mapped across channels and KPIs",
-    href: "/en/resources/blog/digital-marketing-strategy-morocco",
-    category: "Strategy",
-  },
-  {
-    title: "The Complete Guide to Paid Ads in 2026",
-    thumbnail: "/images/blog/post-2.jpeg",
-    thumbnailAlt: "Visual guide to running paid ads on Google, Meta, and TikTok in 2026",
-    href: "/en/resources/blog/paid-ads-guide-2026",
-    category: "Paid Media",
-  },
-  {
-    title: "Social Media Trends Reshaping Morocco",
-    thumbnail: "/images/blog/post-3.jpeg",
-    thumbnailAlt: "Illustration of social media content trends influencing brands in Morocco",
-    href: "/en/resources/blog/social-media-trends-morocco",
-    category: "Social",
-  },
-];
-
-export function BlogPreview() {
+export function BlogPreview({ dict }: { dict: HomePageDict["blogPreview"] }) {
   return (
     <section className="section-y">
       <div className="container-page">
-        <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-2xl mb-10">
-          Marketing insights, playbooks, and trend reports
+        <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-2xl mb-8 sm:mb-10 text-balance">
+          {dict.heading}
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => (
+          {dict.posts.map((post) => (
             <Link
               key={post.href}
               href={post.href}
@@ -59,16 +28,14 @@ export function BlogPreview() {
                 />
               </div>
               <div className="px-6 pb-6 flex flex-col gap-3">
-                {post.category && (
-                  <span className="text-xs font-semibold uppercase tracking-wide text-text-secondary">
-                    {post.category}
-                  </span>
-                )}
+                <span className="text-xs font-semibold uppercase tracking-wide text-text-secondary">
+                  {post.category}
+                </span>
                 <h3 className="font-heading text-xl md:text-2xl font-medium leading-snug line-clamp-2">
                   {post.title}
                 </h3>
                 <span className="inline-flex items-center gap-1 text-sm font-medium mt-2">
-                  Read article
+                  {dict.readArticle}
                   <ChevronRight12 className="transition-transform group-hover:translate-x-0.5" />
                 </span>
               </div>

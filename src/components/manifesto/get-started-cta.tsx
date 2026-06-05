@@ -1,19 +1,20 @@
 import { LinkButton } from "@/components/button";
+import type { WhyUsDict } from "@/lib/i18n/dict.types";
 
-export function GetStartedCta() {
+export function GetStartedCta({ dict }: { dict: WhyUsDict }) {
   return (
     <section className="section-y">
       <div className="container-page">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
-          <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-md text-balance">
-            Ready to grow? Maroc 360.
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center mb-10 md:mb-12">
+          <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-md text-balance">
+            {dict.getStartedTitle}
           </h2>
-          <div className="flex flex-col gap-6 md:items-start">
+          <div className="flex flex-col gap-5 md:gap-6 md:items-start">
             <p className="body-lg md:text-left">
-              Let&apos;s build a marketing engine that turns your brand into a market leader in Morocco and beyond.
+              {dict.getStartedBody}
             </p>
-            <LinkButton href="/en/contact" variant="primary" size="md">
-              Get Started
+            <LinkButton href={dict.contactHref} variant="primary" size="md" className="self-start">
+              {dict.getStartedCta}
             </LinkButton>
           </div>
         </div>

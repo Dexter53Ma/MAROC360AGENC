@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ChevronLeft24, ChevronRight24 } from "@/components/icons";
 import { LinkButton } from "@/components/button";
+import type { CareersDict } from "@/lib/i18n/dict.types";
 
 interface TeamCard {
   title: string;
@@ -47,7 +48,7 @@ const teams: TeamCard[] = [
   },
 ];
 
-export function TeamsCarousel() {
+export function TeamsCarousel({ dict }: { dict: CareersDict }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [Autoplay({ delay: 6000, stopOnInteraction: false })]
@@ -79,11 +80,11 @@ export function TeamsCarousel() {
     <section className="pt-24 pb-0 overflow-hidden">
       <div className="container-page">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-heading text-[40px] md:text-[48px] font-normal leading-[1.15] tracking-[-0.01em] text-text-primary text-balance">
-            Many teams, one vision
+          <h2 className="font-heading text-[2rem] sm:text-[40px] md:text-[48px] font-normal leading-[1.15] tracking-[-0.01em] text-text-primary text-balance">
+            {dict.teamsHeading}
           </h2>
-          <p className="mt-6 text-[22px] leading-[1.25] text-text-primary max-w-[48rem] mx-auto">
-            Marketing moves fast—that&apos;s exactly what makes this work so exciting. Each team at Maroc 360 plays a unique and interconnected role in growing our clients&apos; brands.
+          <p className="mt-5 sm:mt-6 text-base sm:text-[22px] leading-[1.5] sm:leading-[1.25] text-text-primary max-w-[48rem] mx-auto">
+            {dict.teamsSubheading}
           </p>
         </div>
       </div>
@@ -92,7 +93,7 @@ export function TeamsCarousel() {
         <button
           type="button"
           onClick={scrollPrev}
-          aria-label="Previous team"
+          aria-label={dict.previousSlide}
           className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-surface-primary border border-text-primary/10 rounded-full transition-colors hover:bg-surface-tertiary"
         >
           <ChevronLeft24 className="text-text-primary" />
@@ -100,7 +101,7 @@ export function TeamsCarousel() {
         <button
           type="button"
           onClick={scrollNext}
-          aria-label="Next team"
+          aria-label={dict.nextSlide}
           className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-surface-primary border border-text-primary/10 rounded-full transition-colors hover:bg-surface-tertiary"
         >
           <ChevronRight24 className="text-text-primary" />
@@ -114,7 +115,7 @@ export function TeamsCarousel() {
                 className="flex-[0_0_85vw] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_26rem] min-w-0 md:px-2"
               >
                 <div className="bg-surface-tertiary rounded-3xl p-6 h-full flex flex-col">
-                  <div className="relative w-16 h-16 mb-12 flex-shrink-0">
+                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 mb-8 sm:mb-12 flex-shrink-0">
                     <Image
                       src={team.icon}
                       alt=""
@@ -124,10 +125,10 @@ export function TeamsCarousel() {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="font-heading text-[32px] font-normal leading-[1.2] tracking-[-0.01em] text-text-primary">
+                  <h3 className="font-heading text-2xl sm:text-[32px] font-normal leading-[1.2] tracking-[-0.01em] text-text-primary text-balance">
                     {team.title}
                   </h3>
-                  <p className="mt-3 text-[22px] leading-[1.25] text-text-primary">
+                  <p className="mt-3 text-base sm:text-[22px] leading-[1.5] sm:leading-[1.25] text-text-primary">
                     {team.body}
                   </p>
                 </div>
@@ -143,7 +144,7 @@ export function TeamsCarousel() {
             <button
               key={i}
               type="button"
-              aria-label={`Go to team ${i + 1}`}
+              aria-label={dict.goToTeamTemplate.replace("{n}", String(i + 1))}
               onClick={() => emblaApi?.scrollTo(i)}
               className={cn(
                 "h-2 rounded-full transition-all",
@@ -155,12 +156,8 @@ export function TeamsCarousel() {
           ))}
         </div>
         <div className="flex justify-center mt-8 mb-24">
-          <LinkButton
-            href="/en/contact"
-            variant="primary"
-            size="md"
-          >
-            Apply
+          <LinkButton href={dict.contactHref} variant="primary" size="md">
+            {dict.teamsCta}
           </LinkButton>
         </div>
       </div>

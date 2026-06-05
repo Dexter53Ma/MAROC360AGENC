@@ -5,6 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useCallback } from "react";
 import { ChevronLeft24, ChevronRight24 } from "@/components/icons";
+import type { WhyUsDict } from "@/lib/i18n/dict.types";
 
 interface Investor {
   name: string;
@@ -20,7 +21,7 @@ const investors: Investor[] = [
   { name: "Motier Ventures", logo: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b960ce3117638f74790e_motier-ventures.avif" },
 ];
 
-export function InvestorsCarousel() {
+export function InvestorsCarousel({ dict }: { dict: WhyUsDict }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [Autoplay({ delay: 4000, stopOnInteraction: false })]
@@ -32,12 +33,12 @@ export function InvestorsCarousel() {
   return (
     <section className="section-y overflow-hidden">
       <div className="container-page">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-2">
-            Backed by great partners
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 text-balance">
+            {dict.investorsHeading}
           </h2>
           <p className="text-sm text-text-secondary">
-            Partnership is in our DNA and we&apos;re proud to work with many of the best.
+            {dict.investorsSubheading}
           </p>
         </div>
       </div>
@@ -46,7 +47,7 @@ export function InvestorsCarousel() {
         <button
           type="button"
           onClick={scrollPrev}
-          aria-label="Previous investor"
+          aria-label={dict.previousInvestor}
           className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-15 h-22 px-3 items-center justify-start bg-surface-tertiary rounded-r-full transition-colors hover:bg-surface-secondary"
         >
           <ChevronLeft24 className="text-text-primary" />
@@ -54,7 +55,7 @@ export function InvestorsCarousel() {
         <button
           type="button"
           onClick={scrollNext}
-          aria-label="Next investor"
+          aria-label={dict.nextInvestor}
           className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-15 h-22 px-3 items-center justify-end bg-surface-tertiary rounded-l-full transition-colors hover:bg-surface-secondary"
         >
           <ChevronRight24 className="text-text-primary" />

@@ -1,69 +1,56 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LinkButton } from "@/components/button";
+import { HeroSeoAuditForm } from "@/components/hero-seo-audit-form";
+import { Reveal } from "@/components/motion/reveal";
 import { StarIcon } from "@/components/icons";
+import type { HomePageDict } from "@/lib/i18n/dict.types";
 
-export function Hero() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
+export function Hero({ dict }: { dict: HomePageDict["hero"] }) {
   return (
     <section className="relative overflow-hidden">
       <div className="container-page">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-8 sm:pt-12 pb-12 sm:pb-16 lg:pt-20 lg:pb-24">
-          <div className="flex flex-col gap-6 max-w-2xl">
-            <h1 className="heading-display text-[2.5rem] leading-[1.05] sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
-              Your 360° digital marketing partner in Morocco
-            </h1>
-            <p className="body-lg text-lg lg:text-[1.375rem]">
-              From the first brief to the last click, Maroc 360 helps Moroccan brands grow online with strategy, creative, and paid media that actually performs.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-6 sm:pt-12 pb-12 sm:pb-16 lg:pt-20 lg:pb-24">
+          <div className="flex flex-col gap-5 sm:gap-6 max-w-2xl">
+            <Reveal>
+              <h1 className="heading-display text-[2.25rem] leading-[1.05] sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] text-balance">
+                {dict.heading}
+              </h1>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="body-lg sm:text-lg lg:text-[1.375rem]">
+                {dict.subheading}
+              </p>
+            </Reveal>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (email) setSubmitted(true);
-              }}
-              className="flex flex-col sm:flex-row items-stretch gap-2 max-w-xl"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your work email"
-                aria-label="Your work email"
-                className="flex-1 h-12 px-5 rounded-full bg-surface-tertiary border border-text-primary/10 text-base text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-text-primary/30"
-              />
-              <LinkButton type="submit" variant="primary" size="md" className="sm:px-6">
-                {submitted ? "Thanks!" : "Get Started"}
-              </LinkButton>
-            </form>
+            <Reveal delay={200}>
+              <HeroSeoAuditForm dict={dict.seoAuditForm} />
+            </Reveal>
 
-            <Link
-              href="/en/contact"
-              className="inline-flex items-center gap-2 text-sm font-medium text-text-primary hover:opacity-70 transition-opacity"
-            >
-              <span className="flex items-center gap-0.5">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <StarIcon key={i} className="text-brand-green w-4 h-4" />
-                ))}
-              </span>
-              <span>4.9/5 on Google Reviews</span>
-            </Link>
+            <Reveal delay={300}>
+              <Link
+                href={dict.contactLink}
+                className="link-underline inline-flex items-center gap-2 text-sm font-medium text-text-primary"
+              >
+                <span className="stars-rating flex items-center gap-0.5">
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <StarIcon key={i} className="text-brand-green w-4 h-4" />
+                  ))}
+                </span>
+                <span>{dict.rating}</span>
+              </Link>
+            </Reveal>
           </div>
 
           <div className="relative aspect-[1391/910] w-full">
             <Image
-              src="/images/hero/frameworks-hero.jpg"
+              src="/images/hero/frameworks-hero.png"
               alt="Maroc 360 digital marketing services overview"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover rounded-3xl"
+              className="lift rounded-3xl object-cover"
             />
           </div>
         </div>

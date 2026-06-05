@@ -47,3 +47,8 @@ next-env.d.ts
 
 # Local temp files
 temp/
+tmp-*.log
+tmp-*.ps1
+tmp-*.js
+dev-server*.log
+.playwright-mcp/

@@ -1,0 +1,11 @@
+{
+  "html": "<section class=\"breadcrumbs_section\"><div class=\"padding-global\"><div class=\"spacer-1x5rem\"></div><div class=\"container-84rem\"><div class=\"breadcrumbs_list\"><a href=\"/en/get-started\" aria-current=\"page\" class=\"link-size-1rem w--current\">Get started</a></div></div><div class=\"spacer-1x5rem\"></div></div><div class=\"layer-4\"><div data-wf--background--color=\"primary\" class=\"background\"></div></div></section>",
+  "text": "Get started",
+  "styles": {
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "paddingTop": "0px",
+    "paddingBottom": "0px"
+  }
+}

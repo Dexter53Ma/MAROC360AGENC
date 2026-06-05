@@ -1,16 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { LinkButton } from "@/components/button";
+import { EmailSubscribe } from "@/components/email-subscribe";
 
-export function CtaSection() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
+export function CtaSection({ dict }: { dict: { ctaSection: import("@/lib/i18n/dict.types").CtaSectionDict } }) {
+  const c = dict.ctaSection;
   return (
     <section className="section-y">
       <div className="container-page">
-        <div className="relative bg-surface-tertiary rounded-[3rem] lg:rounded-[5rem] px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24 overflow-hidden">
+        <div className="relative bg-surface-tertiary rounded-[2rem] sm:rounded-[3rem] lg:rounded-[5rem] px-6 py-14 sm:px-12 sm:py-20 md:px-20 md:py-24 overflow-hidden">
           <div
             className="absolute inset-0 pointer-events-none opacity-30"
             aria-hidden
@@ -32,31 +29,18 @@ export function CtaSection() {
 
           <div className="relative flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
             <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl">
-              Ready to grow? Maroc 360.
+              {c.title}
             </h2>
-            <p className="body-lg">
-              Let&apos;s build a marketing engine that turns your brand into a market leader in Morocco and beyond.
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (email) setSubmitted(true);
-              }}
-              className="flex flex-col sm:flex-row items-stretch gap-2 w-full max-w-xl mt-4"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your work email"
-                aria-label="Your work email"
-                className="flex-1 h-12 px-5 rounded-full bg-surface-primary border border-text-primary/10 text-base text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-text-primary/30"
+            <p className="body-lg">{c.description}</p>
+            <div className="w-full max-w-xl mt-4">
+              <EmailSubscribe
+                placeholder={c.formPlaceholder}
+                buttonLabel={c.formButton}
+                successLabel={c.formSuccess}
+                variant="primary"
+                size="md"
               />
-              <LinkButton type="submit" variant="primary" size="md" className="sm:px-6">
-                {submitted ? "Thanks!" : "Get Started"}
-              </LinkButton>
-            </form>
+            </div>
           </div>
         </div>
       </div>

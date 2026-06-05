@@ -1,6 +1,7 @@
 import { LinkButton } from "@/components/button";
+import type { WhyUsDict } from "@/lib/i18n/dict.types";
 
-export function CopilotsCta() {
+export function CopilotsCta({ dict }: { dict: WhyUsDict }) {
   return (
     <section className="py-16 md:py-20 lg:py-24">
       <div className="container-page">
@@ -30,16 +31,16 @@ export function CopilotsCta() {
                 className="inline-block w-1.5 h-1.5 rounded-full bg-text-primary"
                 aria-hidden
               />
-              Careers
+              {dict.careersLinkLabel}
             </p>
-            <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl mb-6 text-balance">
-              We&apos;re all builders on this journey
+            <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-balance">
+              {dict.copilotsTitle}
             </h2>
             <p className="text-base md:text-lg text-text-primary/80 leading-relaxed mb-8">
-              Great marketing comes from great people. If you want to help shape how Morocco&apos;s brands grow, we&apos;d love to hear from you.
+              {dict.copilotsBody}
             </p>
-            <LinkButton href="/en/careers" variant="primary" size="md">
-              Explore open roles
+            <LinkButton href={dict.careersHref} variant="primary" size="md">
+              {dict.copilotsCta}
             </LinkButton>
           </div>
         </div>

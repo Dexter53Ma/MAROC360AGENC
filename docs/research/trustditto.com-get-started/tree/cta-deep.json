@@ -1,0 +1,1208 @@
+{
+  "tag": "section",
+  "cls": "cta_section",
+  "text": null,
+  "rect": {
+    "w": 1440,
+    "h": 726.109375
+  },
+  "styles": {
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Inter, Arial, sans-serif",
+    "lineHeight": "24px",
+    "color": "rgb(19, 14, 48)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "width": "1440px",
+    "height": "726.109px",
+    "display": "block",
+    "flexDirection": "row",
+    "border": "0px none rgb(19, 14, 48)",
+    "borderTop": "0px none rgb(19, 14, 48)",
+    "borderBottom": "0px none rgb(19, 14, 48)",
+    "borderLeft": "0px none rgb(19, 14, 48)",
+    "borderRight": "0px none rgb(19, 14, 48)",
+    "overflow": "clip",
+    "position": "relative",
+    "zIndex": "1",
+    "opacity": "1",
+    "transition": "all",
+    "objectFit": "fill"
+  },
+  "children": [
+    {
+      "tag": "div",
+      "cls": "padding-global",
+      "text": null,
+      "rect": {
+        "w": 1440,
+        "h": 726.109375
+      },
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "padding": "0px 48px",
+        "paddingRight": "48px",
+        "paddingLeft": "48px",
+        "width": "1440px",
+        "height": "726.109px",
+        "display": "block",
+        "flexDirection": "row",
+        "border": "0px none rgb(19, 14, 48)",
+        "borderTop": "0px none rgb(19, 14, 48)",
+        "borderBottom": "0px none rgb(19, 14, 48)",
+        "borderLeft": "0px none rgb(19, 14, 48)",
+        "borderRight": "0px none rgb(19, 14, 48)",
+        "overflow": "visible",
+        "position": "static",
+        "opacity": "1",
+        "transition": "all",
+        "objectFit": "fill"
+      },
+      "children": [
+        {
+          "tag": "div",
+          "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+          "text": "",
+          "rect": {
+            "w": 1344,
+            "h": 96
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "padding": "96px 0px 0px",
+            "paddingTop": "96px",
+            "width": "1344px",
+            "height": "96px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "static",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "children": []
+        },
+        {
+          "tag": "div",
+          "cls": "container-84rem",
+          "text": null,
+          "rect": {
+            "w": 1344,
+            "h": 534.109375
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "width": "1344px",
+            "height": "534.109px",
+            "maxWidth": "1344px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "static",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "cls": "cta_header",
+              "text": null,
+              "rect": {
+                "w": 1344,
+                "h": 154.5
+              },
+              "styles": {
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "fontFamily": "Inter, Arial, sans-serif",
+                "lineHeight": "24px",
+                "color": "rgb(19, 14, 48)",
+                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                "width": "1344px",
+                "height": "154.5px",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "48px",
+                "border": "0px none rgb(19, 14, 48)",
+                "borderTop": "0px none rgb(19, 14, 48)",
+                "borderBottom": "0px none rgb(19, 14, 48)",
+                "borderLeft": "0px none rgb(19, 14, 48)",
+                "borderRight": "0px none rgb(19, 14, 48)",
+                "overflow": "visible",
+                "position": "static",
+                "opacity": "1",
+                "transition": "all",
+                "objectFit": "fill"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "cta_header_content",
+                  "text": null,
+                  "rect": {
+                    "w": 648,
+                    "h": 154.5
+                  },
+                  "styles": {
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "fontFamily": "Inter, Arial, sans-serif",
+                    "lineHeight": "24px",
+                    "color": "rgb(19, 14, 48)",
+                    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                    "width": "648px",
+                    "height": "154.5px",
+                    "display": "block",
+                    "flexDirection": "row",
+                    "border": "0px none rgb(19, 14, 48)",
+                    "borderTop": "0px none rgb(19, 14, 48)",
+                    "borderBottom": "0px none rgb(19, 14, 48)",
+                    "borderLeft": "0px none rgb(19, 14, 48)",
+                    "borderRight": "0px none rgb(19, 14, 48)",
+                    "overflow": "visible",
+                    "position": "static",
+                    "opacity": "1",
+                    "transition": "all",
+                    "objectFit": "fill"
+                  },
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "cls": "heading-size-4rem",
+                      "text": "Ready to get compliant? Ditto.",
+                      "rect": {
+                        "w": 648,
+                        "h": 140.78125
+                      },
+                      "styles": {
+                        "fontSize": "64px",
+                        "fontWeight": "400",
+                        "fontFamily": "\"Hedvig Letters Serif\", \"Times New Roman\", sans-serif",
+                        "lineHeight": "70.4px",
+                        "letterSpacing": "-0.64px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "648px",
+                        "height": "140.781px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "cta_header_content",
+                  "text": null,
+                  "rect": {
+                    "w": 648,
+                    "h": 154.5
+                  },
+                  "styles": {
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "fontFamily": "Inter, Arial, sans-serif",
+                    "lineHeight": "24px",
+                    "color": "rgb(19, 14, 48)",
+                    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                    "width": "648px",
+                    "height": "154.5px",
+                    "display": "block",
+                    "flexDirection": "row",
+                    "border": "0px none rgb(19, 14, 48)",
+                    "borderTop": "0px none rgb(19, 14, 48)",
+                    "borderBottom": "0px none rgb(19, 14, 48)",
+                    "borderLeft": "0px none rgb(19, 14, 48)",
+                    "borderRight": "0px none rgb(19, 14, 48)",
+                    "overflow": "visible",
+                    "position": "static",
+                    "opacity": "1",
+                    "transition": "all",
+                    "objectFit": "fill"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "max-width-32rem",
+                      "text": null,
+                      "rect": {
+                        "w": 512,
+                        "h": 82.5
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "512px",
+                        "height": "82.5px",
+                        "maxWidth": "512px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "children": [
+                        {
+                          "tag": "p",
+                          "cls": "text-size-1x375rem",
+                          "text": "Turn your CSR program into a strategic advantage with a compliance copilot that’s with you every step of the way.",
+                          "rect": {
+                            "w": 512,
+                            "h": 82.5
+                          },
+                          "styles": {
+                            "fontSize": "22px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "27.5px",
+                            "letterSpacing": "-0.44px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "512px",
+                            "height": "82.5px",
+                            "display": "block",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "spacer-1x5rem spacer-mob-1rem",
+                      "text": "",
+                      "rect": {
+                        "w": 648,
+                        "h": 24
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "padding": "24px 0px 0px",
+                        "paddingTop": "24px",
+                        "width": "648px",
+                        "height": "24px",
+                        "display": "block",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "button-group",
+                      "text": null,
+                      "rect": {
+                        "w": 648,
+                        "h": 48
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "width": "648px",
+                        "height": "48px",
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                        "alignItems": "center",
+                        "gap": "8px",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "button w-inline-block w--current",
+                          "text": null,
+                          "rect": {
+                            "w": 124.125,
+                            "h": 48
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "20px",
+                            "letterSpacing": "-0.32px",
+                            "color": "rgb(239, 242, 229)",
+                            "backgroundColor": "rgb(19, 14, 48)",
+                            "background": "rgb(19, 14, 48) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "padding": "12px 22px",
+                            "paddingTop": "12px",
+                            "paddingRight": "22px",
+                            "paddingBottom": "12px",
+                            "paddingLeft": "22px",
+                            "width": "124.125px",
+                            "height": "48px",
+                            "maxWidth": "100%",
+                            "display": "flex",
+                            "flexDirection": "row",
+                            "justifyContent": "center",
+                            "alignItems": "center",
+                            "gap": "8px",
+                            "borderRadius": "1440px",
+                            "border": "2px solid rgb(0, 0, 0)",
+                            "borderTop": "2px solid rgb(0, 0, 0)",
+                            "borderBottom": "2px solid rgb(0, 0, 0)",
+                            "borderLeft": "2px solid rgb(0, 0, 0)",
+                            "borderRight": "2px solid rgb(0, 0, 0)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "background-color 0.2s ease-in-out",
+                            "objectFit": "fill"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "cls": "",
+                              "text": "Get started",
+                              "rect": {
+                                "w": 76.125,
+                                "h": 20
+                              },
+                              "styles": {
+                                "fontSize": "16px",
+                                "fontWeight": "400",
+                                "fontFamily": "Inter, Arial, sans-serif",
+                                "lineHeight": "20px",
+                                "letterSpacing": "-0.32px",
+                                "color": "rgb(239, 242, 229)",
+                                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                                "width": "76.125px",
+                                "height": "20px",
+                                "display": "block",
+                                "flexDirection": "row",
+                                "border": "0px none rgb(239, 242, 229)",
+                                "borderTop": "0px none rgb(239, 242, 229)",
+                                "borderBottom": "0px none rgb(239, 242, 229)",
+                                "borderLeft": "0px none rgb(239, 242, 229)",
+                                "borderRight": "0px none rgb(239, 242, 229)",
+                                "overflow": "visible",
+                                "position": "static",
+                                "opacity": "1",
+                                "transition": "all",
+                                "objectFit": "fill"
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "spacer-3rem",
+              "text": "",
+              "rect": {
+                "w": 1344,
+                "h": 48
+              },
+              "styles": {
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "fontFamily": "Inter, Arial, sans-serif",
+                "lineHeight": "24px",
+                "color": "rgb(19, 14, 48)",
+                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                "padding": "48px 0px 0px",
+                "paddingTop": "48px",
+                "width": "1344px",
+                "height": "48px",
+                "display": "block",
+                "flexDirection": "row",
+                "border": "0px none rgb(19, 14, 48)",
+                "borderTop": "0px none rgb(19, 14, 48)",
+                "borderBottom": "0px none rgb(19, 14, 48)",
+                "borderLeft": "0px none rgb(19, 14, 48)",
+                "borderRight": "0px none rgb(19, 14, 48)",
+                "overflow": "visible",
+                "position": "static",
+                "opacity": "1",
+                "transition": "all",
+                "objectFit": "fill"
+              },
+              "children": []
+            },
+            {
+              "tag": "div",
+              "cls": "cta_illus_embed w-embed",
+              "text": null,
+              "rect": {
+                "w": 1680,
+                "h": 331.609375
+              },
+              "styles": {
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "fontFamily": "Inter, Arial, sans-serif",
+                "lineHeight": "24px",
+                "color": "rgb(19, 14, 48)",
+                "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                "margin": "0px -168px",
+                "marginRight": "-168px",
+                "marginLeft": "-168px",
+                "width": "1680px",
+                "height": "331.609px",
+                "display": "block",
+                "flexDirection": "row",
+                "border": "0px none rgb(19, 14, 48)",
+                "borderTop": "0px none rgb(19, 14, 48)",
+                "borderBottom": "0px none rgb(19, 14, 48)",
+                "borderLeft": "0px none rgb(19, 14, 48)",
+                "borderRight": "0px none rgb(19, 14, 48)",
+                "overflow": "visible",
+                "position": "static",
+                "opacity": "1",
+                "transition": "all",
+                "objectFit": "fill"
+              },
+              "children": [
+                {
+                  "tag": "svg",
+                  "cls": "[object SVGAnimatedString]",
+                  "text": null,
+                  "rect": {
+                    "w": 1680,
+                    "h": 325.609375
+                  },
+                  "styles": {
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "fontFamily": "Inter, Arial, sans-serif",
+                    "lineHeight": "24px",
+                    "color": "rgb(19, 14, 48)",
+                    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                    "width": "1680px",
+                    "height": "325.609px",
+                    "display": "inline",
+                    "flexDirection": "row",
+                    "border": "0px none rgb(19, 14, 48)",
+                    "borderTop": "0px none rgb(19, 14, 48)",
+                    "borderBottom": "0px none rgb(19, 14, 48)",
+                    "borderLeft": "0px none rgb(19, 14, 48)",
+                    "borderRight": "0px none rgb(19, 14, 48)",
+                    "overflow": "hidden",
+                    "position": "static",
+                    "opacity": "1",
+                    "transition": "all",
+                    "objectFit": "fill"
+                  },
+                  "children": [
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 211.8773193359375,
+                        "h": 207.65380859375
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 211.8773193359375,
+                            "h": 207.65380859375
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "224.495px",
+                            "height": "220.02px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transform": "matrix(-1, 0, 0, 1, 530.492, 62.3984)",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 350.25189208984375,
+                        "h": 207.65380859375
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 350.25189208984375,
+                            "h": 207.65380859375
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "371.11px",
+                            "height": "220.02px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transform": "matrix(-1, 0, 0, 1, 1328.45, 62.3984)",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 221.97979736328125,
+                        "h": 223.592529296875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 221.97979736328125,
+                            "h": 223.592529296875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "235.199px",
+                            "height": "236.908px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 146.2099609375,
+                        "h": 161.901611328125
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 146.2099609375,
+                            "h": 161.901611328125
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "154.917px",
+                            "height": "171.543px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 309.453369140625,
+                        "h": 323.90576171875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 309.453369140625,
+                            "h": 323.90576171875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "327.882px",
+                            "height": "343.195px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 309.4534606933594,
+                        "h": 323.90576171875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 309.4534606933594,
+                            "h": 323.90576171875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "327.882px",
+                            "height": "343.195px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 424.97967529296875,
+                        "h": 223.591796875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 424.97967529296875,
+                            "h": 223.591796875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "450.288px",
+                            "height": "236.907px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transform": "matrix(-1, 0, 0, 1, 893.008, 54.0938)",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "g",
+                      "cls": "[object SVGAnimatedString]",
+                      "text": null,
+                      "rect": {
+                        "w": 158.2093505859375,
+                        "h": 223.591796875
+                      },
+                      "styles": {
+                        "fontSize": "16px",
+                        "fontWeight": "400",
+                        "fontFamily": "Inter, Arial, sans-serif",
+                        "lineHeight": "24px",
+                        "color": "rgb(19, 14, 48)",
+                        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                        "display": "inline",
+                        "flexDirection": "row",
+                        "border": "0px none rgb(19, 14, 48)",
+                        "borderTop": "0px none rgb(19, 14, 48)",
+                        "borderBottom": "0px none rgb(19, 14, 48)",
+                        "borderLeft": "0px none rgb(19, 14, 48)",
+                        "borderRight": "0px none rgb(19, 14, 48)",
+                        "overflow": "visible",
+                        "position": "static",
+                        "opacity": "1",
+                        "transition": "all",
+                        "objectFit": "fill",
+                        "mixBlendMode": "multiply"
+                      },
+                      "children": [
+                        {
+                          "tag": "rect",
+                          "cls": "[object SVGAnimatedString]",
+                          "text": "",
+                          "rect": {
+                            "w": 158.2093505859375,
+                            "h": 223.591796875
+                          },
+                          "styles": {
+                            "fontSize": "16px",
+                            "fontWeight": "400",
+                            "fontFamily": "Inter, Arial, sans-serif",
+                            "lineHeight": "24px",
+                            "color": "rgb(19, 14, 48)",
+                            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+                            "width": "167.631px",
+                            "height": "236.907px",
+                            "display": "inline",
+                            "flexDirection": "row",
+                            "border": "0px none rgb(19, 14, 48)",
+                            "borderTop": "0px none rgb(19, 14, 48)",
+                            "borderBottom": "0px none rgb(19, 14, 48)",
+                            "borderLeft": "0px none rgb(19, 14, 48)",
+                            "borderRight": "0px none rgb(19, 14, 48)",
+                            "overflow": "visible",
+                            "position": "static",
+                            "opacity": "1",
+                            "transform": "matrix(-1, 0, 0, 1, 1425.18, 54.0938)",
+                            "transition": "all",
+                            "objectFit": "fill"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+          "text": "",
+          "rect": {
+            "w": 1344,
+            "h": 96
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "padding": "96px 0px 0px",
+            "paddingTop": "96px",
+            "width": "1344px",
+            "height": "96px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "static",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "div",
+      "cls": "layer-4",
+      "text": null,
+      "rect": {
+        "w": 1440,
+        "h": 726.109375
+      },
+      "styles": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Inter, Arial, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(19, 14, 48)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "width": "1440px",
+        "height": "726.109px",
+        "display": "block",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "border": "0px none rgb(19, 14, 48)",
+        "borderTop": "0px none rgb(19, 14, 48)",
+        "borderBottom": "0px none rgb(19, 14, 48)",
+        "borderLeft": "0px none rgb(19, 14, 48)",
+        "borderRight": "0px none rgb(19, 14, 48)",
+        "overflow": "visible",
+        "position": "absolute",
+        "zIndex": "-4",
+        "opacity": "1",
+        "transition": "all",
+        "objectFit": "fill"
+      },
+      "children": [
+        {
+          "tag": "div",
+          "cls": "background",
+          "text": "",
+          "rect": {
+            "w": 1440,
+            "h": 726.109375
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgb(19, 14, 48)",
+            "backgroundColor": "rgb(239, 242, 229)",
+            "background": "rgb(239, 242, 229) none repeat scroll 0% 0% / auto padding-box border-box",
+            "width": "1440px",
+            "height": "726.109px",
+            "display": "block",
+            "flexDirection": "row",
+            "border": "0px none rgb(19, 14, 48)",
+            "borderTop": "0px none rgb(19, 14, 48)",
+            "borderBottom": "0px none rgb(19, 14, 48)",
+            "borderLeft": "0px none rgb(19, 14, 48)",
+            "borderRight": "0px none rgb(19, 14, 48)",
+            "overflow": "visible",
+            "position": "absolute",
+            "opacity": "1",
+            "transition": "all",
+            "objectFit": "fill"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

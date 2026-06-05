@@ -2,12 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight12 } from "@/components/icons";
 import type { BlogPost } from "@/types/blog";
+import type { BlogPostDict } from "@/lib/i18n/dict.types";
 
-export function FeaturedPost({ post }: { post: BlogPost }) {
+export function FeaturedPost({
+  post,
+  dict,
+}: {
+  post: BlogPost;
+  dict: BlogPostDict;
+}) {
   return (
     <Link
       href={post.href}
-      className="group grid md:grid-cols-2 gap-6 md:gap-10 rounded-3xl bg-[#FFE228] p-6 md:p-10 transition-transform hover:-translate-y-1"
+      className="lift group grid md:grid-cols-2 gap-6 md:gap-10 rounded-3xl bg-[#FFE228] p-6 md:p-10"
     >
       <div className="flex flex-col justify-center gap-3 md:max-w-[50%]">
         <h2 className="heading-display text-3xl md:text-4xl text-text-primary">
@@ -17,7 +24,7 @@ export function FeaturedPost({ post }: { post: BlogPost }) {
           {post.description}
         </p>
         <span className="inline-flex items-center gap-1 text-sm font-medium mt-2 text-text-primary">
-          Read article
+          {dict.readArticle}
           <ChevronRight12 className="transition-transform group-hover:translate-x-0.5" />
         </span>
       </div>

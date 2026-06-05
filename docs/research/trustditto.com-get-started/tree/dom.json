@@ -1,0 +1,576 @@
+{
+  "tag": "div",
+  "cls": "page-wrapper",
+  "text": null,
+  "children": [
+    {
+      "tag": "div",
+      "cls": "main-wrapper",
+      "text": null,
+      "children": [
+        {
+          "tag": "div",
+          "cls": "navbar1 w-nav",
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "cls": "navbar_container w-container",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "spacer-1rem",
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "cls": "navbar1_component",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "a",
+                      "cls": "navbar_mobile-brand w-nav-brand",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "img",
+                          "cls": "",
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "nav",
+                      "cls": "navbar1_menu w-nav-menu",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "navbar_brand w-inline-block",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "navbar1_navigation-list",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "navbar_button-group",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "navbar1_mobile_button",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "button w-variant-a49ac11c-dff4-0c97-be6d-a3422e4bdf24 w-inline-block w--current",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "navbar1_menu-button w-nav-button",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "cls": "navbar_hamburger",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "spacer-1rem",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "paste-to-global w-embed",
+              "text": null,
+              "children": [
+                {
+                  "tag": "style",
+                  "cls": "",
+                  "text": ".navbar1_dropdown .icon-wrapper{\n\ttransition: transform 0.4s ease;\n}\n.navbar1_dropdown:hover .icon-wrapper, .navbar1_dro",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "w-nav-overlay",
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "cls": "breadcrumbs_section",
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "cls": "padding-global",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "spacer-1x5rem",
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "cls": "container-84rem",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "breadcrumbs_list",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "a",
+                          "cls": "link-size-1rem w--current",
+                          "text": "Get started",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "spacer-1x5rem",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "layer-4",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "background",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "cls": "contact_section",
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "cls": "padding-global",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "spacer-component",
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "cls": "container-84rem",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "contact_component",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "cls": "contact_content_wrapper",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "contact_form_wrapper",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "layer-4",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "background",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": null,
+          "children": [
+            {
+              "tag": "section",
+              "cls": "logostrip_section",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "padding-global",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "spacer-component",
+                      "text": "",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "container-84rem",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "cls": "header",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "spacer-2rem",
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "logostrip_list_wrapper w-dyn-list",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "spacer-component",
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "layer-4",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "background w-variant-d4e67767-ab3f-6e5c-2116-e9a6d2688920",
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": null,
+          "children": [
+            {
+              "tag": "section",
+              "cls": "numbers_section",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "padding-global",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+                      "text": "",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "container-84rem",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "cls": "header",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "spacer-3rem",
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "numbers_list",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "spacer-3rem",
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "button-group x-center",
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "layer-4",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "background",
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": null,
+          "children": [
+            {
+              "tag": "section",
+              "cls": "cta_section",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "padding-global",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+                      "text": "",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "container-84rem",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "cls": "cta_header",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "spacer-3rem",
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "cta_illus_embed w-embed",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "layer-4",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "background",
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "footer",
+          "cls": "footer",
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "cls": "padding-global",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "spacer-component w-variant-c5e33d14-e297-6cd7-2fd0-a5ca94b32941",
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "cls": "container-84rem",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "footer_newsletter",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "p",
+                          "cls": "text-size-1rem text-weight-600 text-wrap-balance",
+                          "text": "Practical CSR insights—tools, studies, and templates, in your inbox",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "cls": "newsletter_form_wrapper w-form",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "spacer-component w-variant-4e707de5-bf1e-dd42-7fb6-ac24ce686a4c",
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "cls": "container-84rem",
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "cls": "footer_component",
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "cls": "footer_brand",
+                          "text": null,
+                          "children": []
+                        },
+                        {
+                          "tag": "nav",
+                          "cls": "footer_navigation",
+                          "text": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "cls": "spacer-component",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "cls": "layer-4",
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "cls": "background",
+                  "text": "",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

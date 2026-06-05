@@ -49,7 +49,7 @@ export function BeliefBlock({
             : "lg:col-start-1 lg:ml-[20%]"
         )}
       >
-        <h3 className="heading-display text-2xl md:text-3xl text-balance">
+        <h3 className="heading-display text-xl sm:text-2xl md:text-3xl text-balance">
           {title}
         </h3>
         <p className="text-base text-text-secondary leading-relaxed">{body}</p>

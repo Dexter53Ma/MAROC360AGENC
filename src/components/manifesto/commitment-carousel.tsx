@@ -5,36 +5,9 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useCallback } from "react";
 import { ChevronLeft24, ChevronRight24 } from "@/components/icons";
+import type { WhyUsDict } from "@/lib/i18n/dict.types";
 
-interface CommitmentCard {
-  badge: string;
-  badgeAlt: string;
-  title: string;
-  body: string;
-}
-
-const commitments: CommitmentCard[] = [
-  {
-    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/69f0c6a9c34efe096f2f8b03_Design%20sans%20titre.svg",
-    badgeAlt: "Google Premier Partner",
-    title: "Google Premier Partner",
-    body: "We're recognized by Google for the volume and quality of campaigns we run for brands across Morocco and the MENA region.",
-  },
-  {
-    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b8162524789eed7a6de2_UN.avif",
-    badgeAlt: "Meta Business Partner",
-    title: "Meta Business Partner",
-    body: "Our media team is certified by Meta to run performance campaigns on Facebook and Instagram at scale.",
-  },
-  {
-    badge: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/6835b6d9cd5c42b2d099f74c_Efrag.avif",
-    badgeAlt: "TikTok Marketing Partner",
-    title: "TikTok Marketing Partner",
-    body: "We help brands win on TikTok with creative, buying, and measurement that match the speed of the platform.",
-  },
-];
-
-export function CommitmentCarousel() {
+export function CommitmentCarousel({ dict }: { dict: WhyUsDict }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [Autoplay({ delay: 6000, stopOnInteraction: false })]
@@ -46,8 +19,8 @@ export function CommitmentCarousel() {
   return (
     <section className="section-y overflow-hidden">
       <div className="container-page">
-        <h2 className="heading-display text-3xl md:text-4xl lg:text-5xl max-w-3xl mb-12 text-balance">
-          We&apos;re committed to growing Morocco&apos;s brands on the global stage
+        <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-3xl mb-8 sm:mb-12 text-balance">
+          {dict.commitmentsHeading}
         </h2>
       </div>
 
@@ -55,7 +28,7 @@ export function CommitmentCarousel() {
         <button
           type="button"
           onClick={scrollPrev}
-          aria-label="Previous commitment"
+          aria-label={dict.previousCommitment}
           className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-15 h-22 px-3 items-center justify-start bg-surface-tertiary rounded-r-full transition-colors hover:bg-surface-secondary"
         >
           <ChevronLeft24 className="text-text-primary" />
@@ -63,7 +36,7 @@ export function CommitmentCarousel() {
         <button
           type="button"
           onClick={scrollNext}
-          aria-label="Next commitment"
+          aria-label={dict.nextCommitment}
           className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-15 h-22 px-3 items-center justify-end bg-surface-tertiary rounded-l-full transition-colors hover:bg-surface-secondary"
         >
           <ChevronRight24 className="text-text-primary" />
@@ -71,7 +44,7 @@ export function CommitmentCarousel() {
 
         <div className="embla" ref={emblaRef}>
           <div className="embla__container pl-6 md:pl-20 lg:pl-[calc((100vw-84rem)/2+2.5rem)]">
-            {commitments.map((card) => (
+            {dict.commitments.map((card) => (
               <div key={card.title} className="embla__slide">
                 <div className="bg-surface-tertiary rounded-3xl p-6 sm:p-8 h-full flex flex-col aspect-[4/3]">
                   <div className="relative w-16 h-16 mb-5 flex-shrink-0">

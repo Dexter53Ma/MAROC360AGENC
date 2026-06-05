@@ -1,0 +1,58 @@
+[
+  {
+    "label": "Nom/Last Name*",
+    "type": "text",
+    "name": "firstname",
+    "required": true,
+    "placeholder": "John"
+  },
+  {
+    "label": "Prénom/First Name*",
+    "type": "text",
+    "name": "lastname",
+    "required": true,
+    "placeholder": "Doe"
+  },
+  {
+    "label": "Email*",
+    "type": "email",
+    "name": "email",
+    "required": true,
+    "placeholder": "john@acme.com"
+  },
+  {
+    "label": "Numéro de téléphone/Phone Number*",
+    "type": "text",
+    "name": "phone_number_from_form",
+    "required": true,
+    "placeholder": "+33 6 21 34 65 78"
+  },
+  {
+    "label": "Nom de l'entreprise/Company Name*",
+    "type": "text",
+    "name": "company",
+    "required": true,
+    "placeholder": "Acme"
+  },
+  {
+    "label": "Quels enjeux de conformité vous concernent ?\nWhich compliance topics are you most interested in?*",
+    "type": "checkbox",
+    "name": "0-2/csr_compliance_topics",
+    "required": false,
+    "placeholder": null
+  },
+  {
+    "label": "utm_source",
+    "type": "hidden",
+    "name": "utm_source",
+    "required": false,
+    "placeholder": null
+  },
+  {
+    "label": "utm_campaign",
+    "type": "hidden",
+    "name": "utm_campaign",
+    "required": false,
+    "placeholder": null
+  }
+]
