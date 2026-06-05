@@ -1,19 +1,8 @@
-import { createAuditor } from "@seomator/seo-audit";
+import { runAudit, AuditError, type CategoryResult } from "@/lib/seo-audit";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 26;
 export const dynamic = "force-dynamic";
-
-const CATEGORIES = [
-  "core",
-  "perf",
-  "security",
-  "links",
-  "images",
-  "content",
-  "technical",
-  "schema",
-] as const;
 
 function normalizeUrl(raw: string): string | null {
   const trimmed = raw.trim();
@@ -43,47 +32,10 @@ function gradeFromScore(score: number): { letter: string; tone: "good" | "ok" | 
   return { letter: "F", tone: "bad" };
 }
 
-function describeError(err: unknown): { message: string; code: string } {
-  const e = err as { code?: string; message?: string; cause?: { code?: string; message?: string } };
-  const code = e?.code ?? e?.cause?.code ?? "";
-  const raw = e?.message ?? "";
-  const causeMsg = e?.cause?.message ?? "";
-  const haystack = `${raw} ${causeMsg}`;
-
-  if (code === "ENOTFOUND" || /getaddrinfo/i.test(haystack) || /ENOTFOUND/i.test(haystack)) {
-    return { code, message: "We couldn’t find that domain. Check the URL and try again." };
-  }
-  if (code === "EAI_AGAIN" || /eai_again/i.test(haystack)) {
-    return { code, message: "DNS lookup failed. Check the URL and your network." };
-  }
-  if (code === "ECONNREFUSED") {
-    return { code, message: "The site refused the connection. It may be down or blocking automated requests." };
-  }
-  if (code === "ECONNRESET" || code === "ETIMEDOUT" || /timeout/i.test(haystack)) {
-    return { code, message: "The site took too long to respond. Try again, or pick a lighter page to audit." };
-  }
-  if (code === "CERT_HAS_EXPIRED" || code === "DEPTH_ZERO_SELF_SIGNED_CERT" || code === "UNABLE_TO_VERIFY_LEAF_SIGNATURE") {
-    return { code, message: "The site has an SSL certificate issue. We can’t safely audit it right now." };
-  }
-  if (/403|forbidden/i.test(haystack)) {
-    return { code, message: "The site blocked our audit request (403 Forbidden)." };
-  }
-  if (/404|not found/i.test(haystack)) {
-    return { code, message: "The page returned a 404. Try the homepage or another public URL." };
-  }
-  if (/5\d\d|server error/i.test(haystack)) {
-    return { code, message: "The site returned a server error. Try again in a moment." };
-  }
-  if (/fetch failed/i.test(haystack)) {
-    return { code, message: "We couldn’t reach that site. Check the URL or try again later." };
-  }
-  return { code, message: raw || causeMsg || "Something went wrong while running the audit." };
-}
-
 function topIssues(
-  categories: Array<{ categoryId: string; results: Array<{ ruleId: string; status: "pass" | "warn" | "fail"; message: string }> }>,
+  categories: readonly CategoryResult[],
   limit = 3,
-) {
+): Array<{ category: string; ruleId: string; message: string; severity: "warn" | "fail" }> {
   const flat = categories.flatMap((cat) =>
     cat.results
       .filter((r) => r.status !== "pass")
@@ -94,7 +46,9 @@ function topIssues(
         severity: r.status as "warn" | "fail",
       })),
   );
-  flat.sort((a, b) => (a.severity === b.severity ? 0 : a.severity === "fail" ? -1 : 1));
+  flat.sort((a, b) =>
+    a.severity === b.severity ? 0 : a.severity === "fail" ? -1 : 1,
+  );
   return flat.slice(0, limit);
 }
 
@@ -135,6 +89,17 @@ function buildErrorResponse(message: string, code = "INVALID_URL", status = 400)
   });
 }
 
+const CATEGORY_SUMMARIES = [
+  { id: "core", name: "Core SEO" },
+  { id: "perf", name: "Performance" },
+  { id: "security", name: "Security" },
+  { id: "links", name: "Links" },
+  { id: "images", name: "Images" },
+  { id: "content", name: "Content" },
+  { id: "schema", name: "Structured Data" },
+  { id: "technical", name: "Technical" },
+];
+
 export async function POST(request: Request) {
   let body: { url?: string };
   try {
@@ -167,10 +132,9 @@ export async function POST(request: Request) {
       };
 
       try {
-        const auditor = createAuditor({
-          categories: [...CATEGORIES],
-          measureCwv: false,
-          timeout: 30_000,
+        emit({ type: "start", url: normalized, categories: CATEGORY_SUMMARIES });
+
+        const raw = await runAudit(normalized, {
           onCategoryStart: (categoryId, categoryName) => {
             emit({ type: "category-start", categoryId, categoryName });
           },
@@ -187,14 +151,6 @@ export async function POST(request: Request) {
           },
         });
 
-        const categoryMeta = auditor.getCategoriesToAudit().map((c) => ({
-          id: c.id,
-          name: c.name,
-        }));
-
-        emit({ type: "start", url: normalized, categories: categoryMeta });
-
-        const raw = await auditor.audit(normalized);
         if (cancelled) return;
 
         const grade = gradeFromScore(raw.overallScore);
@@ -218,9 +174,15 @@ export async function POST(request: Request) {
           },
         });
       } catch (err) {
-        const { code, message } = describeError(err);
-        console.error(`[seo-audit] ${normalized} failed (${code}):`, err);
-        emit({ type: "error", message, code });
+        if (err instanceof AuditError) {
+          console.error(`[seo-audit] ${normalized} failed (${err.code}):`, err.message);
+          emit({ type: "error", message: err.message, code: err.code });
+        } else {
+          console.error(`[seo-audit] ${normalized} crashed:`, err);
+          const message =
+            err instanceof Error ? err.message : "Something went wrong while running the audit.";
+          emit({ type: "error", message, code: "INTERNAL" });
+        }
       } finally {
         try {
           controller.close();
@@ -247,8 +209,8 @@ export async function GET() {
   return new Response(
     JSON.stringify({
       status: "ok",
-      description: "POST { url: 'example.com' } to run a SEOmator audit.",
-      categories: CATEGORIES,
+      description: "POST { url: 'example.com' } to run an SEO audit.",
+      categories: CATEGORY_SUMMARIES,
     }),
     { headers: { "Content-Type": "application/json" } },
   );
