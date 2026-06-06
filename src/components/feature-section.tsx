@@ -28,7 +28,7 @@ export function FeatureSection({
               className="group inline-flex items-center gap-2 mt-2 self-start"
             >
               <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-text-primary/20 text-base font-medium hover:bg-surface-tertiary transition-colors">
-                {learnMoreLabel}
+                {learnMoreLabel.replace("{title}", feature.title)}
                 <ChevronRight12 className="transition-transform group-hover:translate-x-0.5" />
               </span>
             </Link>

@@ -88,7 +88,7 @@ export default function IndustriesIndexPage() {
                     {industry.description}
                   </p>
                   <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-text-primary">
-                    En savoir plus
+                    En savoir plus sur {industry.navLabel}
                     <ChevronRight12 className="transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </Link>

@@ -36,7 +36,7 @@ export function PostCard({
           {post.description}
         </p>
         <span className="inline-flex items-center gap-1 text-sm font-medium mt-1 text-text-primary">
-          {dict.exploreMore}
+          {dict.exploreMore.replace("{title}", post.title)}
           <ChevronRight12 className="transition-transform group-hover:translate-x-0.5" />
         </span>
       </div>
