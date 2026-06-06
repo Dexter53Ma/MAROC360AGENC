@@ -409,10 +409,10 @@ export function Navbar({
                 <Image
                   src="/brand/maroc360-logo.png"
                   alt="Maroc 360 Agency"
-                  width={533}
-                  height={433}
+                  fill
+                  sizes="(max-width: 640px) 160px, 190px"
                   priority
-                  className="absolute inset-0 w-full h-full object-contain object-bottom-left"
+                  className="object-contain object-bottom-left"
                 />
               </div>
             </Link>
