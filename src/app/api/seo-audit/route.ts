@@ -1,4 +1,4 @@
-import { runAudit, AuditError, type CategoryResult } from "@/lib/seo-audit";
+import { runAudit, AuditError, type CategoryResult, type FixRecipe } from "@/lib/seo-audit";
 
 export const runtime = "nodejs";
 export const maxDuration = 26;
@@ -32,24 +32,47 @@ function gradeFromScore(score: number): { letter: string; tone: "good" | "ok" | 
   return { letter: "F", tone: "bad" };
 }
 
-function topIssues(
-  categories: readonly CategoryResult[],
-  limit = 3,
-): Array<{ category: string; ruleId: string; message: string; severity: "warn" | "fail" }> {
+type IssueEntry = {
+  category: string;
+  categoryName: string;
+  ruleId: string;
+  message: string;
+  severity: "warn" | "fail";
+  fix?: FixRecipe;
+};
+
+function topIssues(categories: readonly CategoryResult[], limit = 3): IssueEntry[] {
   const flat = categories.flatMap((cat) =>
     cat.results
       .filter((r) => r.status !== "pass")
       .map((r) => ({
         category: cat.categoryId,
+        categoryName: cat.categoryName,
         ruleId: r.ruleId,
         message: r.message,
         severity: r.status as "warn" | "fail",
+        fix: r.fix,
       })),
   );
   flat.sort((a, b) =>
     a.severity === b.severity ? 0 : a.severity === "fail" ? -1 : 1,
   );
   return flat.slice(0, limit);
+}
+
+function allIssues(categories: readonly CategoryResult[]): IssueEntry[] {
+  return categories.flatMap((cat) =>
+    cat.results
+      .filter((r) => r.status !== "pass")
+      .map((r) => ({
+        category: cat.categoryId,
+        categoryName: cat.categoryName,
+        ruleId: r.ruleId,
+        message: r.message,
+        severity: r.status as "warn" | "fail",
+        fix: r.fix,
+      })),
+  );
 }
 
 type StreamEvent =
@@ -73,7 +96,8 @@ type StreamEvent =
         crawledPages: number;
         timestamp: string;
         categories: Array<{ id: string; score: number; pass: number; warn: number; fail: number }>;
-        topIssues: Array<{ category: string; ruleId: string; message: string; severity: "warn" | "fail" }>;
+        topIssues: IssueEntry[];
+        issues: IssueEntry[];
       };
     }
   | { type: "error"; message: string; code: string };
@@ -171,6 +195,7 @@ export async function POST(request: Request) {
               fail: c.failCount,
             })),
             topIssues: topIssues(raw.categoryResults, 3),
+            issues: allIssues(raw.categoryResults),
           },
         });
       } catch (err) {
