@@ -310,7 +310,7 @@ const blogPostEN: BlogPostDict = {
   relatedPostsTitle: "Related articles",
   faqTitle: "Frequently asked questions",
   backToBlog: "Back to all articles",
-  exploreMore: "Explore more",
+  exploreMore: "Explore {title}",
   notFoundTitle: "Article not found",
   notFoundDescription: "The article you're looking for doesn't exist or has been moved.",
   backHome: "Back to home",
@@ -342,7 +342,7 @@ const blogPostFR: BlogPostDict = {
   relatedPostsTitle: "Articles liés",
   faqTitle: "Questions fréquentes",
   backToBlog: "Retour aux articles",
-  exploreMore: "En savoir plus",
+  exploreMore: "Explorer {title}",
   notFoundTitle: "Article introuvable",
   notFoundDescription: "L'article que vous cherchez n'existe pas ou a été déplacé.",
   backHome: "Retour à l'accueil",
@@ -1055,7 +1055,7 @@ const homeEN: HomePageDict = {
   testimonials: {
     heading: "What our clients say",
     body: "Brands of all sizes choose Maroc 360 for our creativity, our discipline, and the measurable growth we deliver.",
-    readMore: "Read More",
+    readMore: "Read more on the blog",
     previousSlide: "Previous testimonial",
     nextSlide: "Next testimonial",
     cards: [
@@ -1133,12 +1133,12 @@ const homeEN: HomePageDict = {
         thumbnail: "/images/blog/post-3.jpeg",
         thumbnailAlt:
           "Illustration of social media content trends influencing brands in Morocco",
-        href: "/en/blog/social-media-strends-morocco",
+        href: "/en/blog/social-media-strategy-playbook",
         category: "Social",
       },
     ],
   },
-  learnMore: "Learn More",
+  learnMore: "Learn more about {title}",
 };
 
 const legalFR: LegalDict = {
@@ -1314,7 +1314,7 @@ const homeFR: HomePageDict = {
   testimonials: {
     heading: "Ce que nos clients disent",
     body: "Des marques de toutes tailles choisissent Maroc 360 pour notre créativité, notre discipline et la croissance mesurable que nous générons.",
-    readMore: "Lire plus",
+    readMore: "Lire plus sur le blog",
     previousSlide: "Témoignage précédent",
     nextSlide: "Témoignage suivant",
     cards: [
@@ -1398,7 +1398,7 @@ const homeFR: HomePageDict = {
       },
     ],
   },
-  learnMore: "En savoir plus",
+  learnMore: "En savoir plus sur {title}",
 };
 
 const multiStepFormEN: MultiStepFormDict = {
