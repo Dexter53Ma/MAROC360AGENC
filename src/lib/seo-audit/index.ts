@@ -1,5 +1,19 @@
 import * as cheerio from "cheerio";
 
+export type EffortLevel = "5min" | "30min" | "2h" | "1d" | "1w+";
+export type ImpactLevel = "low" | "medium" | "high";
+
+export interface FixRecipe {
+  readonly summary: string;
+  readonly effort: EffortLevel;
+  readonly impact: ImpactLevel;
+  readonly steps: readonly string[];
+  readonly codeSnippet?: string;
+  readonly docUrl?: string;
+  readonly ctaService?: "Technical SEO" | "Performance" | "Content" | "Local SEO" | "Web Development";
+  readonly ctaPitch?: string;
+}
+
 export type CheckStatus = "pass" | "warn" | "fail";
 
 export interface CheckResult {
@@ -7,6 +21,7 @@ export interface CheckResult {
   readonly status: CheckStatus;
   readonly message: string;
   readonly weight: number;
+  readonly fix?: FixRecipe;
 }
 
 export interface CategoryResult {
@@ -62,15 +77,449 @@ const USER_AGENT =
 
 const MAX_HTML_BYTES = 2_000_000;
 
-function pass(id: string, weight: number, message: string): CheckResult {
-  return { ruleId: id, status: "pass", message, weight };
+function pass(id: string, weight: number, message: string, fix?: FixRecipe): CheckResult {
+  return { ruleId: id, status: "pass", message, weight, fix };
 }
-function warn(id: string, weight: number, message: string): CheckResult {
-  return { ruleId: id, status: "warn", message, weight };
+function warn(id: string, weight: number, message: string, fix?: FixRecipe): CheckResult {
+  return { ruleId: id, status: "warn", message, weight, fix };
 }
-function fail(id: string, weight: number, message: string): CheckResult {
-  return { ruleId: id, status: "fail", message, weight };
+function fail(id: string, weight: number, message: string, fix?: FixRecipe): CheckResult {
+  return { ruleId: id, status: "fail", message, weight, fix };
 }
+
+const GENERIC_FIX: FixRecipe = {
+  summary: "Review and address this issue",
+  effort: "30min",
+  impact: "medium",
+  steps: [
+    "Open the affected page in your browser",
+    "Inspect the relevant element",
+    "Apply the appropriate fix",
+  ],
+  ctaService: "Technical SEO",
+  ctaPitch: "Our team can investigate and fix this for you.",
+};
+
+const FIX_RECIPES: Record<string, FixRecipe> = {
+  "title-present": {
+    summary: "Add a unique <title> tag to control how your page appears in search",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "Open the page source or your framework's metadata config",
+      "Add a unique <title> inside <head> that mirrors the page topic",
+      "In Next.js App Router: add `title: '...'` to the `metadata` export",
+    ],
+    codeSnippet: `// Next.js App Router
+export const metadata = {
+  title: "Maroc 360 Agency | 360° digital marketing",
+};`,
+    docUrl: "https://developers.google.com/search/docs/appearance/title-link",
+    ctaService: "Technical SEO",
+    ctaPitch: "We rewrite title tags across your site in a single sprint.",
+  },
+  "title-length": {
+    summary: "Reshape your title to land in the 30–60 character sweet spot",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "Open your page's metadata config (e.g. Next.js `metadata.title`)",
+      "Aim for 30–60 characters and lead with the keyword",
+      "Use a template for the brand suffix, override per page when needed",
+    ],
+    codeSnippet: `// Next.js App Router
+export const metadata = {
+  title: {
+    default: "Maroc 360 Agency | 360° digital marketing",
+    template: "%s | Maroc 360",
+  },
+};`,
+    docUrl: "https://developers.google.com/search/docs/appearance/title-link",
+    ctaService: "Content",
+    ctaPitch: "We tune every title tag for click-through and length.",
+  },
+  "meta-description": {
+    summary: "Add a 70–160 character meta description to control your snippet",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "Open the page's metadata config",
+      "Write a 70–160 character description that matches search intent",
+      "Add it as `description: '...'` in the `metadata` export",
+    ],
+    codeSnippet: `// Next.js App Router
+export const metadata = {
+  description:
+    "Maroc 360 helps Moroccan brands grow with SEO, paid media and creative. Book a free audit.",
+};`,
+    docUrl: "https://developers.google.com/search/docs/appearance/snippet",
+    ctaService: "Content",
+    ctaPitch: "We rewrite meta descriptions sitewide in one pass.",
+  },
+  "h1-count": {
+    summary: "Use exactly one <h1> per page so the topic is unambiguous",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "Inspect the page in DevTools and count <h1> tags",
+      "Pick the main page title as the single <h1>",
+      "Demote the rest to <h2> or below",
+    ],
+    codeSnippet: `// app/about/page.tsx
+export default function AboutPage() {
+  return (
+    <>
+      <h1>About Maroc 360</h1>
+      <h2>Our story</h2>
+      <h2>Our team</h2>
+    </>
+  );
+}`,
+    docUrl: "https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements",
+    ctaService: "Content",
+    ctaPitch: "We audit heading hierarchy across every template.",
+  },
+  canonical: {
+    summary: "Declare a canonical URL to prevent duplicate-content cannibalization",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "Open the page's metadata config",
+      "Decide the canonical URL (usually the preferred absolute URL)",
+      "Add `alternates.canonical` to the `metadata` export",
+    ],
+    codeSnippet: `// Next.js App Router
+export const metadata = {
+  alternates: {
+    canonical: "https://maroc360.agency/en/services/seo",
+  },
+};`,
+    docUrl: "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    ctaService: "Technical SEO",
+    ctaPitch: "We fix canonical and hreflang architecture in under a sprint.",
+  },
+  viewport: {
+    summary: "Add the viewport meta tag or the page is not mobile-friendly",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "Open your root layout or HTML <head>",
+      "Add `width=device-width, initial-scale=1` viewport meta",
+      "In Next.js App Router this is added automatically — verify in the rendered HTML",
+    ],
+    codeSnippet: `// app/layout.tsx
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};`,
+    docUrl: "https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag",
+    ctaService: "Web Development",
+    ctaPitch: "We ship a mobile-friendly audit in one afternoon.",
+  },
+  "html-lang": {
+    summary: "Set the document language to improve accessibility and localized search",
+    effort: "5min",
+    impact: "medium",
+    steps: [
+      "Open the root <html> tag in your layout",
+      "Add `lang=\"en\"` (or `fr`, `ar`, etc.)",
+      "In Next.js, pass `lang` to the <html> element in `app/layout.tsx`",
+    ],
+    codeSnippet: `// app/layout.tsx
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}`,
+    docUrl: "https://developer.mozilla.org/docs/Web/HTML/Global_attributes/lang",
+    ctaService: "Technical SEO",
+    ctaPitch: "We align lang, hreflang and content for multilingual sites.",
+  },
+  "response-time": {
+    summary: "Get server response under 1.5s with a CDN, caching and server tuning",
+    effort: "1d",
+    impact: "high",
+    steps: [
+      "Measure TTFB with Vercel Analytics or Lighthouse",
+      "Put a CDN in front (Vercel Edge, Cloudflare) and enable HTTP caching",
+      "Move dynamic logic to streaming and cache what you can at the edge",
+    ],
+    codeSnippet: `// next.config.js
+module.exports = {
+  experimental: {
+    staleTimes: { dynamic: 30, static: 180 },
+  },
+};`,
+    docUrl: "https://web.dev/articles/ttfb",
+    ctaService: "Performance",
+    ctaPitch: "We cut TTFB by 60% with edge caching and ISR.",
+  },
+  "html-size": {
+    summary: "Trim the HTML payload under 100 KB to speed up first paint",
+    effort: "1d",
+    impact: "medium",
+    steps: [
+      "Run a Lighthouse audit and check the DOM size section",
+      "Move heavy widgets below the fold and lazy-load them",
+      "Use RSC streaming and reduce inline JSON in the initial document",
+    ],
+    codeSnippet: `// app/page.tsx
+import dynamic from "next/dynamic";
+const HeavyWidget = dynamic(() => import("./heavy-widget"), {
+  ssr: false,
+});`,
+    docUrl: "https://web.dev/articles/dom-size",
+    ctaService: "Performance",
+    ctaPitch: "We shrink HTML payloads by 50% on average.",
+  },
+  https: {
+    summary: "Migrate to HTTPS — a ranking signal and a hard requirement for modern features",
+    effort: "1d",
+    impact: "high",
+    steps: [
+      "Provision a free certificate via Let's Encrypt or your hosting provider",
+      "Redirect all `http://` requests to `https://` (301) at the edge",
+      "Add the Strict-Transport-Security header and update internal links",
+    ],
+    codeSnippet: `// next.config.js — redirects
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],
+        destination: "https://maroc360.agency/:path*",
+        permanent: true,
+      },
+    ];
+  },
+};`,
+    docUrl: "https://web.dev/articles/why-https-matters",
+    ctaService: "Web Development",
+    ctaPitch: "We handle the full HTTPS migration in 48 hours.",
+  },
+  "x-frame-options": {
+    summary: "Block clickjacking with X-Frame-Options or CSP frame-ancestors",
+    effort: "30min",
+    impact: "medium",
+    steps: [
+      "Open your edge config (Vercel `vercel.json`, Next middleware, or CDN)",
+      "Add `X-Frame-Options: SAMEORIGIN` or a CSP `frame-ancestors 'none'` directive",
+      "Verify with a securityheaders.com scan",
+    ],
+    codeSnippet: `// next.config.js
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+        ],
+      },
+    ];
+  },
+};`,
+    docUrl: "https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options",
+    ctaService: "Technical SEO",
+    ctaPitch: "We harden security headers and ship a clean securityheaders.com report.",
+  },
+  "internal-links": {
+    summary: "Add internal links between related pages so crawlers can find your content",
+    effort: "1d",
+    impact: "high",
+    steps: [
+      "Audit your top 10 pages and list the related content for each",
+      "Add 3–5 contextual in-body links per page using descriptive anchor text",
+      "Update the footer and breadcrumbs with category-level links",
+    ],
+    codeSnippet: `// app/blog/[slug]/page.tsx
+import Link from "next/link";
+export default function Post({ related }) {
+  return (
+    <p>
+      Read our guide on <Link href="/blog/seo-audit">{related.title}</Link>.
+    </p>
+  );
+}`,
+    docUrl: "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    ctaService: "Content",
+    ctaPitch: "We rebuild your internal-link graph for crawlability and topic clusters.",
+  },
+  "alt-coverage": {
+    summary: "Add alt text to every <img> for accessibility and image search",
+    effort: "30min",
+    impact: "high",
+    steps: [
+      "Run a Lighthouse audit and list all images without alt",
+      "Add `alt=\"...\"` describing the image; use `alt=\"\"` for decorative images",
+      "In Next.js, set `alt` on every `<Image>` and `<img>`",
+    ],
+    codeSnippet: `// app/page.tsx
+import Image from "next/image";
+<Image
+  src="/hero.avif"
+  alt="Maroc 360 team in Casablanca office"
+  width={1200}
+  height={600}
+/>`,
+    docUrl: "https://web.dev/articles/alt-text",
+    ctaService: "Web Development",
+    ctaPitch: "We backfill alt text across your entire media library.",
+  },
+  dimensions: {
+    summary: "Declare width and height on images to prevent layout shift (CLS)",
+    effort: "30min",
+    impact: "medium",
+    steps: [
+      "Audit your images and find those missing width/height",
+      "Add explicit pixel values (or `style={{ width: '100%', height: 'auto' }}`)",
+      "In Next.js, `<Image>` infers dimensions automatically — verify the rendered HTML",
+    ],
+    codeSnippet: `// app/page.tsx
+<Image
+  src="/hero.avif"
+  alt="Maroc 360 team"
+  width={1200}
+  height={600}
+  priority
+/>`,
+    docUrl: "https://web.dev/articles/cls",
+    ctaService: "Web Development",
+    ctaPitch: "We fix CLS issues across templates in one sprint.",
+  },
+  "word-count": {
+    summary: "Expand thin content to 300+ words to give Google enough to rank",
+    effort: "2h",
+    impact: "medium",
+    steps: [
+      "Audit the page and identify thin sections under 100 words",
+      "Outline 4–6 sections answering the search intent",
+      "Write 300+ words with internal links, a FAQ and a clear CTA",
+    ],
+    codeSnippet: `// app/blog/[slug]/page.tsx — structure
+export default function Post() {
+  return (
+    <article>
+      <h1>...</h1>
+      <p>Lead paragraph with the main answer.</p>
+      <h2>Why it matters</h2>
+      <h2>How to do it</h2>
+      <h2>FAQ</h2>
+      <p><Link href="/contact">Talk to our team</Link></p>
+    </article>
+  );
+}`,
+    docUrl: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    ctaService: "Content",
+    ctaPitch: "We rewrite thin pages into ranking-grade long-form content.",
+  },
+  "open-graph": {
+    summary: "Add Open Graph tags so shared links render rich previews",
+    effort: "30min",
+    impact: "medium",
+    steps: [
+      "Open the page's metadata config",
+      "Set `openGraph: { title, description, url, siteName, images, type }`",
+      "Validate with the Facebook Sharing Debugger",
+    ],
+    codeSnippet: `// Next.js App Router
+export const metadata = {
+  openGraph: {
+    title: "Maroc 360 | 360° digital marketing",
+    description: "SEO, paid media and creative for Moroccan brands.",
+    url: "https://maroc360.agency/en",
+    siteName: "Maroc 360",
+    images: [{ url: "/og.avif", width: 1200, height: 630 }],
+    type: "website",
+  },
+};`,
+    docUrl: "https://ogp.me/",
+    ctaService: "Content",
+    ctaPitch: "We ship a complete OG and Twitter Card kit across your site.",
+  },
+  "jsonld-present": {
+    summary: "Add JSON-LD structured data so Google can build rich results",
+    effort: "2h",
+    impact: "high",
+    steps: [
+      "Pick the most relevant schema (Organization, WebPage, Product, Article)",
+      "Build the JSON-LD with Google's Structured Data Markup Helper",
+      "In Next.js, drop it into a `script` tag with `type=\"application/ld+json\"`",
+    ],
+    codeSnippet: `// app/layout.tsx
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Maroc 360",
+  url: "https://maroc360.agency",
+  logo: "https://maroc360.agency/logo.avif",
+};
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+/>`,
+    docUrl: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+    ctaService: "Technical SEO",
+    ctaPitch: "We build the schema.org layer that unlocks rich results.",
+  },
+  "robots-directive": {
+    summary: "Review the meta robots tag — noindex hides the page from search",
+    effort: "5min",
+    impact: "high",
+    steps: [
+      "View source and find the `<meta name=\"robots\">` tag",
+      "Remove `noindex` and `nofollow` if the page should be indexable",
+      "In Next.js, override with `robots: { index: true, follow: true }` in metadata",
+    ],
+    codeSnippet: `// Next.js App Router
+export const metadata = {
+  robots: { index: true, follow: true },
+};`,
+    docUrl: "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag",
+    ctaService: "Technical SEO",
+    ctaPitch: "We audit robots directives across every URL in your sitemap.",
+  },
+  doctype: {
+    summary: "Add <!DOCTYPE html> so the page doesn't render in quirks mode",
+    effort: "5min",
+    impact: "low",
+    steps: [
+      "Open the HTML template (or your framework's root document)",
+      "Add `<!DOCTYPE html>` as the first line",
+      "In Next.js App Router the doctype is included automatically — verify the response",
+    ],
+    codeSnippet: `<!DOCTYPE html>
+<html lang="en">
+  <head>...</head>
+</html>`,
+    docUrl: "https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode",
+    ctaService: "Web Development",
+    ctaPitch: "We fix template and DOCTYPE issues during a full code review.",
+  },
+  favicon: {
+    summary: "Add a favicon to silence 404s and brand the browser tab",
+    effort: "5min",
+    impact: "low",
+    steps: [
+      "Export a 32×32 PNG and an SVG version of your logo",
+      "Place them under `/public/`",
+      "In Next.js App Router, drop `icon.png` in `app/` — it's served automatically",
+    ],
+    codeSnippet: `// app/layout.tsx — App Router auto-uses these
+// /app/icon.png
+// /app/apple-icon.png
+export const metadata = {
+  icons: { icon: "/favicon.ico" },
+};`,
+    docUrl: "https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons",
+    ctaService: "Web Development",
+    ctaPitch: "We ship a full favicon + web manifest + OG image kit.",
+  },
+};
 
 const coreChecks: Check[] = [
   {
@@ -78,7 +527,7 @@ const coreChecks: Check[] = [
     weight: 20,
     run: (ctx) => {
       const t = ctx.$("head > title").first().text().trim();
-      if (!t) return fail("title-present", 20, "Page is missing a <title> tag.");
+      if (!t) return fail("title-present", 20, "Page is missing a <title> tag.", FIX_RECIPES["title-present"]);
       return pass("title-present", 20, "Page has a <title> tag.");
     },
   },
@@ -87,18 +536,21 @@ const coreChecks: Check[] = [
     weight: 15,
     run: (ctx) => {
       const t = ctx.$("head > title").first().text().trim();
-      if (!t) return warn("title-length", 15, "Add a <title> to control search snippets.");
+      if (!t)
+        return warn("title-length", 15, "Add a <title> to control search snippets.", FIX_RECIPES["title-length"]);
       if (t.length < 30)
         return warn(
           "title-length",
           15,
           `Title is only ${t.length} characters — aim for 30–60 for best search snippets.`,
+          FIX_RECIPES["title-length"],
         );
       if (t.length > 65)
         return warn(
           "title-length",
           15,
           `Title is ${t.length} characters — Google typically truncates after 60.`,
+          FIX_RECIPES["title-length"],
         );
       return pass("title-length", 15, `Title length is ${t.length} characters (sweet spot).`);
     },
@@ -109,18 +561,25 @@ const coreChecks: Check[] = [
     run: (ctx) => {
       const d = ctx.$('head > meta[name="description"]').attr("content")?.trim() ?? "";
       if (!d)
-        return fail("meta-description", 15, "Missing meta description — search engines will auto-generate one.");
+        return fail(
+          "meta-description",
+          15,
+          "Missing meta description — search engines will auto-generate one.",
+          FIX_RECIPES["meta-description"],
+        );
       if (d.length < 70)
         return warn(
           "meta-description",
           15,
           `Meta description is only ${d.length} characters — aim for 70–160.`,
+          FIX_RECIPES["meta-description"],
         );
       if (d.length > 160)
         return warn(
           "meta-description",
           15,
           `Meta description is ${d.length} characters — Google typically truncates after 160.`,
+          FIX_RECIPES["meta-description"],
         );
       return pass("meta-description", 15, `Meta description length is ${d.length} characters.`);
     },
@@ -131,12 +590,13 @@ const coreChecks: Check[] = [
     run: (ctx) => {
       const h1s = ctx.$("h1");
       const n = h1s.length;
-      if (n === 0) return fail("h1-count", 15, "Page has no <h1> heading.");
+      if (n === 0) return fail("h1-count", 15, "Page has no <h1> heading.", FIX_RECIPES["h1-count"]);
       if (n > 1)
         return warn(
           "h1-count",
           15,
           `Page has ${n} <h1> headings — use exactly one for a clear page topic.`,
+          FIX_RECIPES["h1-count"],
         );
       return pass("h1-count", 15, "Page has exactly one <h1> heading.");
     },
@@ -147,7 +607,12 @@ const coreChecks: Check[] = [
     run: (ctx) => {
       const lang = ctx.$("html").attr("lang")?.trim();
       if (!lang)
-        return warn("html-lang", 10, "Missing <html lang> attribute — hurts accessibility and SEO.");
+        return warn(
+          "html-lang",
+          10,
+          "Missing <html lang> attribute — hurts accessibility and SEO.",
+          FIX_RECIPES["html-lang"],
+        );
       return pass("html-lang", 10, `Document language is set to "${lang}".`);
     },
   },
@@ -157,7 +622,7 @@ const coreChecks: Check[] = [
     run: (ctx) => {
       const c = ctx.$('head > link[rel="canonical"]').attr("href")?.trim();
       if (!c)
-        return warn("canonical", 15, "Missing canonical link — risk of duplicate content.");
+        return warn("canonical", 15, "Missing canonical link — risk of duplicate content.", FIX_RECIPES["canonical"]);
       return pass("canonical", 15, "Canonical link is declared.");
     },
   },
@@ -167,7 +632,7 @@ const coreChecks: Check[] = [
     run: (ctx) => {
       const v = ctx.$('head > meta[name="viewport"]').attr("content")?.trim();
       if (!v)
-        return fail("viewport", 10, "Missing viewport meta — page is not mobile-friendly.");
+        return fail("viewport", 10, "Missing viewport meta — page is not mobile-friendly.", FIX_RECIPES["viewport"]);
       return pass("viewport", 10, "Viewport meta is declared.");
     },
   },
@@ -181,8 +646,18 @@ const performanceChecks: Check[] = [
       const ms = ctx.responseTimeMs;
       if (ms < 1500) return pass("response-time", 25, `Server responded in ${ms}ms.`);
       if (ms < 3000)
-        return warn("response-time", 25, `Server responded in ${ms}ms — aim for under 1.5s.`);
-      return fail("response-time", 25, `Server responded in ${ms}ms — too slow for good UX.`);
+        return warn(
+          "response-time",
+          25,
+          `Server responded in ${ms}ms — aim for under 1.5s.`,
+          FIX_RECIPES["response-time"],
+        );
+      return fail(
+        "response-time",
+        25,
+        `Server responded in ${ms}ms — too slow for good UX.`,
+        FIX_RECIPES["response-time"],
+      );
     },
   },
   {
@@ -192,8 +667,13 @@ const performanceChecks: Check[] = [
       const kb = Math.round(ctx.contentLength / 1024);
       if (kb < 100) return pass("html-size", 20, `HTML payload is ${kb} KB.`);
       if (kb < 300)
-        return warn("html-size", 20, `HTML payload is ${kb} KB — consider trimming or lazy-loading.`);
-      return fail("html-size", 20, `HTML payload is ${kb} KB — too large for fast paint.`);
+        return warn(
+          "html-size",
+          20,
+          `HTML payload is ${kb} KB — consider trimming or lazy-loading.`,
+          FIX_RECIPES["html-size"],
+        );
+      return fail("html-size", 20, `HTML payload is ${kb} KB — too large for fast paint.`, FIX_RECIPES["html-size"]);
     },
   },
   {
@@ -238,7 +718,7 @@ const securityChecks: Check[] = [
     weight: 30,
     run: (ctx) => {
       if (ctx.finalUrl.startsWith("https://")) return pass("https", 30, "Page is served over HTTPS.");
-      return fail("https", 30, "Page is served over plain HTTP — switch to HTTPS.");
+      return fail("https", 30, "Page is served over plain HTTP — switch to HTTPS.", FIX_RECIPES["https"]);
     },
   },
   {
@@ -248,7 +728,12 @@ const securityChecks: Check[] = [
       const v = ctx.headers.get("x-frame-options") ?? ctx.headers.get("content-security-policy") ?? "";
       if (/deny|sameorigin/i.test(ctx.headers.get("x-frame-options") ?? "") || /frame-ancestors/i.test(v))
         return pass("x-frame-options", 15, "Clickjacking protection is configured.");
-      return warn("x-frame-options", 15, "No X-Frame-Options or CSP frame-ancestors — add one to prevent clickjacking.");
+      return warn(
+        "x-frame-options",
+        15,
+        "No X-Frame-Options or CSP frame-ancestors — add one to prevent clickjacking.",
+        FIX_RECIPES["x-frame-options"],
+      );
     },
   },
   {
@@ -319,9 +804,20 @@ const linksChecks: Check[] = [
             return false;
           }
         }).length;
-      if (internal === 0) return fail("internal-links", 25, "No internal links found — site has no discoverable structure.");
+      if (internal === 0)
+        return fail(
+          "internal-links",
+          25,
+          "No internal links found — site has no discoverable structure.",
+          FIX_RECIPES["internal-links"],
+        );
       if (internal < 3)
-        return warn("internal-links", 25, `Only ${internal} internal link(s) — add more to help crawlers.`);
+        return warn(
+          "internal-links",
+          25,
+          `Only ${internal} internal link(s) — add more to help crawlers.`,
+          FIX_RECIPES["internal-links"],
+        );
       return pass("internal-links", 25, `Found ${internal} internal links.`);
     },
   },
@@ -421,8 +917,18 @@ const imagesChecks: Check[] = [
       const pct = Math.round((withAlt / n) * 100);
       if (pct === 100) return pass("alt-coverage", 30, `All ${n} image(s) have alt text.`);
       if (pct >= 90)
-        return warn("alt-coverage", 30, `${pct}% of images (${n - withAlt} missing) have alt text.`);
-      return fail("alt-coverage", 30, `Only ${pct}% of images have alt text (${n - withAlt} missing).`);
+        return warn(
+          "alt-coverage",
+          30,
+          `${pct}% of images (${n - withAlt} missing) have alt text.`,
+          FIX_RECIPES["alt-coverage"],
+        );
+      return fail(
+        "alt-coverage",
+        30,
+        `Only ${pct}% of images have alt text (${n - withAlt} missing).`,
+        FIX_RECIPES["alt-coverage"],
+      );
     },
   },
   {
@@ -438,8 +944,18 @@ const imagesChecks: Check[] = [
       if (withDims === imgs.length)
         return pass("dimensions", 20, "All images declare width and height (good for CLS).");
       if (withDims >= imgs.length / 2)
-        return warn("dimensions", 20, `${imgs.length - withDims} image(s) missing width/height — add them to prevent layout shift.`);
-      return fail("dimensions", 20, `Most images (${imgs.length - withDims}) lack width/height attributes.`);
+        return warn(
+          "dimensions",
+          20,
+          `${imgs.length - withDims} image(s) missing width/height — add them to prevent layout shift.`,
+          FIX_RECIPES["dimensions"],
+        );
+      return fail(
+        "dimensions",
+        20,
+        `Most images (${imgs.length - withDims}) lack width/height attributes.`,
+        FIX_RECIPES["dimensions"],
+      );
     },
   },
   {
@@ -488,8 +1004,13 @@ const contentChecks: Check[] = [
       const words = (mainText.match(/\b[\wÀ-ſ'-]+\b/g) ?? []).length;
       if (words >= 300) return pass("word-count", 30, `Page has ${words} words.`);
       if (words >= 150)
-        return warn("word-count", 30, `Page has ${words} words — aim for 300+ for better rankings.`);
-      return fail("word-count", 30, `Page has only ${words} words — too thin for SEO.`);
+        return warn(
+          "word-count",
+          30,
+          `Page has ${words} words — aim for 300+ for better rankings.`,
+          FIX_RECIPES["word-count"],
+        );
+      return fail("word-count", 30, `Page has only ${words} words — too thin for SEO.`, FIX_RECIPES["word-count"]);
     },
   },
   {
@@ -523,8 +1044,8 @@ const contentChecks: Check[] = [
         !haveUrl && "og:url",
       ].filter(Boolean) as string[];
       if (score >= 3)
-        return warn("open-graph", 20, `Open Graph is partial — missing ${missing.join(", ")}.`);
-      return fail("open-graph", 20, `Open Graph is missing key tags: ${missing.join(", ")}.`);
+        return warn("open-graph", 20, `Open Graph is partial — missing ${missing.join(", ")}.`, FIX_RECIPES["open-graph"]);
+      return fail("open-graph", 20, `Open Graph is missing key tags: ${missing.join(", ")}.`, FIX_RECIPES["open-graph"]);
     },
   },
   {
@@ -543,9 +1064,19 @@ const contentChecks: Check[] = [
       const robots = (ctx.$("head > meta[name='robots']").attr("content") ?? "").toLowerCase();
       if (!robots) return pass("robots-directive", 20, "No meta robots directive — page is indexable by default.");
       if (/noindex/.test(robots))
-        return fail("robots-directive", 20, "Page is marked noindex — it will not appear in search.");
+        return fail(
+          "robots-directive",
+          20,
+          "Page is marked noindex — it will not appear in search.",
+          FIX_RECIPES["robots-directive"],
+        );
       if (/nofollow/.test(robots))
-        return warn("robots-directive", 20, "Page is marked nofollow — links won't pass authority.");
+        return warn(
+          "robots-directive",
+          20,
+          "Page is marked nofollow — links won't pass authority.",
+          FIX_RECIPES["robots-directive"],
+        );
       return pass("robots-directive", 20, `Robots directive is "${robots}".`);
     },
   },
@@ -558,7 +1089,12 @@ const schemaChecks: Check[] = [
     run: (ctx) => {
       const scripts = ctx.$('head > script[type="application/ld+json"]');
       if (scripts.length === 0)
-        return warn("jsonld-present", 35, "No JSON-LD structured data — add Organization or WebPage schema.");
+        return warn(
+          "jsonld-present",
+          35,
+          "No JSON-LD structured data — add Organization or WebPage schema.",
+          FIX_RECIPES["jsonld-present"],
+        );
       let valid = 0;
       scripts.each((_, el) => {
         try {
@@ -571,7 +1107,12 @@ const schemaChecks: Check[] = [
         }
       });
       if (valid > 0) return pass("jsonld-present", 35, `Found ${valid} valid JSON-LD block(s).`);
-      return warn("jsonld-present", 35, `Found ${scripts.length} JSON-LD script(s) but none parsed correctly.`);
+      return warn(
+        "jsonld-present",
+        35,
+        `Found ${scripts.length} JSON-LD script(s) but none parsed correctly.`,
+        FIX_RECIPES["jsonld-present"],
+      );
     },
   },
   {
@@ -647,7 +1188,7 @@ const technicalChecks: Check[] = [
     run: (ctx) => {
       const has = /<!doctype html>/i.test(ctx.html.slice(0, 200));
       if (has) return pass("doctype", 15, "Document has an HTML5 doctype.");
-      return warn("doctype", 15, "Missing <!doctype html> — page may render in quirks mode.");
+      return warn("doctype", 15, "Missing <!doctype html> — page may render in quirks mode.", FIX_RECIPES["doctype"]);
     },
   },
   {
@@ -680,7 +1221,7 @@ const technicalChecks: Check[] = [
         ctx.$('head > link[rel="icon"]').length > 0 ||
         ctx.$('head > link[rel="shortcut icon"]').length > 0;
       if (has) return pass("favicon", 20, "Favicon is declared.");
-      return warn("favicon", 20, "No <link rel='icon'> — browsers will request /favicon.ico and get a 404.");
+      return warn("favicon", 20, "No <link rel='icon'> — browsers will request /favicon.ico and get a 404.", FIX_RECIPES["favicon"]);
     },
   },
 ];
@@ -779,7 +1320,12 @@ export async function runAudit(
   const categoryResults: CategoryResult[] = [];
   for (const category of CATEGORIES) {
     callbacks.onCategoryStart?.(category.id, category.name);
-    const results = category.checks.map((c) => c.run(ctx));
+    const results = category.checks.map((c) => {
+      const r = c.run(ctx);
+      if (r.fix) return r;
+      if (r.status === "pass") return r;
+      return { ...r, fix: GENERIC_FIX };
+    });
     const score = computeCategoryScore(results);
     const result: CategoryResult = {
       categoryId: category.id,

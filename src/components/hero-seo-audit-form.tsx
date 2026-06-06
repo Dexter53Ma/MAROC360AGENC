@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef, useState, type FormEvent } from "react";
-import { ArrowRight, Loader2, SearchIcon, Check, X } from "@/components/icons";
+import { ArrowRight, Loader2, SearchIcon, Check, X, ChevronDown16 } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import type { HomeSeoAuditFormDict } from "@/lib/i18n/dict.types";
+import type { EffortLevel, FixRecipe, ImpactLevel } from "@/lib/seo-audit";
 
 type GradeTone = "good" | "ok" | "warn" | "bad";
 
@@ -15,11 +16,13 @@ interface CategorySummary {
   fail: number;
 }
 
-interface TopIssue {
+interface Issue {
   category: string;
+  categoryName: string;
   ruleId: string;
   message: string;
   severity: "warn" | "fail";
+  fix?: FixRecipe;
 }
 
 interface AuditResult {
@@ -29,7 +32,8 @@ interface AuditResult {
   crawledPages: number;
   timestamp: string;
   categories: CategorySummary[];
-  topIssues: TopIssue[];
+  topIssues: Issue[];
+  issues: Issue[];
 }
 
 type CategoryStatus = "pending" | "running" | "done";
@@ -219,6 +223,196 @@ function CategoryProgressList({
   );
 }
 
+function effortLabel(level: EffortLevel, dict: HomeSeoAuditFormDict): string {
+  switch (level) {
+    case "5min":
+      return dict.effort5min;
+    case "30min":
+      return dict.effort30min;
+    case "2h":
+      return dict.effort2h;
+    case "1d":
+      return dict.effort1d;
+    case "1w+":
+      return dict.effort1w;
+  }
+}
+
+function impactLabel(level: ImpactLevel, dict: HomeSeoAuditFormDict): string {
+  switch (level) {
+    case "low":
+      return dict.impactLow;
+    case "medium":
+      return dict.impactMedium;
+    case "high":
+      return dict.impactHigh;
+  }
+}
+
+function SeverityBadge({ severity, dict }: { severity: "warn" | "fail"; dict: HomeSeoAuditFormDict }) {
+  return (
+    <span
+      className={cn(
+        "mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[9px] font-bold",
+        severity === "fail"
+          ? "bg-brand-pink text-text-primary"
+          : "bg-brand-yellow text-text-primary",
+      )}
+      aria-label={severity === "fail" ? dict.severityFailLabel : dict.severityWarnLabel}
+    >
+      {severity === "fail" ? "!" : "i"}
+    </span>
+  );
+}
+
+function Chip({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center rounded-full border border-text-primary/10 bg-surface-tertiary px-2 py-0.5 text-[10px] font-medium text-text-secondary">
+      {children}
+    </span>
+  );
+}
+
+function ExpandableIssueCard({
+  issue,
+  isExpanded,
+  onToggle,
+  dict,
+}: {
+  issue: Issue;
+  isExpanded: boolean;
+  onToggle: () => void;
+  dict: HomeSeoAuditFormDict;
+}) {
+  const [copied, setCopied] = useState(false);
+  const fix = issue.fix;
+
+  const handleCopy = async (snippet: string) => {
+    try {
+      await navigator.clipboard.writeText(snippet);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // ignore
+    }
+  };
+
+  return (
+    <li className="rounded-lg bg-surface-primary/60 text-xs text-text-primary">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={isExpanded}
+        className="flex w-full items-start gap-2 px-3 py-2 text-left"
+      >
+        <SeverityBadge severity={issue.severity} dict={dict} />
+        <span className="min-w-0 flex-1">
+          <span className="block font-medium">{issue.message}</span>
+          <span className="mt-0.5 block text-text-tertiary">· {issue.categoryName}</span>
+          {fix ? (
+            <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
+              <Chip>{effortLabel(fix.effort, dict)}</Chip>
+              <Chip>{impactLabel(fix.impact, dict)}</Chip>
+            </span>
+          ) : null}
+        </span>
+        {fix ? (
+          <span
+            className={cn(
+              "mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-text-tertiary transition-transform",
+              isExpanded && "rotate-180",
+            )}
+            aria-hidden
+          >
+            <ChevronDown16 className="h-3.5 w-3.5" />
+          </span>
+        ) : null}
+      </button>
+
+      {isExpanded && fix ? (
+        <div className="border-t border-text-primary/10 px-3 py-3">
+          <p className="text-xs font-semibold text-text-primary">{fix.summary}</p>
+          <ol className="mt-2 list-decimal space-y-1 pl-5 text-text-secondary">
+            {fix.steps.map((step, i) => (
+              <li key={i}>{step}</li>
+            ))}
+          </ol>
+
+          {fix.codeSnippet ? (
+            <div className="mt-3 overflow-hidden rounded-md border border-text-primary/10 bg-surface-primary">
+              <div className="flex items-center justify-between border-b border-text-primary/10 bg-surface-tertiary px-2.5 py-1.5">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+                  {dict.copyCodeLabel}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => handleCopy(fix.codeSnippet ?? "")}
+                  className="press inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-[10px] font-semibold text-text-secondary hover:bg-surface-primary"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-3 w-3" />
+                      <span>{dict.codeCopiedLabel}</span>
+                    </>
+                  ) : (
+                    <span>{dict.copyCodeLabel}</span>
+                  )}
+                </button>
+              </div>
+              <pre className="overflow-x-auto px-3 py-2 text-[11px] leading-relaxed text-text-primary">
+                <code>{fix.codeSnippet}</code>
+              </pre>
+            </div>
+          ) : null}
+
+          {fix.docUrl ? (
+            <a
+              href={fix.docUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press mt-3 inline-flex items-center gap-1 text-xs font-semibold text-text-primary underline-offset-2 hover:underline"
+            >
+              <span>{dict.learnMoreLabel}</span>
+              <ArrowRight className="h-3 w-3" />
+            </a>
+          ) : null}
+
+          {fix.ctaService && fix.ctaPitch ? (
+            <div className="mt-3 rounded-md border border-text-primary/10 bg-surface-primary p-3">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+                {dict.ctaPitchPrefix} · {fix.ctaService}
+              </p>
+              <p className="mt-1 text-xs text-text-secondary">{fix.ctaPitch}</p>
+              <a
+                href={dict.ctaHref}
+                className="press mt-2 inline-flex items-center gap-1 rounded-full bg-text-primary px-3 py-1.5 text-[11px] font-semibold text-surface-primary hover:opacity-90"
+              >
+                <span>{dict.ctaButtonLabel}</span>
+                <ArrowRight className="h-3 w-3" />
+              </a>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
+    </li>
+  );
+}
+
+function CompactIssueRow({ issue, index, dict }: { issue: Issue; index: number; dict: HomeSeoAuditFormDict }) {
+  return (
+    <li
+      key={`compact-${issue.ruleId}-${index}`}
+      className="flex items-start gap-2 rounded-lg bg-surface-primary/60 px-3 py-2 text-xs text-text-primary"
+    >
+      <SeverityBadge severity={issue.severity} dict={dict} />
+      <span className="min-w-0 flex-1">
+        <span className="font-medium">{issue.message}</span>
+        <span className="ml-1 text-text-tertiary">· {issue.categoryName}</span>
+      </span>
+    </li>
+  );
+}
+
 function AuditResultPanel({
   result,
   onReset,
@@ -228,6 +422,9 @@ function AuditResultPanel({
   onReset: () => void;
   dict: HomeSeoAuditFormDict;
 }) {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
   const styles = GRADE_STYLES[result.grade.tone];
   const hostname = (() => {
     try {
@@ -240,6 +437,12 @@ function AuditResultPanel({
   const auditedText = dict.auditedPagesTemplate
     .replace("{n}", String(result.crawledPages))
     .replace("{date}", new Date(result.timestamp).toLocaleString());
+
+  const allIssues = result.issues;
+  const topThree = allIssues.slice(0, 3);
+  const rest = allIssues.slice(3);
+  const hasTop = topThree.length > 0;
+  const hasRest = rest.length > 0;
 
   return (
     <div
@@ -283,41 +486,54 @@ function AuditResultPanel({
         </button>
       </div>
 
-      {result.topIssues.length > 0 ? (
+      {hasTop ? (
         <div className="mt-4 space-y-2">
           <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
             {dict.topIssuesHeading}
           </p>
           <ul className="space-y-1.5">
-            {result.topIssues.map((issue, i) => (
-              <li
-                key={`${issue.ruleId}-${i}`}
-                className="flex items-start gap-2 rounded-lg bg-surface-primary/60 px-3 py-2 text-xs text-text-primary"
-              >
-                <span
-                  className={cn(
-                    "mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[9px] font-bold",
-                    issue.severity === "fail"
-                      ? "bg-brand-pink text-text-primary"
-                      : "bg-brand-yellow text-text-primary",
-                  )}
-                  aria-label={issue.severity === "fail" ? dict.severityFailLabel : dict.severityWarnLabel}
-                >
-                  {issue.severity === "fail" ? "!" : "i"}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="font-medium">{issue.message}</span>
-                  <span className="ml-1 text-text-tertiary">
-                    · {categoryLabel(issue.category, undefined, dict)}
-                  </span>
-                </span>
-              </li>
+            {topThree.map((issue, i) => (
+              <ExpandableIssueCard
+                key={`top-${issue.ruleId}-${i}`}
+                issue={issue}
+                isExpanded={expandedIndex === i}
+                onToggle={() => setExpandedIndex(expandedIndex === i ? null : i)}
+                dict={dict}
+              />
             ))}
           </ul>
         </div>
       ) : (
         <p className="mt-3 text-xs text-text-secondary">{dict.noIssues}</p>
       )}
+
+      {hasRest ? (
+        <div className="mt-3 space-y-2">
+          <button
+            type="button"
+            onClick={() => setShowAll((s) => !s)}
+            aria-expanded={showAll}
+            className="press inline-flex items-center gap-1 text-[11px] font-semibold text-text-primary hover:underline"
+          >
+            <span>{showAll ? dict.hideAllIssuesLabel : dict.viewAllIssuesLabel}</span>
+            <span className="text-text-tertiary">({dict.issuesCountTemplate.replace("{n}", String(rest.length))})</span>
+            <ChevronDown16
+              className={cn(
+                "h-3 w-3 text-text-tertiary transition-transform",
+                showAll && "rotate-180",
+              )}
+              aria-hidden
+            />
+          </button>
+          {showAll ? (
+            <ul className="space-y-1.5">
+              {rest.map((issue, i) => (
+                <CompactIssueRow key={`rest-${issue.ruleId}-${i}`} issue={issue} index={i} dict={dict} />
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ) : null}
 
       <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-text-primary/5 pt-3 text-[10px] text-text-tertiary">
         <span>{dict.footerCategories}</span>

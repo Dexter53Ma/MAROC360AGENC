@@ -448,6 +448,25 @@ export interface HomeSeoAuditFormDict {
   readonly severityFailLabel: string;
   readonly severityWarnLabel: string;
   readonly categoryLabels: Readonly<Record<string, string>>;
+  readonly effort5min: string;
+  readonly effort30min: string;
+  readonly effort2h: string;
+  readonly effort1d: string;
+  readonly effort1w: string;
+  readonly impactLow: string;
+  readonly impactMedium: string;
+  readonly impactHigh: string;
+  readonly expandFixLabel: string;
+  readonly collapseFixLabel: string;
+  readonly viewAllIssuesLabel: string;
+  readonly hideAllIssuesLabel: string;
+  readonly issuesCountTemplate: string;
+  readonly copyCodeLabel: string;
+  readonly codeCopiedLabel: string;
+  readonly learnMoreLabel: string;
+  readonly ctaPitchPrefix: string;
+  readonly ctaButtonLabel: string;
+  readonly ctaHref: string;
 }
 
 export interface MultiStepFormServiceOption {
