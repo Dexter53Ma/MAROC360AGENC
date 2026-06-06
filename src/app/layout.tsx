@@ -26,13 +26,22 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: "Maroc 360 Agency | Your 360° digital marketing partner in Morocco",
+  title: "Maroc 360 Agency | 360° digital marketing in Morocco",
   description:
-    "Maroc 360 Agency is a full-service digital marketing agency based in Morocco. We help brands grow with strategy, creative, paid media, SEO, social, and content that delivers measurable results.",
+    "Full-service digital marketing agency in Morocco. Strategy, paid media, SEO, social, and content that drives measurable growth.",
+  alternates: {
+    canonical: siteConfig.url,
+    languages: {
+      en: siteConfig.url,
+      fr: `${siteConfig.url}/fr`,
+      "x-default": siteConfig.url,
+    },
+  },
   openGraph: {
     siteName: "Maroc 360 Agency",
     locale: "en_US",
     type: "website",
+    url: siteConfig.url,
     images: [
       {
         url: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77bec4f672c42ac4d5_open-graph.jpg",
