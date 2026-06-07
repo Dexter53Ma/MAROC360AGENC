@@ -10,6 +10,7 @@ import {
 } from "@/components/multi-step-form";
 import { siteConfig } from "@/lib/site-config";
 import { getDict } from "@/lib/i18n/dict";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  verification: {
+    google: "IviR5xHUEAuisvRXP-ruirwwlREDkvvD8mMwRYKgw9M",
+  },
   icons: {
     icon: [
       {
@@ -88,6 +92,7 @@ export default function RootLayout({
           <ChatWidget />
           <MultiStepFormModal fallbackDict={getDict("en").multiStepForm} />
         </MultiStepFormProvider>
+        <GoogleAnalytics />
       </body>
     </html>
   );
