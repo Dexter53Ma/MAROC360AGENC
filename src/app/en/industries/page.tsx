@@ -6,6 +6,9 @@ import { Footer } from "@/components/footer";
 import { CtaSection } from "@/components/cta-section";
 import { ChevronRight12 } from "@/components/icons";
 import { INDUSTRIES } from "@/lib/industries";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Industries – Maroc 360 Agency",
@@ -14,6 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesIndexPage() {
+  const url = absoluteUrl("/en/industries");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "en",
+    type: "CollectionPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Industries", item: url },
+  ]);
   return (
     <>
       <Navbar dict={getDict("en").nav} locale="en" multiStepForm={getDict("en").multiStepForm} />
@@ -61,6 +77,8 @@ export default function IndustriesIndexPage() {
         <CtaSection dict={getDict("en")} />
       </main>
       <Footer dict={getDict("en").footer} locale="en" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

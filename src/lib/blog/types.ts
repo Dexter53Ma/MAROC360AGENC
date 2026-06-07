@@ -6,6 +6,7 @@ export interface BlogFrontmatter {
   readonly category: string;
   readonly featured?: boolean;
   readonly datePublished: string;
+  readonly dateModified?: string;
   readonly author: string;
   readonly authorRole: string;
   readonly tags: readonly string[];
@@ -27,6 +28,7 @@ export interface BlogPostFull {
   readonly featured: boolean;
   readonly datePublished: string;
   readonly datePublishedLabel: string;
+  readonly dateModified: string;
   readonly author: string;
   readonly authorRole: string;
   readonly tags: readonly string[];

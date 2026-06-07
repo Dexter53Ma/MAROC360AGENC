@@ -9,12 +9,18 @@ import { BlogArticle } from "@/components/blog/blog-article";
 import { BlogBreadcrumbs } from "@/components/blog/blog-breadcrumbs";
 import { RelatedPosts } from "@/components/blog/related-posts";
 import { ShareButtons } from "@/components/blog/share-buttons";
+import { JsonLd } from "@/components/json-ld";
 import {
   getAllSlugs,
   getBlogPost,
   getRelatedPosts,
 } from "@/lib/blog/loader";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import {
+  blogPostingSchema,
+  breadcrumbSchema,
+  faqSchema,
+} from "@/lib/schema";
 
 interface PageProps {
   readonly params: Promise<{ slug: string }>;
@@ -94,73 +100,27 @@ export default async function BlogPostPage({ params }: PageProps) {
     ? post.image
     : absoluteUrl(post.image);
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
+  const articleSchema = blogPostingSchema({
+    title: post.title,
     description: post.description,
-    image: [imageUrl],
+    image: imageUrl,
     datePublished: post.datePublished,
-    author: {
-      "@type": "Organization",
-      name: post.author,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.publisher.name,
-      logo: {
-        "@type": "ImageObject",
-        url: absoluteUrl(siteConfig.publisher.logo),
-      },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": canonicalUrl,
-    },
-    articleSection: post.category,
+    dateModified: post.dateModified ?? post.datePublished,
+    inLanguage: "en",
+    authorName: post.author,
+    category: post.category,
     keywords: post.tags.join(", "),
-  };
+    url: canonicalUrl,
+  });
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: absoluteUrl("/en"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: absoluteUrl("/en/blog"),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.title,
-        item: canonicalUrl,
-      },
-    ],
-  };
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Blog", item: absoluteUrl("/en/blog") },
+    { name: post.title, item: canonicalUrl },
+  ]);
 
-  const faqSchema =
-    post.faqs.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: post.faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          })),
-        }
-      : null;
+  const faqData =
+    post.faqs.length > 0 ? faqSchema(post.faqs) : null;
 
   return (
     <>
@@ -200,26 +160,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <Footer dict={dict.footer} locale="en" />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-      {faqSchema ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema),
-          }}
-        />
-      ) : null}
+      <JsonLd data={articleSchema} />
+      <JsonLd data={crumbs} />
+      {faqData ? <JsonLd data={faqData} /> : null}
     </>
   );
 }

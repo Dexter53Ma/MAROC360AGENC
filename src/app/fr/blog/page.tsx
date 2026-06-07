@@ -8,6 +8,9 @@ import { PostsGrid } from "@/components/blog/posts-grid";
 import { SubscribeInline } from "@/components/blog/subscribe-inline";
 import { getAllBlogPosts } from "@/lib/blog/loader";
 import type { BlogPost } from "@/types/blog";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: "Ressources & Blog | Maroc 360 Agency",
@@ -47,6 +50,20 @@ export default async function BlogPageFR() {
 
   const dict = getDict("fr");
   const homeLabel = "Accueil";
+
+  const url = absoluteUrl("/fr/blog");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    type: "CollectionPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Ressources & Blog", item: url },
+  ]);
 
   return (
     <>
@@ -101,6 +118,8 @@ export default async function BlogPageFR() {
       </main>
 
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

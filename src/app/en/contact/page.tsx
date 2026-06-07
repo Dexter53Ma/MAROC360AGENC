@@ -7,6 +7,9 @@ import { ContactSection } from "@/components/contact/contact-section";
 import { LogoStrip } from "@/components/logo-strip";
 import { ContactNumbersSection } from "@/components/contact/numbers-section";
 import { ContactCtaSection } from "@/components/contact/cta-section";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Get in touch – Maroc 360 Agency",
@@ -16,6 +19,19 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const dict = getDict("en");
+  const url = absoluteUrl("/en/contact");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "en",
+    type: "ContactPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Contact", item: url },
+  ]);
   return (
     <>
       <Navbar dict={dict.nav} locale="en" multiStepForm={dict.multiStepForm} />
@@ -30,6 +46,8 @@ export default function ContactPage() {
         <ContactCtaSection />
       </main>
       <Footer dict={dict.footer} locale="en" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

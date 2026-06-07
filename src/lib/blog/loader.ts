@@ -167,6 +167,7 @@ async function readPostFile(
     featured: frontmatter.featured ?? false,
     datePublished: frontmatter.datePublished,
     datePublishedLabel: formatPublishDate(frontmatter.datePublished),
+    dateModified: frontmatter.dateModified ?? frontmatter.datePublished,
     author: frontmatter.author,
     authorRole: frontmatter.authorRole,
     tags: frontmatter.tags,

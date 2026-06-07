@@ -8,6 +8,9 @@ import { CopilotsCta } from "@/components/manifesto/copilots-cta";
 import { CommitmentCarousel } from "@/components/manifesto/commitment-carousel";
 import { InvestorsCarousel } from "@/components/manifesto/investors-carousel";
 import { GetStartedCta } from "@/components/manifesto/get-started-cta";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Manifeste – Maroc 360 Agency",
@@ -18,6 +21,19 @@ export const metadata: Metadata = {
 export default function ManifestoPageFR() {
   const dict = getDict("fr");
   const w = dict.whyUs;
+  const url = absoluteUrl("/fr/why-us");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    type: "AboutPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Manifeste", item: url },
+  ]);
   return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
@@ -67,6 +83,8 @@ export default function ManifestoPageFR() {
         <GetStartedCta dict={w} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

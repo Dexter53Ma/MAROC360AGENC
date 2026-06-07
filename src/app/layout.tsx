@@ -11,6 +11,8 @@ import {
 import { siteConfig } from "@/lib/site-config";
 import { getDict } from "@/lib/i18n/dict";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { JsonLd } from "@/components/json-ld";
+import { globalSchema } from "@/lib/schema";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -93,6 +95,7 @@ export default function RootLayout({
           <MultiStepFormModal fallbackDict={getDict("en").multiStepForm} />
         </MultiStepFormProvider>
         <GoogleAnalytics />
+        <JsonLd data={globalSchema} />
       </body>
     </html>
   );

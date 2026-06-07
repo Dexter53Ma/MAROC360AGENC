@@ -6,6 +6,9 @@ import { getDict } from "@/lib/i18n/dict";
 import { Footer } from "@/components/footer";
 import { CtaSection } from "@/components/cta-section";
 import { CASE_STUDIES } from "@/lib/case-studies";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Case Studies – Maroc 360 Agency",
@@ -14,9 +17,23 @@ export const metadata: Metadata = {
 };
 
 export default function CaseStudiesPage() {
+  const dict = getDict("en");
+  const url = absoluteUrl("/en/case-studies");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "en",
+    type: "CollectionPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Case Studies", item: url },
+  ]);
   return (
     <>
-      <Navbar dict={getDict("en").nav} locale="en" multiStepForm={getDict("en").multiStepForm} />
+      <Navbar dict={dict.nav} locale="en" multiStepForm={dict.multiStepForm} />
       <main id="main" tabIndex={-1}>
         <section className="pt-10 sm:pt-12 md:pt-20 pb-8 md:pb-12">
           <div className="container-page">
@@ -145,9 +162,11 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        <CtaSection dict={getDict("en")} />
+        <CtaSection dict={dict} />
       </main>
-      <Footer dict={getDict("en").footer} locale="en" />
+      <Footer dict={dict.footer} locale="en" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

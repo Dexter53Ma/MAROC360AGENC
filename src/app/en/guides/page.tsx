@@ -6,6 +6,9 @@ import { Footer } from "@/components/footer";
 import { CtaSection } from "@/components/cta-section";
 import { ChevronRight12 } from "@/components/icons";
 import { getAllBlogPosts } from "@/lib/blog/loader";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Guides – Maroc 360 Agency",
@@ -48,6 +51,20 @@ export default async function GuidesIndexPage() {
     category: p.category,
     publishedLabel: p.datePublishedLabel,
   }));
+
+  const url = absoluteUrl("/en/guides");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "en",
+    type: "CollectionPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Guides", item: url },
+  ]);
 
   return (
     <>
@@ -160,6 +177,8 @@ export default async function GuidesIndexPage() {
         <CtaSection dict={getDict("en")} />
       </main>
       <Footer dict={getDict("en").footer} locale="en" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

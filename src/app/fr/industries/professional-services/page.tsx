@@ -8,6 +8,8 @@ import { ServiceHero } from "@/components/solutions/service-hero";
 import { FeatureBlock } from "@/components/solutions/feature-block";
 import { CustomersCarousel } from "@/components/solutions/customers-carousel";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: `Services professionnels – ${siteConfig.name}`,
@@ -62,7 +64,23 @@ const features = [
   },
 ];
 
-export default function ProfessionalServicesPage() { const dict = getDict("fr"); return (
+export default function ProfessionalServicesPage() {
+  const dict = getDict("fr");
+  const url = absoluteUrl("/fr/industries/professional-services");
+  const schema = serviceSchema({
+    name: "Services professionnels",
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    category: "Industrie services professionnels",
+    serviceType: "Marketing services professionnels",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Industries", item: absoluteUrl("/fr/industries") },
+    { name: "Services professionnels", item: url },
+  ]);
+  return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
       <main id="main" tabIndex={-1}>
@@ -115,6 +133,8 @@ export default function ProfessionalServicesPage() { const dict = getDict("fr");
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

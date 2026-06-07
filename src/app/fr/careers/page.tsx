@@ -9,6 +9,9 @@ import { TeamsCarousel } from "@/components/careers/teams-carousel";
 import { VideoSection } from "@/components/careers/video-section";
 import { ValuesGrid } from "@/components/careers/values-grid";
 import { InterviewList } from "@/components/careers/interview-list";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Carrières chez Maroc 360 Agency – Les grandes marques ne se construisent pas seules",
@@ -18,6 +21,19 @@ export const metadata: Metadata = {
 
 export default function CareersPageFR() {
   const dict = getDict("fr");
+  const url = absoluteUrl("/fr/careers");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    type: "WebPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Carrières", item: url },
+  ]);
   return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
@@ -31,6 +47,8 @@ export default function CareersPageFR() {
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

@@ -5,6 +5,9 @@ import { getDict } from "@/lib/i18n/dict";
 import { Footer } from "@/components/footer";
 import { CtaSection } from "@/components/cta-section";
 import { ChevronRight12 } from "@/components/icons";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Services – Maroc 360 Agency",
@@ -53,6 +56,19 @@ const services = [
 
 export default function ServicesPage() {
   const dict = getDict("fr");
+  const url = absoluteUrl("/fr/services");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    type: "CollectionPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Services", item: url },
+  ]);
   return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
@@ -101,6 +117,8 @@ export default function ServicesPage() {
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

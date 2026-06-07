@@ -7,6 +7,8 @@ import { ServiceHero } from "@/components/solutions/service-hero";
 import { FeatureBlock } from "@/components/solutions/feature-block";
 import { CustomersCarousel } from "@/components/solutions/customers-carousel";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: `SEO & Contenu – ${siteConfig.name}`,
@@ -61,7 +63,23 @@ const features = [
   },
 ];
 
-export default function SeoContentPage() { const dict = getDict("fr"); return (
+export default function SeoContentPage() {
+  const dict = getDict("fr");
+  const url = absoluteUrl("/fr/services/seo-content");
+  const schema = serviceSchema({
+    name: "SEO & Contenu",
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    category: "Marketing digital",
+    serviceType: "SEO & Contenu",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Services", item: absoluteUrl("/fr/services") },
+    { name: "SEO & Contenu", item: url },
+  ]);
+  return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
       <main id="main" tabIndex={-1}>
@@ -97,6 +115,8 @@ export default function SeoContentPage() { const dict = getDict("fr"); return (
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

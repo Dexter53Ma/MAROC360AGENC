@@ -9,6 +9,9 @@ import { BlogBreadcrumbs } from "@/components/blog/blog-breadcrumbs";
 import { SubscribeInline } from "@/components/blog/subscribe-inline";
 import { PostCard } from "@/components/blog/post-card";
 import { siteConfig } from "@/lib/site-config";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 interface PageProps {
   readonly params: Promise<{ slug: string }>;
@@ -120,6 +123,21 @@ export default async function BlogCategoryPageFR({ params }: PageProps) {
       category: p.category,
     }));
 
+  const pageUrl = absoluteUrl(`/fr/blog/category/${cat}`);
+  const schema = webPageSchema({
+    id: `${pageUrl}#webpage`,
+    name: `${label} – Blog | ${siteConfig.name}`,
+    description: `${posts.length} ${posts.length === 1 ? "article" : "articles"} sur ${label.toLowerCase()} par l'équipe Maroc 360.`,
+    url: pageUrl,
+    inLanguage: "fr",
+    type: "CollectionPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Blog", item: absoluteUrl("/fr/blog") },
+    { name: label, item: pageUrl },
+  ]);
+
   return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
@@ -188,6 +206,8 @@ export default async function BlogCategoryPageFR({ params }: PageProps) {
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

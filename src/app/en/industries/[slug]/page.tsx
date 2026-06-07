@@ -6,6 +6,9 @@ import { CtaSection } from "@/components/cta-section";
 import { HeroWithIllustration } from "@/components/solutions/hero-with-illustration";
 import { FeatureBlock } from "@/components/solutions/feature-block";
 import { CustomersCarousel } from "@/components/solutions/customers-carousel";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Marketing Platform – Maroc 360 Agency | Your brand's growth engine",
@@ -42,6 +45,20 @@ const features = [
 
 export default function ManagementSystemPage() {
   const dict = getDict("en");
+  const url = absoluteUrl("/en/industries/management-system");
+  const schema = serviceSchema({
+    name: "Marketing Platform for Industries",
+    description: metadata.description as string,
+    url,
+    inLanguage: "en",
+    category: "Marketing Technology",
+    serviceType: "Marketing Platform",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Industries", item: absoluteUrl("/en/industries") },
+    { name: "Marketing Platform", item: url },
+  ]);
   return (
     <>
       <Navbar dict={dict.nav} locale="en" multiStepForm={dict.multiStepForm} />
@@ -83,6 +100,8 @@ export default function ManagementSystemPage() {
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="en" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

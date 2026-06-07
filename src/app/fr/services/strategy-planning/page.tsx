@@ -7,6 +7,8 @@ import { ServiceHero } from "@/components/solutions/service-hero";
 import { FeatureBlock } from "@/components/solutions/feature-block";
 import { CustomersCarousel } from "@/components/solutions/customers-carousel";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: `Stratégie & Planning – ${siteConfig.name}`,
@@ -61,7 +63,23 @@ const features = [
   },
 ];
 
-export default function StrategyPlanningPage() { const dict = getDict("fr"); return (
+export default function StrategyPlanningPage() {
+  const dict = getDict("fr");
+  const url = absoluteUrl("/fr/services/strategy-planning");
+  const schema = serviceSchema({
+    name: "Stratégie & Planning",
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    category: "Conseil marketing",
+    serviceType: "Stratégie & Planning",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Services", item: absoluteUrl("/fr/services") },
+    { name: "Stratégie & Planning", item: url },
+  ]);
+  return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
       <main id="main" tabIndex={-1}>
@@ -97,6 +115,8 @@ export default function StrategyPlanningPage() { const dict = getDict("fr"); ret
         <CtaSection dict={dict} />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

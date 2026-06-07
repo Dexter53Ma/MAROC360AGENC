@@ -5,6 +5,9 @@ import { getDict } from "@/lib/i18n/dict";
 import { Footer } from "@/components/footer";
 import { LegalBreadcrumbs } from "@/components/legal/breadcrumbs";
 import { LegalPage, type LegalSection } from "@/components/legal/legal-page";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Conditions d'utilisation – Maroc 360 Agency",
@@ -218,6 +221,19 @@ const sections: LegalSection[] = [
 
 export default function TermsPage() {
   const dict = getDict("fr");
+  const url = absoluteUrl("/fr/terms");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "fr",
+    type: "WebPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Accueil", item: absoluteUrl("/fr") },
+    { name: "Conditions d'utilisation", item: url },
+  ]);
   return (
     <>
       <Navbar dict={dict.nav} locale="fr" multiStepForm={dict.multiStepForm} />
@@ -237,6 +253,8 @@ export default function TermsPage() {
         />
       </main>
       <Footer dict={dict.footer} locale="fr" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

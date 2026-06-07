@@ -4,6 +4,9 @@ import { getDict } from "@/lib/i18n/dict";
 import { Footer } from "@/components/footer";
 import { LegalBreadcrumbs } from "@/components/legal/breadcrumbs";
 import { LegalPage, type LegalSection } from "@/components/legal/legal-page";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-config";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Terms of Service – Maroc 360 Agency",
@@ -214,9 +217,23 @@ const sections: LegalSection[] = [
 ];
 
 export default function TermsPage() {
+  const dict = getDict("en");
+  const url = absoluteUrl("/en/terms");
+  const schema = webPageSchema({
+    id: `${url}#webpage`,
+    name: metadata.title as string,
+    description: metadata.description as string,
+    url,
+    inLanguage: "en",
+    type: "WebPage",
+  });
+  const crumbs = breadcrumbSchema([
+    { name: "Home", item: absoluteUrl("/en") },
+    { name: "Terms of Service", item: url },
+  ]);
   return (
     <>
-      <Navbar dict={getDict("en").nav} locale="en" multiStepForm={getDict("en").multiStepForm} />
+      <Navbar dict={dict.nav} locale="en" multiStepForm={dict.multiStepForm} />
       <main id="main" tabIndex={-1}>
         <LegalBreadcrumbs current="Terms" href="/en/terms" />
         <LegalPage
@@ -226,7 +243,9 @@ export default function TermsPage() {
           sections={sections}
         />
       </main>
-      <Footer dict={getDict("en").footer} locale="en" />
+      <Footer dict={dict.footer} locale="en" />
+      <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
     </>
   );
 }

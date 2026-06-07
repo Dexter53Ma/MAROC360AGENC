@@ -1,0 +1,401 @@
+{
+  "_meta": {
+    "site": "Maroc 360 Agency",
+    "url": "https://maroc360.agency",
+    "generated": "2026-06-07",
+    "format": "JSON-LD (Google preferred)",
+    "usage_notes": [
+      "Each block is a standalone @graph entry. Paste them as <script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@graph\":[...]}</script>.",
+      "All URLs MUST be absolute. All images must be absolute URLs (https://...).",
+      "Place schema in initial server-rendered HTML, not JS-injected, per Google's December 2025 JS SEO guidance.",
+      "For multi-language pages, repeat the same schema on the locale-specific page; do NOT use inLanguage to switch types — change the content strings instead."
+    ]
+  },
+  "homepage": {
+    "name": "Homepage Organization + WebSite + LocalBusiness + Reviews",
+    "scope": "/, /en, /fr (same block, swap language-specific fields)",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "LocalBusiness"],
+          "@id": "https://maroc360.agency/#organization",
+          "name": "Maroc 360 Agency",
+          "alternateName": "Maroc 360",
+          "url": "https://maroc360.agency",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://maroc360.agency/brand/maroc360-logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77bec4f672c42ac4d5_open-graph.jpg",
+          "description": "Full-service digital marketing agency in Morocco. Strategy, paid media, SEO, social, and content that drives measurable growth.",
+          "telephone": "+212-621-947493",
+          "email": "Contact@maroc360.agency",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MA",
+            "addressLocality": "Casablanca",
+            "addressRegion": "Casablanca-Settat"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Morocco" },
+            { "@type": "AdministrativeArea", "name": "MENA" },
+            { "@type": "Country", "name": "France" }
+          ],
+          "priceRange": "$$",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+212-621-947493",
+              "contactType": "sales",
+              "areaServed": ["MA", "FR", "MENA"],
+              "availableLanguage": ["English", "French", "Arabic"]
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+212-621-947493",
+              "contactType": "customer support",
+              "contactOption": "TollFree",
+              "areaServed": ["MA"],
+              "availableLanguage": ["English", "French", "Arabic"]
+            }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/maroc360",
+            "https://www.instagram.com/maroc360",
+            "https://www.facebook.com/maroc360"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Maroc 360 Founding Team"
+          },
+          "foundingDate": "2024",
+          "knowsAbout": [
+            "Digital Marketing",
+            "Search Engine Optimization",
+            "Paid Media",
+            "Social Media Marketing",
+            "Content Strategy",
+            "Brand Strategy",
+            "Performance Marketing"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "47",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://maroc360.agency/#website",
+          "url": "https://maroc360.agency",
+          "name": "Maroc 360 Agency",
+          "inLanguage": ["en", "fr"],
+          "publisher": { "@id": "https://maroc360.agency/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://maroc360.agency/en/blog?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://maroc360.agency/#webpage",
+          "url": "https://maroc360.agency",
+          "name": "Maroc 360 Agency | 360° digital marketing in Morocco",
+          "isPartOf": { "@id": "https://maroc360.agency/#website" },
+          "about": { "@id": "https://maroc360.agency/#organization" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+  },
+  "service": {
+    "name": "Service page (e.g. /en/services/management-system)",
+    "scope": "All 6 service pages; /industries/* can use the same pattern with adjusted description.",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://maroc360.agency/en/services/management-system#service",
+          "name": "Marketing Platform",
+          "alternateName": "Management System",
+          "description": "A single source of truth for your marketing — briefs, assets, KPIs, and reports all live in one place.",
+          "url": "https://maroc360.agency/en/services/management-system",
+          "serviceType": "Marketing Operations Platform",
+          "category": "Digital Marketing",
+          "provider": { "@id": "https://maroc360.agency/#organization" },
+          "areaServed": [
+            { "@type": "Country", "name": "Morocco" },
+            { "@type": "AdministrativeArea", "name": "MENA" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Marketing platform services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Marketing platform setup"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Performance reporting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI-assisted creative briefs"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maroc360.agency/en" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://maroc360.agency/en/services" },
+            { "@type": "ListItem", "position": 3, "name": "Marketing Platform", "item": "https://maroc360.agency/en/services/management-system" }
+          ]
+        }
+      ]
+    }
+  },
+  "blogPost": {
+    "name": "Blog post (replacement for current Article + FAQPage)",
+    "scope": "All blog posts at /blog/* (en + fr)",
+    "notes": "Removes FAQPage (restricted for commercial sites since Aug 2023, no SERP benefit). Adds dateModified. Changes author from Organization to Person (or keep as Organization with explicit editor if no individual bylines exist).",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://maroc360.agency/en/blog/digital-marketing-strategy-morocco#article",
+          "headline": "How to Build a Digital Marketing Strategy in Morocco (2026 Guide)",
+          "description": "A clear digital marketing strategy is the difference between guessing and growing. This guide walks through audience research, channel mix, KPIs, and budget allocation tailored to the Moroccan market in 2026.",
+          "image": [
+            "https://cdn.prod.website-files.com/682d7fad3c89203197a56fce/6a1850c71817ffd03370ffa3_new_better_businesses_illustration_10.png"
+          ],
+          "datePublished": "2026-05-20",
+          "dateModified": "2026-06-07",
+          "author": {
+            "@type": "Organization",
+            "name": "Maroc 360",
+            "url": "https://maroc360.agency"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://maroc360.agency/#organization",
+            "name": "Maroc 360 Agency",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://maroc360.agency/brand/maroc360-logo.png",
+              "width": 512,
+              "height": 512
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://maroc360.agency/en/blog/digital-marketing-strategy-morocco"
+          },
+          "articleSection": "Strategy",
+          "keywords": "digital marketing, strategy, Morocco, marketing plan, business growth",
+          "inLanguage": "en",
+          "wordCount": 2400,
+          "timeRequired": "PT12M"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maroc360.agency/en" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://maroc360.agency/en/blog" },
+            { "@type": "ListItem", "position": 3, "name": "How to Build a Digital Marketing Strategy in Morocco (2026 Guide)", "item": "https://maroc360.agency/en/blog/digital-marketing-strategy-morocco" }
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "name": "Contact page",
+    "scope": "/en/contact, /fr/contact",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://maroc360.agency/en/contact#contactpage",
+          "url": "https://maroc360.agency/en/contact",
+          "name": "Contact Maroc 360 Agency",
+          "description": "Tell us about your brand, your goals, and the problems you're trying to solve. We'll come back within one business day.",
+          "inLanguage": "en",
+          "about": { "@id": "https://maroc360.agency/#organization" },
+          "isPartOf": { "@id": "https://maroc360.agency/#website" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://maroc360.agency/seo/og-image.png"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maroc360.agency/en" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://maroc360.agency/en/contact" }
+          ]
+        }
+      ]
+    }
+  },
+  "about": {
+    "name": "About / Why us page",
+    "scope": "/en/why-us (and any /about route if added)",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "@id": "https://maroc360.agency/en/why-us#aboutpage",
+          "url": "https://maroc360.agency/en/why-us",
+          "name": "Why Maroc 360",
+          "description": "We're a senior team that has worked in-house, at the biggest agencies, and on the brands we love. Here's how we work — and what we believe.",
+          "inLanguage": "en",
+          "about": { "@id": "https://maroc360.agency/#organization" },
+          "isPartOf": { "@id": "https://maroc360.agency/#website" },
+          "mainEntity": { "@id": "https://maroc360.agency/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maroc360.agency/en" },
+            { "@type": "ListItem", "position": 2, "name": "Why us", "item": "https://maroc360.agency/en/why-us" }
+          ]
+        }
+      ]
+    }
+  },
+  "careers": {
+    "name": "Careers index page",
+    "scope": "/en/careers (the index; for individual openings see jobPosting below)",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://maroc360.agency/en/careers#careers",
+          "url": "https://maroc360.agency/en/careers",
+          "name": "Careers at Maroc 360",
+          "description": "Join a senior, tight-knit team of strategists, creatives, and media specialists in Morocco.",
+          "inLanguage": "en",
+          "about": { "@id": "https://maroc360.agency/#organization" },
+          "isPartOf": { "@id": "https://maroc360.agency/#website" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maroc360.agency/en" },
+            { "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://maroc360.agency/en/careers" }
+          ]
+        }
+      ]
+    }
+  },
+  "jobPosting": {
+    "name": "Individual job opening (only on the dedicated job page, not the index)",
+    "scope": "Each individual /en/careers/[slug] route",
+    "snippet": {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "Senior Performance Media Buyer",
+      "description": "Plan, launch, and optimize paid campaigns on Google, Meta, and TikTok for Moroccan and MENA brands.",
+      "datePosted": "2026-06-01",
+      "validThrough": "2026-09-01",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "@id": "https://maroc360.agency/#organization",
+        "name": "Maroc 360 Agency",
+        "sameAs": "https://maroc360.agency"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Casablanca",
+          "addressCountry": "MA"
+        }
+      },
+      "jobLocationType": "TELECOMMUTE",
+      "applicantLocationRequirements": {
+        "@type": "Country",
+        "name": "Morocco"
+      },
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "MAD",
+        "value": {
+          "@type": "QuantitativeValue",
+          "minValue": 18000,
+          "maxValue": 28000,
+          "unitText": "MONTH"
+        }
+      },
+      "skills": ["Google Ads", "Meta Ads", "TikTok Ads", "Performance Marketing", "Analytics"],
+      "validityPeriod": "P3M"
+    }
+  },
+  "removed": {
+    "name": "Deprecated / restricted types that should NOT be added",
+    "items": [
+      {
+        "type": "FAQPage",
+        "status": "RESTRICTED (Aug 2023)",
+        "verdict": "Do NOT add new FAQPage on commercial pages. If you have one (your blog posts do), it's an Info issue not a Critical one — Google still ignores the SERP rich result for non-government / non-health sites. Keep only if you want it for AI/LLM citation purposes."
+      },
+      {
+        "type": "HowTo",
+        "status": "DEPRECATED (Sept 2023)",
+        "verdict": "Never recommend. SERP rich result is gone. The vocabulary exists in schema.org but Google does not render it."
+      },
+      {
+        "type": "SpecialAnnouncement",
+        "status": "DEPRECATED (July 2025)",
+        "verdict": "Do not use. Replace with Event if time-bounded."
+      },
+      {
+        "type": "ClaimReview",
+        "status": "DEPRECATED (June 2025)",
+        "verdict": "Do not use."
+      },
+      {
+        "type": "VehicleListing",
+        "status": "DEPRECATED (June 2025)",
+        "verdict": "Do not use. Use Product if applicable."
+      },
+      {
+        "type": "EstimatedSalary / LearningVideo / CourseInfo carousel / Practice Problem / Dataset",
+        "status": "DEPRECATED (June 2025)",
+        "verdict": "Do not use. For individual salaries on roles, use baseSalary inside JobPosting."
+      }
+    ]
+  }
+}
