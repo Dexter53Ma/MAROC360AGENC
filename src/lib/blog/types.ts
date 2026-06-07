@@ -50,6 +50,7 @@ export interface BlogPostSummary {
   readonly featured: boolean;
   readonly datePublished: string;
   readonly datePublishedLabel: string;
+  readonly dateModified: string;
   readonly readingTimeMinutes: number;
   readonly href: string;
 }

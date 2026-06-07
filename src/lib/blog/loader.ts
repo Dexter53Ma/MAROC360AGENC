@@ -268,6 +268,7 @@ function toSummary(post: BlogPostFull): BlogPostSummary {
     featured: post.featured,
     datePublished: post.datePublished,
     datePublishedLabel: post.datePublishedLabel,
+    dateModified: post.dateModified,
     readingTimeMinutes: post.readingTimeMinutes,
     href: post.href,
   };

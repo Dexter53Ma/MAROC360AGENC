@@ -5,41 +5,24 @@ import { INDUSTRIES } from "@/lib/industries";
 import { getAllBlogSummaries } from "@/lib/blog/loader";
 
 type StaticEntry = {
-  readonly path: string;
-  readonly priority: number;
-  readonly changeFrequency: "weekly" | "monthly" | "yearly";
+  readonly en: string;
+  readonly fr?: string;
 };
 
-const STATIC_PATHS_EN: ReadonlyArray<StaticEntry> = [
-  { path: "/en", priority: 1.0, changeFrequency: "weekly" },
-  { path: "/en/services", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/en/services/management-system", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/en/case-studies", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/en/industries", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/en/guides", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/en/guides/2026-marketing-playbook", priority: 0.8, changeFrequency: "yearly" },
-  { path: "/en/blog", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/en/careers", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/en/contact", priority: 0.7, changeFrequency: "yearly" },
-  { path: "/en/why-us", priority: 0.6, changeFrequency: "yearly" },
-  { path: "/en/privacy", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/en/terms", priority: 0.3, changeFrequency: "yearly" },
-];
-
-const STATIC_PATHS_FR: ReadonlyArray<StaticEntry> = [
-  { path: "/fr", priority: 1.0, changeFrequency: "weekly" },
-  { path: "/fr/services", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/fr/services/management-system", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/fr/case-studies", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/fr/industries", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/fr/guides", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/fr/guides/2026-marketing-playbook", priority: 0.8, changeFrequency: "yearly" },
-  { path: "/fr/blog", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/fr/careers", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/fr/contact", priority: 0.7, changeFrequency: "yearly" },
-  { path: "/fr/why-us", priority: 0.6, changeFrequency: "yearly" },
-  { path: "/fr/privacy", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/fr/terms", priority: 0.3, changeFrequency: "yearly" },
+const STATIC_PATHS: ReadonlyArray<StaticEntry> = [
+  { en: "/en", fr: "/fr" },
+  { en: "/en/services", fr: "/fr/services" },
+  { en: "/en/solutions/management-system", fr: "/fr/services/management-system" },
+  { en: "/en/case-studies", fr: "/fr/case-studies" },
+  { en: "/en/industries", fr: "/fr/industries" },
+  { en: "/en/guides", fr: "/fr/guides" },
+  { en: "/en/guides/2026-marketing-playbook", fr: "/fr/guides/2026-marketing-playbook" },
+  { en: "/en/resources/blog", fr: "/fr/blog" },
+  { en: "/en/careers", fr: "/fr/careers" },
+  { en: "/en/contact", fr: "/fr/contact" },
+  { en: "/en/manifesto", fr: "/fr/why-us" },
+  { en: "/en/privacy", fr: "/fr/privacy" },
+  { en: "/en/terms", fr: "/fr/terms" },
 ];
 
 const CATEGORY_PATHS = [
@@ -52,112 +35,83 @@ const CATEGORY_PATHS = [
   "creator",
 ] as const;
 
-function toEntry({
-  path,
-  priority,
-  changeFrequency,
-  lastModified,
-}: {
-  path: string;
-  priority: number;
-  changeFrequency: "weekly" | "monthly" | "yearly";
-  lastModified: Date;
-}): MetadataRoute.Sitemap[number] {
+function makeAlternates(enPath: string, frPath?: string) {
   return {
-    url: `${siteConfig.url}${path}`,
-    lastModified,
-    changeFrequency,
-    priority,
+    en: `${siteConfig.url}${enPath}`,
+    ...(frPath ? { fr: `${siteConfig.url}${frPath}` } : {}),
+    "x-default": `${siteConfig.url}${enPath}`,
   };
 }
 
-function makeAlternates(pathSuffix: string) {
+function toEntry({ en, fr }: StaticEntry): MetadataRoute.Sitemap[number] {
   return {
-    en: `${siteConfig.url}/en${pathSuffix}`,
-    fr: `${siteConfig.url}/fr${pathSuffix}`,
-    "x-default": `${siteConfig.url}/en${pathSuffix}`,
+    url: `${siteConfig.url}${en}`,
+    alternates: { languages: makeAlternates(en, fr) },
+  };
+}
+
+function toFrEntry({ en, fr }: StaticEntry): MetadataRoute.Sitemap[number] | null {
+  if (!fr) return null;
+  return {
+    url: `${siteConfig.url}${fr}`,
+    alternates: { languages: makeAlternates(en, fr) },
   };
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
   const [enBlogPosts, frBlogPosts] = await Promise.all([
     getAllBlogSummaries("en"),
     getAllBlogSummaries("fr"),
   ]);
 
-  const enStatic: MetadataRoute.Sitemap = STATIC_PATHS_EN.map((e) =>
-    toEntry({ ...e, lastModified: now })
-  );
-  const frStatic: MetadataRoute.Sitemap = STATIC_PATHS_FR.map((e) =>
-    toEntry({ ...e, lastModified: now })
-  );
+  const enStatic: MetadataRoute.Sitemap = STATIC_PATHS.map(toEntry);
+  const frStatic: MetadataRoute.Sitemap = STATIC_PATHS
+    .map(toFrEntry)
+    .filter((e): e is MetadataRoute.Sitemap[number] => e !== null);
 
   const enServices: MetadataRoute.Sitemap = SERVICES.map((s) => ({
     url: `${siteConfig.url}${s.href}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-    alternates: { languages: makeAlternates(s.href.replace(/^\/en/, "")) },
+    alternates: { languages: makeAlternates(s.href, s.href.replace(/^\/en/, "/fr")) },
   }));
   const frServices: MetadataRoute.Sitemap = SERVICES.map((s) => ({
     url: `${siteConfig.url}${s.href.replace(/^\/en/, "/fr")}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-    alternates: { languages: makeAlternates(s.href.replace(/^\/en/, "")) },
+    alternates: { languages: makeAlternates(s.href, s.href.replace(/^\/en/, "/fr")) },
   }));
 
   const enIndustries: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
     url: `${siteConfig.url}${i.href}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-    alternates: { languages: makeAlternates(i.href.replace(/^\/en/, "")) },
+    alternates: { languages: makeAlternates(i.href, i.href.replace(/^\/en/, "/fr")) },
   }));
   const frIndustries: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
     url: `${siteConfig.url}${i.href.replace(/^\/en/, "/fr")}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-    alternates: { languages: makeAlternates(i.href.replace(/^\/en/, "")) },
+    alternates: { languages: makeAlternates(i.href, i.href.replace(/^\/en/, "/fr")) },
   }));
 
   const enCategories: MetadataRoute.Sitemap = CATEGORY_PATHS.map((slug) => ({
     url: `${siteConfig.url}/en/blog/category/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
     alternates: {
-      languages: makeAlternates(`/blog/category/${slug}`),
+      languages: makeAlternates(`/en/blog/category/${slug}`, `/fr/blog/category/${slug}`),
     },
   }));
   const frCategories: MetadataRoute.Sitemap = CATEGORY_PATHS.map((slug) => ({
     url: `${siteConfig.url}/fr/blog/category/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
     alternates: {
-      languages: makeAlternates(`/blog/category/${slug}`),
+      languages: makeAlternates(`/en/blog/category/${slug}`, `/fr/blog/category/${slug}`),
     },
   }));
 
   const enBlogEntries: MetadataRoute.Sitemap = enBlogPosts.map((p) => ({
     url: `${siteConfig.url}${p.href}`,
-    lastModified: new Date(p.datePublished),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+    lastModified: new Date(p.dateModified ?? p.datePublished),
     alternates: {
-      languages: makeAlternates(`/blog/${p.slug}`),
+      languages: makeAlternates(`/en/blog/${p.slug}`, `/fr/blog/${p.slug}`),
     },
   }));
   const frBlogEntries: MetadataRoute.Sitemap = frBlogPosts.map((p) => ({
     url: `${siteConfig.url}${p.href}`,
-    lastModified: new Date(p.datePublished),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+    lastModified: new Date(p.dateModified ?? p.datePublished),
     alternates: {
-      languages: makeAlternates(`/blog/${p.slug}`),
+      languages: makeAlternates(`/en/blog/${p.slug}`, `/fr/blog/${p.slug}`),
     },
   }));
 
