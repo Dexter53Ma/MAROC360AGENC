@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Full-service digital marketing agency in Morocco. Strategy, paid media, SEO, social, and content that drives measurable growth.",
   openGraph: {
     siteName: "Maroc 360 Agency",
-    locale: "en_US",
+    locale: "en_MA",
     type: "website",
     url: `${siteConfig.url}/en`,
     images: [
@@ -38,6 +38,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@maroc360",
+    creator: "@maroc360",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   verification: {
     google: "IviR5xHUEAuisvRXP-ruirwwlREDkvvD8mMwRYKgw9M",
@@ -56,6 +69,8 @@ export const metadata: Metadata = {
 export function Head() {
   return (
     <>
+      <link rel="preconnect" href="https://cdn.prod.website-files.com" />
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       <link rel="llms" href="/llms.txt" />
       <link rel="alternate" href="/llms.txt" type="text/plain" title="llms.txt" />
     </>

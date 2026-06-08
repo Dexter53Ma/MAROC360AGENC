@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Maroc 360 est une agence de marketing digital 360° basée au Maroc. Nous accompagnons les marques sur la stratégie, le créatif, la publicité payante, le SEO, les réseaux sociaux et le contenu — avec des résultats mesurables.",
   openGraph: {
     siteName: "Maroc 360 Agency",
-    locale: "fr_FR",
+    locale: "fr_MA",
     type: "website",
     url: `${siteConfig.url}/fr`,
     images: [
@@ -41,6 +41,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@maroc360",
+    creator: "@maroc360",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   verification: {
     google: "IviR5xHUEAuisvRXP-ruirwwlREDkvvD8mMwRYKgw9M",
@@ -59,6 +72,8 @@ export const metadata: Metadata = {
 export function Head() {
   return (
     <>
+      <link rel="preconnect" href="https://cdn.prod.website-files.com" />
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       <link rel="llms" href="/llms.txt" />
       <link rel="alternate" href="/llms.txt" type="text/plain" title="llms.txt" />
     </>
