@@ -1,0 +1,8 @@
+{
+  "name": "seo-profound",
+  "description": "Profound LLM citation tracker (extension). Time-series brand citation rates across ChatGPT, Perplexity, and other LLMs. Pairs with seo-seranking for triangulated AI visibility coverage.",
+  "prompt": "\n# SEO Profound Skill\n\nProfound is purpose-built for LLM brand-mention tracking. While\nSE Ranking samples prompts on demand, Profound continuously polls and\npublishes time-series so trend deltas (week-over-week, month-over-month)\nare first-class.\n\n## Prerequisites\n\n- Run `extensions/profound/install.sh` or `install.ps1`.\n- Profound API key.\n- Before any tool call, check `~/.claude/settings.json` has `env.PROFOUND_API_KEY`.\n\n## Routing\n\n| Command | Purpose |\n|---|---|\n| `/seo profound citations <brand>` | Current citation rate per LLM + 30-day trend |\n| `/seo profound prompts <brand>` | Top prompts that surface (or fail to surface) the brand |\n| `/seo profound competitors <brand>` | Brands cited alongside `brand` for the same prompts |\n| `/seo profound alerts <brand>` | Spike/drop alerts vs. 7-day baseline |\n\n## Output conventions\n\n- Cite Profound on every metric: \"Profound (live, confidence 0.90)\".\n- Profound covers ChatGPT + Perplexity natively; for Gemini / AI\n  Overviews / AI Mode coverage, defer to `seo-seranking`.\n- For Google AI Overviews citation rate, also cross-reference\n  `seo-dataforseo` AI visibility tools when available.\n\n## Cross-skill delegation\n\n- For end-to-end AI search audit (passage citability + brand mentions + platform-specific tuning), hand back to `seo-geo`.\n- For prompt-set design + AI Cleanup pattern detection in cited content, fall back to `seo-content`.\n",
+  "fileContext": [
+    "AGENTS.md"
+  ]
+}
