@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { RootBody } from "@/components/root-body";
+import "../globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
