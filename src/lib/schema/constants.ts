@@ -10,10 +10,10 @@ export const SCHEMA = {
   email: siteConfig.contact.email,
   whatsapp: siteConfig.whatsapp.display,
   address: {
-    streetAddress: "",
+    streetAddress: "Boulevard Mohammed V",
     addressLocality: "Casablanca",
     addressRegion: "Casablanca-Settat",
-    postalCode: "",
+    postalCode: "20000",
     addressCountry: "MA",
   },
   geo: {

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Maroc 360 Agency",
     locale: "en_US",
     type: "website",
-    url: siteConfig.url,
+    url: `${siteConfig.url}/en`,
     images: [
       {
         url: "https://cdn.prod.website-files.com/682d7fad3c89203197a56faa/682d8b77bec4f672c42ac4d5_open-graph.jpg",
@@ -50,6 +50,9 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/seo/webclip.png",
+  },
+  other: {
+    "llms-txt": "/llms.txt",
   },
 };
 
