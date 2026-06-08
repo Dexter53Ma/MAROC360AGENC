@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { JsonLd } from "@/components/json-ld";
 import { pageAlternates } from "@/lib/metadata-helpers";
@@ -125,7 +126,7 @@ export default function AboutPageFr() {
               <h2>Contactez-Nous</h2>
               <p>
                 Prêt à développer votre marque ?{" "}
-                <a href="/fr/contact">Contactez-nous dès aujourd&apos;hui</a> pour
+                <Link href="/fr/contact">Contactez-nous dès aujourd&apos;hui</Link> pour
                 discuter de vos besoins en marketing digital.
               </p>
             </div>
