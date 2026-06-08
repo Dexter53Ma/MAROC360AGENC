@@ -41,9 +41,9 @@ export function Footer({ dict, locale }: { dict: FooterDict; locale: "en" | "fr"
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-8 sm:gap-y-10">
             {dict.columns.map((col) => (
               <div key={col.title} className="flex flex-col gap-3">
-                <h4 className="font-semibold text-xs sm:text-sm uppercase tracking-wide">
+                <p className="font-semibold text-xs sm:text-sm uppercase tracking-wide">
                   {col.title}
-                </h4>
+                </p>
                 <ul className="flex flex-col gap-2">
                   {col.links.map((link) => (
                     <li key={`${link.href}-${link.label}`}>

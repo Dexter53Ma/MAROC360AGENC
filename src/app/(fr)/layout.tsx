@@ -54,10 +54,16 @@ export const metadata: Metadata = {
     ],
     apple: "/seo/webclip.png",
   },
-  other: {
-    "llms-txt": "/llms.txt",
-  },
 };
+
+export function Head() {
+  return (
+    <>
+      <link rel="llms" href="/llms.txt" />
+      <link rel="alternate" href="/llms.txt" type="text/plain" title="llms.txt" />
+    </>
+  );
+}
 
 export default function FrRootLayout({
   children,
